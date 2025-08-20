@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "harness",
+  "key": {
+    "G": "minecraft:glass",
+    "L": "minecraft:leather"
+  },
+  "pattern": [
+    "LLL",
+    "G G"
+  ],
+  "result": {
+    "components": {
+      "minecraft:equippable": {
+        "slot": "body",
+        "asset_id": "nice_things:simple_harness",
+        "allowed_entities": "minecraft:happy_ghast",
+        "dispensable": true,
+        "equip_on_interact": true,
+        "can_be_sheared": true
+      },
+      "minecraft:item_name": {
+        "translate": "item.nice_things.simple_harness",
+        "fallback": "Simple Harness"
+      },
+      "minecraft:item_model": "nice_things:simple_harness",
+      "minecraft:custom_data": "{nice_things:simple_harness}"
+    },
+    "count": 1,
+    "id": "minecraft:black_harness"
+  }
+}

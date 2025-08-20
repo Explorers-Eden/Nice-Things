@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "harness",
+  "key": {
+    "G": "minecraft:glass",
+    "B": "minecraft:black_wool",
+    "S": "minecraft:sculk",
+    "L": "minecraft:leather"
+  },
+  "pattern": [
+    "LBL",
+    "GSG"
+  ],
+  "result": {
+    "components": {
+      "minecraft:equippable": {
+        "slot": "body",
+        "asset_id": "nice_things:sculk_harness",
+        "allowed_entities": "minecraft:happy_ghast",
+        "dispensable": true,
+        "equip_on_interact": true,
+        "can_be_sheared": true
+      },
+      "minecraft:item_name": {
+        "translate": "item.nice_things.sculk_harness",
+        "fallback": "Sculk Harness"
+      },
+      "minecraft:item_model": "nice_things:sculk_harness",
+      "minecraft:custom_data": "{nice_things:sculk_harness}"
+    },
+    "count": 1,
+    "id": "minecraft:black_harness"
+  }
+}

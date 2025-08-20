@@ -1,0 +1,8 @@
+{
+    "values": [
+		"nice_things:load",
+		"nice_things:chopper/move/init",
+		"nice_things:conveyor/move/init",
+		"nice_things:fan/blow/init"
+	]
+}

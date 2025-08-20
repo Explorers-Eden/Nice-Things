@@ -1,0 +1,15 @@
+{
+  "asset_id": "nice_things:tulip",
+  "author": {
+    "color": "gray",
+    "translate": "painting.nice_things.tulip.author",
+    "fallback": "Explorer's Eden"
+  },
+  "height": 1,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.nice_things.tulip.title",
+    "fallback": "Tulip"
+  },
+  "width": 1
+}

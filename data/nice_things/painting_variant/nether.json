@@ -1,0 +1,15 @@
+{
+  "asset_id": "nice_things:nether",
+  "author": {
+    "color": "gray",
+    "translate": "painting.nice_things.nether.author",
+    "fallback": "Explorer's Eden"
+  },
+  "height": 3,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.nice_things.nether.title",
+    "fallback": "The Nether"
+  },
+  "width": 3
+}

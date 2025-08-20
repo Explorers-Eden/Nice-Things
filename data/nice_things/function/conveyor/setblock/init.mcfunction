@@ -1,0 +1,2 @@
+execute as @e[type=minecraft:item_display,tag=nice_things.conveyor.spawner] at @s run function nice_things:conveyor/setblock/exec
+execute as @e[type=minecraft:item_display,tag=nice_things.conveyor.display] at @s unless block ~ ~-.5 ~ petrified_oak_slab[type=double] run function nice_things:conveyor/setblock/remove

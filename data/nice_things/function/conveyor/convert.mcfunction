@@ -1,0 +1,34 @@
+execute if items entity @s container.0 #nice_things:convertable_to_mud run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:mud"}
+
+execute if items entity @s container.0 minecraft:white_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:white_concrete"}
+execute if items entity @s container.0 minecraft:orange_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:orange_concrete"}
+execute if items entity @s container.0 minecraft:magenta_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:magenta_concrete"}
+execute if items entity @s container.0 minecraft:light_blue_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:light_blue_concrete"}
+execute if items entity @s container.0 minecraft:yellow_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:yellow_concrete"}
+execute if items entity @s container.0 minecraft:lime_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:lime_concrete"}
+execute if items entity @s container.0 minecraft:pink_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:pink_concrete"}
+execute if items entity @s container.0 minecraft:gray_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:gray_concrete"}
+execute if items entity @s container.0 minecraft:light_gray_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:light_gray_concrete"}
+execute if items entity @s container.0 minecraft:cyan_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:cyan_concrete"}
+execute if items entity @s container.0 minecraft:purple_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:purple_concrete"}
+execute if items entity @s container.0 minecraft:blue_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:blue_concrete"}
+execute if items entity @s container.0 minecraft:brown_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:brown_concrete"}
+execute if items entity @s container.0 minecraft:green_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:green_concrete"}
+execute if items entity @s container.0 minecraft:red_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:red_concrete"}
+execute if items entity @s container.0 minecraft:black_concrete_powder run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:black_concrete"}
+
+execute if items entity @s container.0 minecraft:dead_brain_coral_block run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:brain_coral_block"}
+execute if items entity @s container.0 minecraft:dead_bubble_coral_block run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:bubble_coral_block"}
+execute if items entity @s container.0 minecraft:dead_fire_coral_block run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:fire_coral_block"}
+execute if items entity @s container.0 minecraft:dead_horn_coral_block run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:horn_coral_block"}
+execute if items entity @s container.0 minecraft:dead_tube_coral_block run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:tube_coral_block"}
+execute if items entity @s container.0 minecraft:dead_brain_coral run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:brain_coral"}
+execute if items entity @s container.0 minecraft:dead_brain_coral_fan run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:brain_coral_fan"}
+execute if items entity @s container.0 minecraft:dead_bubble_coral run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:bubble_coral"}
+execute if items entity @s container.0 minecraft:dead_bubble_coral_fan run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:bubble_coral_fan"}
+execute if items entity @s container.0 minecraft:dead_fire_coral run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:fire_coral"}
+execute if items entity @s container.0 minecraft:dead_fire_coral_fan run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:fire_coral_fan"}
+execute if items entity @s container.0 minecraft:dead_horn_coral run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:horn_coral"}
+execute if items entity @s container.0 minecraft:dead_horn_coral_fan run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:horn_coral_fan"}
+execute if items entity @s container.0 minecraft:dead_tube_coral run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:tube_coral"}
+execute if items entity @s container.0 minecraft:dead_tube_coral_fan run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:tube_coral_fan"}

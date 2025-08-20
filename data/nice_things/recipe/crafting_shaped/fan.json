@@ -1,0 +1,66 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "#": "minecraft:iron_ingot",
+    "C": "minecraft:crafting_table",
+    "L": "minecraft:wind_charge"
+  },
+  "pattern": [
+    "##L",
+    "#CL",
+    "##L"
+  ],
+  "result": {
+    "components": {
+                "minecraft:item_model": "nice_things:fan",
+                "minecraft:max_stack_size": 64,
+                "minecraft:item_name": {
+                  "fallback": "Fan",
+                  "translate": "items.nice_things.fan"
+                },
+                "minecraft:custom_data": "{items:fan}",
+                "minecraft:entity_data": {
+                  "id": "minecraft:item_display",
+                  "Tags": [
+                    "nice_things.fan.spawner",
+                    "nice_things.fan.display"
+                  ],
+                  "transformation": {
+                    "translation": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "left_rotation": [
+                      0,
+                      0,
+                      0,
+                      1
+                    ],
+                    "right_rotation": [
+                      0,
+                      0,
+                      0,
+                      1
+                    ],
+                    "scale": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "billboard": "fixed",
+                  "item": {
+                    "id": "minecraft:barrier",
+                    "components": {
+                      "minecraft:item_model": "minecraft:air"
+                    },
+                    "count": 1
+                  }
+                }
+              },
+    "count": 1,
+    "id": "minecraft:bat_spawn_egg"
+  }
+}
