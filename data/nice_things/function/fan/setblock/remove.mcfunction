@@ -1,2 +1,2 @@
-loot spawn ~ ~ ~ loot nice_things:item/fan
+loot spawn ~ ~ ~ loot nice_things:block/fan
 kill @s

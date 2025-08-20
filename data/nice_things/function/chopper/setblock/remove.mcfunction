@@ -1,2 +1,2 @@
-loot spawn ~ ~ ~ loot nice_things:item/chopper
+loot spawn ~ ~ ~ loot nice_things:block/chopper
 kill @s

@@ -1,2 +1,2 @@
-loot spawn ~ ~ ~ loot nice_things:item/conveyor
+loot spawn ~ ~ ~ loot nice_things:block/conveyor
 kill @s
