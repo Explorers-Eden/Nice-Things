@@ -20,8 +20,7 @@
                   "can_be_sheared": true
                 },
                 "minecraft:item_name": {
-                  "translate": "item.nice_things.simple_harness",
-                  "fallback": "Simple Harness"
+                  "translate": "item.nice_things.simple_harness"
                 },
                 "minecraft:item_model": "nice_things:simple_harness",
                 "minecraft:custom_data": "{nice_things:simple_harness}"

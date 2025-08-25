@@ -23,8 +23,7 @@
         "can_be_sheared": true
       },
       "minecraft:item_name": {
-        "translate": "item.nice_things.sculk_harness",
-        "fallback": "Sculk Harness"
+        "translate": "item.nice_things.sculk_harness"
       },
       "minecraft:item_model": "nice_things:sculk_harness",
       "minecraft:custom_data": "{nice_things:sculk_harness}"

@@ -2,14 +2,12 @@
   "asset_id": "nice_things:bear",
   "author": {
     "color": "gray",
-    "translate": "painting.nice_things.bear.author",
-    "fallback": "Explorer's Eden"
+    "translate": "painting.nice_things.bear.author"
   },
   "height": 1,
   "title": {
     "color": "yellow",
-    "translate": "painting.nice_things.bear.title",
-    "fallback": "Bear"
+    "translate": "painting.nice_things.bear.title"
   },
   "width": 1
 }
