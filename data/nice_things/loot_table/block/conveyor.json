@@ -17,9 +17,9 @@
                 "minecraft:item_model": "nice_things:conveyor",
                 "minecraft:max_stack_size": 64,
                 "minecraft:item_name": {
-                  "translate": "item.nice_things.conveyor"
+                  "translate": "block.nice_things.conveyor"
                 },
-                "minecraft:custom_data": "{items:conveyor}",
+                "minecraft:custom_data": "{nice_things:conveyor}",
                 "minecraft:entity_data": {
                   "id": "minecraft:item_display",
                   "Tags": [

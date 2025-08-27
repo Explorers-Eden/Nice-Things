@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:stonecutter/painting_bear",
+      "nice_things:stonecutter/painting_end",
+      "nice_things:stonecutter/painting_nether",
+      "nice_things:stonecutter/painting_overworld",
+      "nice_things:stonecutter/painting_red_mushroom",
+      "nice_things:stonecutter/painting_tulip"
+    ]
+  }
+}

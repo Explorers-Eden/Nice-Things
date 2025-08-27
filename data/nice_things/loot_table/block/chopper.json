@@ -17,9 +17,9 @@
                 "minecraft:item_model": "nice_things:chopper",
                 "minecraft:max_stack_size": 64,
                 "minecraft:item_name": {
-                  "translate": "item.nice_things.chopper"
+                  "translate": "block.nice_things.chopper"
                 },
-                "minecraft:custom_data": "{items:chopper}",
+                "minecraft:custom_data": "{nice_things:chopper}",
                 "minecraft:entity_data": {
                   "id": "minecraft:item_display",
                   "Tags": [
