@@ -1,0 +1,11 @@
+{
+  "values": [
+    "minecraft:chest",
+    "minecraft:trapped_chest",
+    "minecraft:barrel",
+    "minecraft:suspicious_sand",
+    "minecraft:suspicious_gravel",
+    "minecraft:chiseled_bookshelf",
+    "minecraft:decorated_pot"
+  ]
+}

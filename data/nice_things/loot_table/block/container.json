@@ -1,0 +1,75 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bat_spawn_egg",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "nice_things:container",
+                "minecraft:max_stack_size": 64,
+                "minecraft:item_name": {
+                  "translate": "block.nice_things.container"
+                },
+                "minecraft:custom_data": "{nice_things:container}",
+                "minecraft:entity_data": {
+                  "id": "minecraft:item_display",
+                  "Tags": [
+                    "nice_things.container.spawner",
+                    "nice_things.container.display"
+                  ],
+                  "data": {
+                      "stored_item": {
+                        "id": "minecraft:air",
+                        "count": "0"
+                      }
+                  },
+                  "transformation": {
+                    "translation": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "left_rotation": [
+                      0,
+                      0,
+                      0,
+                      1
+                    ],
+                    "right_rotation": [
+                      0,
+                      0,
+                      0,
+                      1
+                    ],
+                    "scale": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "billboard": "fixed",
+                  "item": {
+                    "id": "minecraft:barrier",
+                    "components": {
+                      "minecraft:item_model": "minecraft:air"
+                    },
+                    "count": 1
+                  }
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

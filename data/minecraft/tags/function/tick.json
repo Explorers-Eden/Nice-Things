@@ -1,7 +1,5 @@
 {
     "values": [
-		"nice_things:conveyor/setblock/init",
-		"nice_things:chopper/setblock/init",
-		"nice_things:fan/setblock/init"
+		"#nice_things:blocks"
 	]
 }

@@ -1,6 +1,7 @@
 execute align z positioned ~ ~ ~.5 run tp ~ ~ ~
 data modify entity @s Motion set value [-0.30d,0d,0d]
 data modify entity @s[type=item] Age set value 0s
+effect give @s minecraft:slowness 3 255 true
 
 execute as @s[type=item] if block ~ ~ ~ minecraft:water if items entity @s container.0 #nice_things:convertable_by_water run function nice_things:conveyor/convert
 

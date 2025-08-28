@@ -1,0 +1,16 @@
+execute as @e[type=minecraft:item_display,tag=nice_things.container.spawner] at @s run function nice_things:container/setblock/exec
+
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=-180] at @s unless block ~ ~ ~.5 petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=-90] at @s unless block ~-.5 ~ ~ petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=90] at @s unless block ~.5 ~ ~ petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=0] at @s unless block ~ ~ ~-.5 petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=-180] at @s unless block ~ ~ ~.5 petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_wo_items
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=-90] at @s unless block ~-.5 ~ ~ petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_wo_items
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=90] at @s unless block ~.5 ~ ~ petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_wo_items
+execute as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=0] at @s unless block ~ ~ ~-.5 petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run function nice_things:container/setblock/remove_wo_items
+
+execute if predicate {"condition":"minecraft:random_chance","chance":0.15} as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=-180] at @s run particle minecraft:portal ~ ~ ~.5 0 0 0 .5 2 normal
+execute if predicate {"condition":"minecraft:random_chance","chance":0.15} as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=-90] at @s run particle minecraft:portal ~-.5 ~ ~ 0 0 0 .5 2 normal
+execute if predicate {"condition":"minecraft:random_chance","chance":0.15} as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=90] at @s run particle minecraft:portal ~.5 ~ ~ 0 0 0 .5 2 normal
+execute if predicate {"condition":"minecraft:random_chance","chance":0.15} as @e[type=minecraft:item_display,tag=nice_things.container.display,y_rotation=0] at @s run particle minecraft:portal ~ ~ ~-.5 0 0 0 .5 2 normal

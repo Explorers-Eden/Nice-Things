@@ -1,0 +1,1 @@
+$data modify entity @n[type=text_display,tag=nice_things.container.text,distance=..3] text.text set value "$(count)"
