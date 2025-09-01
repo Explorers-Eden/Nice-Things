@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:bread",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "nice_things:cake_slice",
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.cake_slice"
+                },
+                "minecraft:custom_data": {
+                  "nice_things": "cake_slice"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

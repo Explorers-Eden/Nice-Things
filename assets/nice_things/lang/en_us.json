@@ -1,6 +1,9 @@
 {
    "item.nice_things.simple_harness": "Simple Harness",
    "item.nice_things.sculk_harness": "Sculk Harness",
+   "item.nice_things.invisible_item_frame": "Invisible Item Frame",
+   "item.nice_things.invisible_glow_item_frame": "Invisible Glow Item Frame",
+   "item.nice_things.cake_slice": "Cake Slice",
 
    "block.nice_things.fan": "Fan",
    "block.nice_things.chopper": "Chopper",

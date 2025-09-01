@@ -1,2 +1,2 @@
-execute as @e[type=minecraft:item_display,tag=nice_things.chopper.spawner] at @s run function nice_things:chopper/setblock/exec
+execute as @e[type=minecraft:item_frame,tag=nice_things.chopper.spawner] at @s run function nice_things:chopper/setblock/exec
 execute as @e[type=minecraft:item_display,tag=nice_things.chopper.display] at @s unless block ~ ~-.5 ~ petrified_oak_slab[type=double] run function nice_things:chopper/setblock/remove

@@ -1,0 +1,31 @@
+{
+  "values": [
+    "#minecraft:coal_ores",
+    "#minecraft:copper_ores",
+    "#minecraft:diamond_ores",
+    "#minecraft:emerald_ores",
+    "#minecraft:gold_ores",
+    "#minecraft:iron_ores",
+    "#minecraft:lapis_ores",
+    "#minecraft:redstone_ores",
+    "minecraft:grass_block",
+    "minecraft:podzol",
+    "minecraft:mycelium",
+    "minecraft:dirt_path",
+    "minecraft:farmland",
+    "minecraft:clay",
+    "minecraft:gravel",
+    "minecraft:snow_block",
+    "minecraft:stone",
+    "minecraft:deepslate",
+    "minecraft:crimson_nylium",
+    "minecraft:warped_nylium",
+    "minecraft:amethyst_cluster",
+    "minecraft:red_mushroom_block",
+    "minecraft:brown_mushroom_block",
+    "minecraft:pumpkin",
+    "minecraft:melon",
+    "minecraft:cobweb",
+    "minecraft:nether_quartz_ore"
+  ]
+}

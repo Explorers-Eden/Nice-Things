@@ -1,20 +1,22 @@
 playsound minecraft:block.wood.place block @a ~ ~ ~ 0.8
 
-#south
-execute if entity @p[y_rotation=-45..45] run data modify entity @s Rotation[0] set value -180.0f
-#west
-execute if entity @p[y_rotation=45..135] run data modify entity @s Rotation[0] set value -90.0f
-#east
-execute if entity @p[y_rotation=-135..-45] run data modify entity @s Rotation[0] set value 90.0f
-#north
-execute if entity @p[y_rotation=-179.99..-135] run data modify entity @s Rotation[0] set value 0.0f
-execute if entity @p[y_rotation=135..179.99] run data modify entity @s Rotation[0] set value 0.0f
+summon item_display ~ ~ ~ {billboard:"fixed",Tags:["nice_things.conveyor.spawner","nice_things.conveyor.display"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,-0.51f,0f],scale:[1f,1f,1f]},item:{id:"minecraft:barrier",count:1,components:{"minecraft:item_model":"nice_things:conveyor"}}}
 
-data modify entity @s item.components."minecraft:item_model" set value "nice_things:conveyor"
+#south
+execute if entity @p[y_rotation=-45..45] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value -180.0f
+#west
+execute if entity @p[y_rotation=45..135] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value -90.0f
+#east
+execute if entity @p[y_rotation=-135..-45] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 90.0f
+#north
+execute if entity @p[y_rotation=-179.99..-135] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 0.0f
+execute if entity @p[y_rotation=135..179.99] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 0.0f
+
 data modify entity @s Rotation[1] set value 0.0f
-data modify entity @s transformation.translation[1] set value -0.51f
-tp @s ~ ~1.01 ~
+
+execute align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] ~ ~0.51 ~
 
 setblock ~ ~ ~ minecraft:petrified_oak_slab[type=double]
 
-tag @s remove nice_things.conveyor.spawner
+tag @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] remove nice_things.conveyor.spawner
+kill @s

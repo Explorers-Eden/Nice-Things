@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:glow_item_frame",
+    "minecraft:glass"
+  ],
+  "result": {
+    "components": {
+                "minecraft:item_model": "nice_things:invisible_glow_item_frame",
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.invisible_glow_item_frame"
+                },
+                "minecraft:entity_data": {
+                  "id": "minecraft:glow_item_frame",
+                  "Tags": [
+                    "nice_things.invis_glow_item_frame"
+                  ],
+                  "Invisible": true
+                }
+              },
+    "count": 1,
+    "id": "minecraft:glow_item_frame"
+  }
+}
