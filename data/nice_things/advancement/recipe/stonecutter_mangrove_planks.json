@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:mangrove_planks"
           }
         ]
       },
@@ -19,7 +19,11 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:stonecutter/mangrove/door",
+      "nice_things:stonecutter/mangrove/pressure_plate",
+      "nice_things:stonecutter/mangrove/slabs",
+      "nice_things:stonecutter/mangrove/stairs",
+      "nice_things:stonecutter/mangrove/trapdoor"
     ]
   }
 }

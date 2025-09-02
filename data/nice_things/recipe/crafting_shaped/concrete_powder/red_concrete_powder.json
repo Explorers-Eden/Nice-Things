@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "concrete_powder",
+    "key": {
+        "#": "#nice_things:dyeable_concrete_powder",
+        "X": "minecraft:red_dye"
+    },
+    "pattern": [
+        "###",
+        "#X#",
+        "###"
+    ],
+    "result": {
+        "count": 8,
+        "id": "minecraft:red_concrete_powder"
+    },
+    "show_notification": true
+}

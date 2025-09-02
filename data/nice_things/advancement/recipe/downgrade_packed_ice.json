@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:packed_ice"
           }
         ]
       },
@@ -19,7 +19,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:crafting_shapeless/downgrade_packed_ice"
     ]
   }
 }

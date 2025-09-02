@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "stained_terracotta",
+    "key": {
+      "#": "#minecraft:terracotta",
+      "X": "minecraft:phantom_membrane"
+    },
+    "pattern": [
+      "###",
+      "#X#",
+      "###"
+    ],
+    "result": {
+      "count": 8,
+      "id": "minecraft:terracotta"
+    },
+    "show_notification": true
+  }

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:gold_ingot"
           }
         ]
       },
@@ -19,7 +19,7 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:crafting_shaped/golden_horse_armor"
     ]
   }
 }

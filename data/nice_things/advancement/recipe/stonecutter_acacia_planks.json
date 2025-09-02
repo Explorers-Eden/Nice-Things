@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:acacia_planks"
           }
         ]
       },
@@ -19,7 +19,11 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:stonecutter/acacia/door",
+      "nice_things:stonecutter/acacia/pressure_plate",
+      "nice_things:stonecutter/acacia/slabs",
+      "nice_things:stonecutter/acacia/stairs",
+      "nice_things:stonecutter/acacia/trapdoor"
     ]
   }
 }

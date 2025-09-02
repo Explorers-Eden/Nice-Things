@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#nice_things:dyeable_glass_panes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shaped/glass/black_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/blue_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/brown_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/cyan_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/gray_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/green_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/light_blue_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/light_gray_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/lime_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/magenta_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/orange_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/pink_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/purple_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/red_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/white_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/yellow_stained_glass_pane_from_glass_pane",
+      "nice_things:crafting_shaped/glass/undye_stained_glass_pane"
+    ]
+  }
+}

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:chain"
           }
         ]
       },
@@ -19,7 +19,10 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:crafting_shaped/chainmail_helmet",
+      "nice_things:crafting_shaped/chainmail_chestplate",
+      "nice_things:crafting_shaped/chainmail_leggings",
+      "nice_things:crafting_shaped/chainmail_boots"
     ]
   }
 }

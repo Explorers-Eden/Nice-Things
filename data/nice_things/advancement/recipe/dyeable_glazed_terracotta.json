@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#nice_things:dyeable_glazed_terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shaped/terracotta/black_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/blue_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/brown_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/cyan_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/gray_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/green_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/light_blue_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/light_gray_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/lime_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/magenta_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/orange_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/pink_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/purple_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/red_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/white_glazed_terracotta",
+      "nice_things:crafting_shaped/terracotta/yellow_glazed_terracotta"
+    ]
+  }
+}

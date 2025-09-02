@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "glazed_terracotta",
+    "key": {
+        "#": "#nice_things:dyeable_glazed_terracotta",
+        "X": "minecraft:light_blue_dye"
+    },
+    "pattern": [
+        "###",
+        "#X#",
+        "###"
+    ],
+    "result": {
+        "count": 8,
+        "id": "minecraft:light_blue_glazed_terracotta"
+    },
+    "show_notification": true
+}

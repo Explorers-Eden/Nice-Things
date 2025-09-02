@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "misc",
+    "pattern": [
+      "C C",
+      "CIC",
+      "CNC"
+    ],
+    "key": {
+      "C": [
+        "minecraft:chain"
+      ],
+      "I": [
+        "minecraft:gold_ingot"
+      ],
+      "N": [
+        "minecraft:gold_nugget"
+      ]
+    },
+    "result": {
+      "id": "minecraft:bell",
+      "count": 1
+    }
+  }
+  

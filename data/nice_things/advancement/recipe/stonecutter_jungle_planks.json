@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:jungle_planks"
           }
         ]
       },
@@ -19,7 +19,11 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:stonecutter/jungle/door",
+      "nice_things:stonecutter/jungle/pressure_plate",
+      "nice_things:stonecutter/jungle/slabs",
+      "nice_things:stonecutter/jungle/stairs",
+      "nice_things:stonecutter/jungle/trapdoor"
     ]
   }
 }

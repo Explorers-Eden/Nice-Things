@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:cake"
+            "items": "minecraft:crimson_planks"
           }
         ]
       },
@@ -19,7 +19,11 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:crafting_shapeless/cake_slice"
+      "nice_things:stonecutter/crimson/door",
+      "nice_things:stonecutter/crimson/pressure_plate",
+      "nice_things:stonecutter/crimson/slabs",
+      "nice_things:stonecutter/crimson/stairs",
+      "nice_things:stonecutter/crimson/trapdoor"
     ]
   }
 }

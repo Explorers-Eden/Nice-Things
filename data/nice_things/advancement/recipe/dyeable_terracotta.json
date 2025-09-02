@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:terracotta"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shaped/terracotta/black_terracotta",
+      "nice_things:crafting_shaped/terracotta/blue_terracotta",
+      "nice_things:crafting_shaped/terracotta/brown_terracotta",
+      "nice_things:crafting_shaped/terracotta/cyan_terracotta",
+      "nice_things:crafting_shaped/terracotta/gray_terracotta",
+      "nice_things:crafting_shaped/terracotta/green_terracotta",
+      "nice_things:crafting_shaped/terracotta/light_blue_terracotta",
+      "nice_things:crafting_shaped/terracotta/light_gray_terracotta",
+      "nice_things:crafting_shaped/terracotta/lime_terracotta",
+      "nice_things:crafting_shaped/terracotta/magenta_terracotta",
+      "nice_things:crafting_shaped/terracotta/orange_terracotta",
+      "nice_things:crafting_shaped/terracotta/pink_terracotta",
+      "nice_things:crafting_shaped/terracotta/purple_terracotta",
+      "nice_things:crafting_shaped/terracotta/red_terracotta",
+      "nice_things:crafting_shaped/terracotta/white_terracotta",
+      "nice_things:crafting_shaped/terracotta/yellow_terracotta",
+      "nice_things:crafting_shaped/terracotta/undye_terracotta"
+    ]
+  }
+}

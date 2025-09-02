@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "concrete",
+    "key": {
+        "#": "#nice_things:dyeable_concrete",
+        "X": "minecraft:cyan_dye"
+    },
+    "pattern": [
+        "###",
+        "#X#",
+        "###"
+    ],
+    "result": {
+        "count": 8,
+        "id": "minecraft:cyan_concrete"
+    },
+    "show_notification": true
+}

@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#nice_things:dyeable_concrete"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shaped/terracotta/black_concrete",
+      "nice_things:crafting_shaped/terracotta/blue_concrete",
+      "nice_things:crafting_shaped/terracotta/brown_concrete",
+      "nice_things:crafting_shaped/terracotta/cyan_concrete",
+      "nice_things:crafting_shaped/terracotta/gray_concrete",
+      "nice_things:crafting_shaped/terracotta/green_concrete",
+      "nice_things:crafting_shaped/terracotta/light_blue_concrete",
+      "nice_things:crafting_shaped/terracotta/light_gray_concrete",
+      "nice_things:crafting_shaped/terracotta/lime_concrete",
+      "nice_things:crafting_shaped/terracotta/magenta_concrete",
+      "nice_things:crafting_shaped/terracotta/orange_concrete",
+      "nice_things:crafting_shaped/terracotta/pink_concrete",
+      "nice_things:crafting_shaped/terracotta/purple_concrete",
+      "nice_things:crafting_shaped/terracotta/red_concrete",
+      "nice_things:crafting_shaped/terracotta/white_concrete",
+      "nice_things:crafting_shaped/terracotta/yellow_concrete"
+    ]
+  }
+}

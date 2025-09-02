@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "building",
+    "group": "stained_glass",
+    "key": {
+        "#": "#nice_things:dyeable_glass",
+        "X": "minecraft:black_dye"
+    },
+    "pattern": [
+        "###",
+        "#X#",
+        "###"
+    ],
+    "result": {
+        "count": 8,
+        "id": "minecraft:black_stained_glass"
+    },
+    "show_notification": true
+}

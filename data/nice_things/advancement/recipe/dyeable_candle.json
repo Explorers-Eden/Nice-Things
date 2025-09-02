@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:candles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shaped/candle/black_candle",
+      "nice_things:crafting_shaped/candle/blue_candle",
+      "nice_things:crafting_shaped/candle/brown_candle",
+      "nice_things:crafting_shaped/candle/cyan_candle",
+      "nice_things:crafting_shaped/candle/gray_candle",
+      "nice_things:crafting_shaped/candle/green_candle",
+      "nice_things:crafting_shaped/candle/light_blue_candle",
+      "nice_things:crafting_shaped/candle/light_gray_candle",
+      "nice_things:crafting_shaped/candle/lime_candle",
+      "nice_things:crafting_shaped/candle/magenta_candle",
+      "nice_things:crafting_shaped/candle/orange_candle",
+      "nice_things:crafting_shaped/candle/pink_candle",
+      "nice_things:crafting_shaped/candle/purple_candle",
+      "nice_things:crafting_shaped/candle/red_candle",
+      "nice_things:crafting_shaped/candle/white_candle",
+      "nice_things:crafting_shaped/candle/yellow_candle",
+      "nice_things:crafting_shaped/candle/undye_candle"
+    ]
+  }
+}
