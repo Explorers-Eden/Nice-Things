@@ -1,0 +1,31 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:baked_potato",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            },
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_model": "nice_things:boiled_egg",
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.boiled_egg"
+                },
+                "minecraft:custom_data": {
+                  "nice_things": "boiled_egg"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

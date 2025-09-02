@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "ingredient": "#minecraft:eggs",
+  "result": {
+    "id": "minecraft:baked_potato",
+    "components": {
+                "minecraft:item_model": "nice_things:boiled_egg",
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.boiled_egg"
+                },
+                "minecraft:custom_data": {
+                  "nice_things": "boiled_egg"
+                }
+              }
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}
