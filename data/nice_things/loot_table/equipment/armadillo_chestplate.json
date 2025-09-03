@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_chestplate",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.armadillo_chestplate"
+                },
+                "minecraft:item_model": "nice_things:armadillo_chestplate",
+                "minecraft:rarity": "common",
+                "minecraft:custom_data": "{nice_things:armadillo_chestplate}",
+                "minecraft:equippable": {
+                  "slot": "chest",
+                  "equip_sound": "minecraft:item.armor.equip_iron",
+                  "asset_id": "nice_things:armadillo",
+                  "dispensable": true,
+                  "swappable": true,
+                  "damage_on_hurt": true,
+                  "equip_on_interact": true,
+                  "can_be_sheared": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

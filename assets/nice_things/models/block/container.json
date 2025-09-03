@@ -1,7 +1,6 @@
 {
 	"format_version": "1.21.6",
 	"credit": "Made with Blockbench",
-	"parent": "minecraft:block/template_container",
 	"textures": {
 		"0": "nice_things:block/container_top",
 		"2": "nice_things:block/container_side",
