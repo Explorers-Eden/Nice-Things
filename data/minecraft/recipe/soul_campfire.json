@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "#minecraft:soul_fire_base_blocks",
+    "L": "#minecraft:logs",
+    "S": "minecraft:stick",
+    "F": [
+      "minecraft:fire_charge",
+      "minecraft:soul_torch"
+    ]
+  },
+  "pattern": [
+    " F ",
+    "S#S",
+    "LLL"
+  ],
+  "result": {
+    "components": {
+                      "minecraft:item_name": {"translate":"block.nice_things.lit_soul_campfire"},
+                      "minecraft:block_state": {
+                        "lit": "true"
+                      },
+                      "minecraft:custom_data": {
+                        "nice_things": "lit_soul_campfire"
+                      }
+                    },
+    "count": 1,
+    "id": "minecraft:soul_campfire"
+  }
+}

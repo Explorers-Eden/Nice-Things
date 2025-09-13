@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": "#minecraft:coals",
+    "L": "#minecraft:logs",
+    "S": "minecraft:stick",
+    "F": [
+      "minecraft:fire_charge",
+      "minecraft:torch"
+    ]
+  },
+  "pattern": [
+    " F ",
+    "SCS",
+    "LLL"
+  ],
+  "result": {
+    "components": {
+                      "minecraft:item_name": {"translate":"block.nice_things.lit_campfire"},
+                      "minecraft:block_state": {
+                        "lit": "true"
+                      },
+                      "minecraft:custom_data": {
+                        "nice_things": "lit_campfire"
+                      }
+                    },
+    "count": 1,
+    "id": "minecraft:campfire"
+  }
+}

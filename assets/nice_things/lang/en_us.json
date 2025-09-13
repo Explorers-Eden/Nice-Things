@@ -576,6 +576,10 @@
    "block.nice_things.banner.z.red": "Red Letter: Z",
    "block.nice_things.banner.z.white": "White Letter: Z",
    "block.nice_things.banner.z.yellow": "Yellow Letter: Z",
+   "block.nice_things.lit_campfire": "Lit Campfire",
+   "block.nice_things.unlit_campfire": "Unlit Campfire",
+   "block.nice_things.lit_soul_campfire": "Lit Soul Campfire",
+   "block.nice_things.unlit_soul_campfire": "Unlit Soul Campfire",
 
    "painting.nice_things.bear.author": "Explorer's Eden",
    "painting.nice_things.bear.title": "Bear",

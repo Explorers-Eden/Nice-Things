@@ -5,6 +5,7 @@
 		"nice_things:chopper/process/init",
 		"nice_things:conveyor/move/init",
 		"nice_things:fan/blow/init",
-		"nice_things:armadillo_chestplate"
+		"nice_things:armadillo_chestplate",
+		"nice_things:armor_stand/init"
 	]
 }

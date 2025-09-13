@@ -1,0 +1,14 @@
+[
+  {
+    "function": "minecraft:set_components",
+    "components": {
+      "minecraft:entity_data": {
+        "id": "minecraft:armor_stand",
+        "ShowArms": true
+      },
+      "minecraft:custom_data": {
+        "nice_things": "armor_stand"
+      }
+    }
+  }
+]
