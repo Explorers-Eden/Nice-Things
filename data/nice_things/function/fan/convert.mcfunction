@@ -9,6 +9,12 @@ execute if items entity @s container.0 minecraft:copper_trapdoor run return run 
 execute if items entity @s container.0 minecraft:cut_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_cut_copper"}
 execute if items entity @s container.0 minecraft:cut_copper_slab run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_cut_copper_slab"}
 execute if items entity @s container.0 minecraft:cut_copper_stairs run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_cut_copper_stairs"}
+execute if items entity @s container.0 minecraft:lightning_rod run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_lightning_rod"}
+execute if items entity @s container.0 minecraft:copper_golem_statue run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_copper_golem_statue"}
+execute if items entity @s container.0 minecraft:copper_chain run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_copper_chain"}
+execute if items entity @s container.0 minecraft:copper_chest run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_copper_chest"}
+execute if items entity @s container.0 minecraft:copper_lantern run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_copper_lantern"}
+execute if items entity @s container.0 minecraft:copper_bars run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:exposed_copper_bars"}
 
 execute if items entity @s container.0 minecraft:exposed_chiseled_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_chiseled_copper"}
 execute if items entity @s container.0 minecraft:exposed_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_copper"}
@@ -19,6 +25,12 @@ execute if items entity @s container.0 minecraft:exposed_copper_trapdoor run ret
 execute if items entity @s container.0 minecraft:exposed_cut_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_cut_copper"}
 execute if items entity @s container.0 minecraft:exposed_cut_copper_slab run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_cut_copper_slab"}
 execute if items entity @s container.0 minecraft:exposed_cut_copper_stairs run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_cut_copper_stairs"}
+execute if items entity @s container.0 minecraft:exposed_lightning_rod run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_lightning_rod"}
+execute if items entity @s container.0 minecraft:exposed_copper_golem_statue run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_copper_golem_statue"}
+execute if items entity @s container.0 minecraft:exposed_copper_chain run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_copper_chain"}
+execute if items entity @s container.0 minecraft:exposed_copper_chest run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_copper_chest"}
+execute if items entity @s container.0 minecraft:exposed_copper_lantern run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_copper_lantern"}
+execute if items entity @s container.0 minecraft:exposed_copper_bars run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:weathered_copper_bars"}
 
 execute if items entity @s container.0 minecraft:weathered_chiseled_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_chiseled_copper"}
 execute if items entity @s container.0 minecraft:weathered_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_copper"}
@@ -29,3 +41,9 @@ execute if items entity @s container.0 minecraft:weathered_copper_trapdoor run r
 execute if items entity @s container.0 minecraft:weathered_cut_copper run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_cut_copper"}
 execute if items entity @s container.0 minecraft:weathered_cut_copper_slab run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_cut_copper_slab"}
 execute if items entity @s container.0 minecraft:weathered_cut_copper_stairs run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_cut_copper_stairs"}
+execute if items entity @s container.0 minecraft:weathered_lightning_rod run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_lightning_rod"}
+execute if items entity @s container.0 minecraft:weathered_copper_golem_statue run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_copper_golem_statue"}
+execute if items entity @s container.0 minecraft:weathered_copper_chain run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_copper_chain"}
+execute if items entity @s container.0 minecraft:weathered_copper_chest run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_copper_chest"}
+execute if items entity @s container.0 minecraft:weathered_copper_lantern run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_copper_lantern"}
+execute if items entity @s container.0 minecraft:weathered_copper_bars run return run item modify entity @s container.0 {"function":"minecraft:set_item","item":"minecraft:oxidized_copper_bars"}
