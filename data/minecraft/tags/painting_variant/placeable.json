@@ -5,6 +5,10 @@
     "nice_things:end",
     "nice_things:bear",
     "nice_things:tulip",
-    "nice_things:red_mushroom"
+    "nice_things:red_mushroom",
+    "minecraft:fire",
+    "minecraft:earth",
+    "minecraft:water",
+    "minecraft:wind"
   ]
 }
