@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "craftable_disc",
+  "category": "misc",
+  "pattern": [
+    "FFF",
+    "F#F",
+    "FFF"
+  ],
+  "key": {
+    "F": "minecraft:disc_fragment_5",
+    "#": "minecraft:oak_sapling"
+  },
+  "result": {
+    "components": {
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.music_disc"
+                },
+                "minecraft:rarity": "uncommon",
+                "item_model": "nice_things:music_disc_ambient_forest",
+                "minecraft:custom_data": {
+                  "nice_things": {
+                    "item": "music_disc_ambient_forest"
+                  }
+                },
+                "minecraft:jukebox_playable": "nice_things:ambient_forest"
+              },
+    "count": 1,
+    "id": "minecraft:music_disc_5"
+  }
+}

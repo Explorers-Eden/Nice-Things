@@ -1,4 +1,8 @@
 {
+   "jukebox_song.nice_things.ambient_forest": "Ambient Forest Sounds",
+   "jukebox_song.nice_things.ambient_ocean": "Ambient Ocean Sounds",
+
+   "item.nice_things.music_disc": "Music Disc",
    "item.nice_things.simple_harness": "Simple Harness",
    "item.nice_things.sculk_harness": "Sculk Harness",
    "item.nice_things.invisible_item_frame": "Invisible Item Frame",
@@ -10,6 +14,14 @@
    "item.nice_things.golden_sweet_berries": "Golden Sweet Berries",
    "item.nice_things.boiled_egg": "Boiled Egg",
    "item.nice_things.armadillo_chestplate": "Armadillo Chestplate",
+   "item.nice_things.small_armor_stand": "Small Armor Stand",
+   "item.nice_things.biome_brew.cocoa": "Cocoa Biome Brew",
+   "item.nice_things.biome_brew.lush": "Lush Biome Brew",
+   "item.nice_things.biome_brew.winter": "Winter Biome Brew",
+   "item.nice_things.biome_brew.ruby": "Ruby Biome Brew",
+   "item.nice_things.biome_brew.lavender": "Lavender Biome Brew",
+   "item.nice_things.biome_brew.pumpkin": "Pumpkin Biome Brew",
+   "item.nice_things.biome_brew.void": "Void Biome Brew",
 
    "block.nice_things.fan": "Fan",
    "block.nice_things.chopper": "Chopper",

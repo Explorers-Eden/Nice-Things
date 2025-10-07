@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "X#X",
+    "XXX"
+  ],
+  "key": {
+    "X": "minecraft:azalea_leaves",
+    "#": "minecraft:pink_petals"
+  },
+  "result": {
+    "id": "minecraft:flowering_azalea_leaves",
+    "count": 8
+  }
+}

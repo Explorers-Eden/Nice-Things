@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:command",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:music_disc_5",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.music_disc"
+                },
+                "minecraft:rarity": "uncommon",
+                "item_model": "nice_things:music_disc_ambient_ocean",
+                "minecraft:custom_data": {
+                  "nice_things": {
+                    "item": "music_disc_ambient_ocean"
+                  }
+                },
+                "minecraft:jukebox_playable": "nice_things:ambient_ocean"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "sound_event": {
+      "sound_id": "nice_things:music_disc.ambient.ocean"
+  },
+    "description": {
+      "translate": "jukebox_song.nice_things.ambient_ocean"
+    },
+    "length_in_seconds": 132.0,
+    "comparator_output": 15
+  }
+  
