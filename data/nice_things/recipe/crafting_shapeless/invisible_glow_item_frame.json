@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     "minecraft:glow_item_frame",
-    "minecraft:glass"
+    "minecraft:glass_pane"
   ],
   "result": {
     "components": {
