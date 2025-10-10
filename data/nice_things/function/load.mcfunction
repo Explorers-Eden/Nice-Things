@@ -8,4 +8,4 @@ scoreboard objectives add nice_things.container dummy
 scoreboard players set $1 nice_things.technical 1
 
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "1.2"
+data modify storage eden:datapack nice_things.version set value "1.3"

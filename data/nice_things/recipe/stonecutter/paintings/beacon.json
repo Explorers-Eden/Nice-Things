@@ -3,7 +3,7 @@
   "ingredient": "minecraft:painting",
   "result": {
     "components": {
-      "minecraft:painting/variant": "minecraft:creebat"
+      "minecraft:painting/variant": "nice_things:beacon"
     },
     "count": 1,
     "id": "minecraft:painting"

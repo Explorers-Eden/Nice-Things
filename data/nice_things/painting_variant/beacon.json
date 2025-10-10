@@ -1,0 +1,13 @@
+{
+  "asset_id": "nice_things:beacon",
+  "author": {
+    "color": "gray",
+    "translate": "painting.nice_things.beacon.author"
+  },
+  "height": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.nice_things.beacon.title"
+  },
+  "width": 2
+}
