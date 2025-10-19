@@ -1,0 +1,8 @@
+## Changes:
+- Added new Block: Display Case
+    - Can be crafted with a Glass Block and 2 Iron Ingots
+    - Displays and rotates an Item given to
+    - Only the player who placed the block can interact/break it
+
+
+## Fixes:
