@@ -1,8 +1,22 @@
 ## Changes:
-- Added new Block: Display Case
-    - Can be crafted with a Glass Block and 2 Iron Ingots
-    - Displays and rotates an Item given to
-    - Only the player who placed the block can interact/break it
+- Added new Structures:
+    - End Ships (generate in the End and always contain a broken Elytra)
+    - Villager Outposts (7 variants in total; 1 type for each Villager type)
+    - Several decorative Taiga structures
+    - Several decorative Snowy structures
+    - Several decorative Jungle structures
+- Added new Recipes:
+    - Pale Moss Block/Carpet from Moss Block/Carpet & Light Gray Dye (shaped crafting)
+    - Display Cases (shaped crafting)
+- Added new Blocks: 
+    - Display Cases:
+        - Has variants for each Wood Type, Copper Block and Iron (17 in total)
+        - Can be crafted with a Glass Block and a respective block (example: 2 Iron Blocks and a Glass Block for the Iron Display Case)
+        - Displays and rotates an Item given to
+        - Only the player who placed the block can interact/break it
+        - Right clicking it with an item in hand places the item in the Display Case (when no other is in it)
+        - Right Clicking the Display Case with an empty hand will remove the item from the Display Case
+        - Left Clicking the Display Case with an empty hand breaks the Display Case
 
 
 ## Fixes:

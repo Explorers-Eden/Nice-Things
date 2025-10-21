@@ -1,4 +1,4 @@
-loot spawn ~ ~ ~ loot nice_things:block/display_case
+$loot spawn ~ ~ ~ loot nice_things:block/display_case/$(type)
 $summon item ~ ~ ~ {Item:$(item)}
 
 setblock ~ ~ ~ minecraft:air

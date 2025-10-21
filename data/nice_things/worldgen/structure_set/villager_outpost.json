@@ -1,0 +1,45 @@
+{
+    "placement": {
+      "type": "minecraft:random_spread",
+      "spacing": 32,
+      "separation": 12,
+      "salt": 292997630,
+      "spread_type": "triangular",
+      "frequency_reduction_method": "default",
+      "frequency": 0.8,
+      "exclusion_zone": {
+        "other_set": "minecraft:villages",
+        "chunk_count": 10
+      }
+    },
+    "structures": [
+      {
+        "structure": "nice_things:villager_outpost/desert",
+        "weight": 1
+      },
+      {
+        "structure": "nice_things:villager_outpost/jungle",
+        "weight": 1
+      },
+      {
+        "structure": "nice_things:villager_outpost/plains",
+        "weight": 1
+      },
+      {
+        "structure": "nice_things:villager_outpost/savanna",
+        "weight": 1
+      },
+      {
+        "structure": "nice_things:villager_outpost/snow",
+        "weight": 1
+      },
+      {
+        "structure": "nice_things:villager_outpost/swamp",
+        "weight": 1
+      },
+      {
+        "structure": "nice_things:villager_outpost/taiga",
+        "weight": 1
+      }
+    ]
+  }

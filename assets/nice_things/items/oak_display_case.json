@@ -1,7 +1,7 @@
 {
     "model": {
       "type": "minecraft:model",
-      "model": "nice_things:block/display_case"
+      "model": "nice_things:block/oak_display_case"
     }
   }
   

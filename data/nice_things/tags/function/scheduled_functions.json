@@ -7,6 +7,7 @@
 		"nice_things:fan/blow/init",
 		"nice_things:armadillo_chestplate",
 		"nice_things:armor_stand/init",
-		"nice_things:display_case/rotate"
+		"nice_things:display_case/rotate",
+		"nice_things:display_case/remove"
 	]
 }

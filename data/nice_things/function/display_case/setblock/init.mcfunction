@@ -1,1 +1,1 @@
-execute as @e[type=minecraft:item_frame,tag=nice_things.display_case.spawner] at @s run function nice_things:display_case/setblock/exec
+execute as @e[type=minecraft:item_frame,tag=nice_things.display_case.spawner] at @s run function nice_things:display_case/setblock/exec with entity @s data

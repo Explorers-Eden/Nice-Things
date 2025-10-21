@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shaped/display_case/iron",
+      "nice_things:crafting_shaped/display_case/acacia",
+      "nice_things:crafting_shaped/display_case/bamboo",
+      "nice_things:crafting_shaped/display_case/birch",
+      "nice_things:crafting_shaped/display_case/cherry",
+      "nice_things:crafting_shaped/display_case/copper",
+      "nice_things:crafting_shaped/display_case/crimson",
+      "nice_things:crafting_shaped/display_case/dark_oak",
+      "nice_things:crafting_shaped/display_case/exposed_copper",
+      "nice_things:crafting_shaped/display_case/jungle",
+      "nice_things:crafting_shaped/display_case/mangrove",
+      "nice_things:crafting_shaped/display_case/oak",
+      "nice_things:crafting_shaped/display_case/oxidized_copper",
+      "nice_things:crafting_shaped/display_case/pale_oak",
+      "nice_things:crafting_shaped/display_case/spruce",
+      "nice_things:crafting_shaped/display_case/warped",
+      "nice_things:crafting_shaped/display_case/weathered_copper"
+    ]
+  }
+}

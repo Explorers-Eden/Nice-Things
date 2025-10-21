@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "xxx",
+    "x#x",
+    "xxx"
+  ],
+  "key": {
+    "x": "minecraft:moss_carpet",
+    "#": "minecraft:light_gray_dye"
+  },
+  "result": {
+    "id": "minecraft:pale_moss_carpet",
+    "count": 8
+  }
+}

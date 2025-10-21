@@ -1,4 +1,4 @@
-loot spawn ~ ~ ~ loot nice_things:block/display_case
+$loot spawn ~ ~ ~ loot nice_things:block/display_case/$(type)
 
 setblock ~ ~ ~ minecraft:air
 kill @n[type=item_display,distance=..0.25,tag=nice_things.display_case.block]

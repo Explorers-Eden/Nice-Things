@@ -1,0 +1,150 @@
+{
+    "name": "nice_things:jungle_decorations",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/bamboo_farm_1",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/bamboo_farm_2",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/bamboo_farm_3",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/bamboo_farm_4",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/cookie_farm_1",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/cookie_farm_2",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/cookie_farm_3",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/temple_1",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/temple_2",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/temple_3",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/temple_4",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/torch_1",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/torch_2",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/torch_3",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 10,
+        "element": {
+            "location": "nice_things:jungle_decorations/torch_4",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    },
+    {
+        "weight": 2,
+        "element": {
+            "location": "nice_things:jungle_decorations/statue_1",
+            "processors": "minecraft:empty",
+            "projection": "rigid",
+            "element_type": "minecraft:single_pool_element"
+        }
+    }
+]
+}

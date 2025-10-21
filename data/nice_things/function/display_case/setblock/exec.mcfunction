@@ -1,8 +1,9 @@
-playsound minecraft:block.wood.place block @a ~ ~ ~ 0.8
+playsound minecraft:block.glass.place block @a ~ ~ ~ 0.8
 
-execute align xyz run summon item_display ~.5 ~.5 ~.5 \
+$execute align xyz run summon item_display ~.5 ~.5 ~.5 \
     {\
         billboard:"fixed",\
+        data:{type:$(type)},\
         Tags:["nice_things.display_case.block"],\
         transformation:{\
             left_rotation:[0f,0f,0f,1f],\
@@ -14,16 +15,17 @@ execute align xyz run summon item_display ~.5 ~.5 ~.5 \
             id:"minecraft:barrier",\
             count:1,\
             components:{\
-                "minecraft:item_model":"nice_things:display_case"\
+                "minecraft:item_model":"nice_things:$(type)_display_case"\
             }\
         }\
     }
 
-execute align xyz run summon item_display ~.5 ~.5 ~.5 \
+$execute align xyz run summon item_display ~.5 ~.5 ~.5 \
     {\
         billboard:"fixed",\
         interpolation_duration:250,\
         teleport_duration:250,\
+        data:{type:$(type)},\
         Tags:["nice_things.display_case.item"],\
         transformation:{\
             left_rotation:[0f,0f,0f,1f],\
@@ -33,11 +35,12 @@ execute align xyz run summon item_display ~.5 ~.5 ~.5 \
         }\
     }
 
-execute align xyz run summon interaction ~.5 ~ ~.5 \
+$execute align xyz run summon interaction ~.5 ~ ~.5 \
     {\
         width:1.01f,\
         height:1.0f,\
         response:1b,\
+        data:{type:$(type)},\
         Tags:["nice_things.display_case.interaction"]\
     }
 
