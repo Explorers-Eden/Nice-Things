@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "  X",
+    " # ",
+    "X  "
+  ],
+  "key": {
+    "X": "minecraft:iron_ingot",
+    "#": "minecraft:stick"
+  },
+  "result": {
+    "id": "minecraft:music_disc_13",
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:max_damage": 251,
+      "!minecraft:jukebox_playable": {},
+      "minecraft:item_name": {
+        "translate": "item.nice_things.wrench"
+      },
+      "minecraft:item_model": "nice_things:wrench",
+      "minecraft:rarity": "common",
+      "minecraft:damage": 0,
+      "minecraft:repairable": {
+                  "items": "minecraft:iron_ingot"
+                },
+      "minecraft:custom_data": {
+        "nice_things": "wrench"
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 9999999,
+        "animation": "block",
+        "has_consume_particles": false
+      }
+    },
+    "count": 1
+  }
+}

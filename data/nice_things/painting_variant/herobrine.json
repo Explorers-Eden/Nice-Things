@@ -1,0 +1,13 @@
+{
+  "asset_id": "nice_things:herobrine",
+  "author": {
+    "color": "gray",
+    "translate": "painting.nice_things.herobrine.author"
+  },
+  "height": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.nice_things.herobrine.title"
+  },
+  "width": 2
+}

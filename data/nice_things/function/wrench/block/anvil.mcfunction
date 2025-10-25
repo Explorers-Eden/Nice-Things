@@ -1,0 +1,3 @@
+execute if block ~ ~ ~ minecraft:anvil run return run function nice_things:wrench/rotate/facing {"block":"minecraft:anvil"}
+execute if block ~ ~ ~ minecraft:chipped_anvil run return run function nice_things:wrench/rotate/facing {"block":"minecraft:chipped_anvil"}
+execute if block ~ ~ ~ minecraft:damaged_anvil run return run function nice_things:wrench/rotate/facing {"block":"minecraft:damaged_anvil"}

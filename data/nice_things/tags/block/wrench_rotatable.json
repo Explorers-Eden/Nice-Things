@@ -1,0 +1,17 @@
+{
+  "values": [
+    "#nice_things:container",
+    "#nice_things:redstone",
+    "#nice_things:furnaces",
+    "#nice_things:glazed_terracotta",
+    "#minecraft:logs",
+    "#minecraft:anvil",
+    "#minecraft:chains",
+    "#minecraft:lightning_rods",
+    "#minecraft:copper_golem_statues",
+    "minecraft:grindstone",
+    "minecraft:stonecutter",
+    "minecraft:decorated_pot",
+    "minecraft:calibrated_sculk_sensor"
+  ]
+}

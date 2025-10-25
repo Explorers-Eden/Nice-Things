@@ -2,6 +2,9 @@
    "jukebox_song.nice_things.ambient_forest": "Ambient Forest Sounds",
    "jukebox_song.nice_things.ambient_ocean": "Ambient Ocean Sounds",
 
+   "item.nice_things.cheese": "Cheese",
+   "item.nice_things.chorus_pie": "Chorus Pie",
+   "item.nice_things.wrench": "Wrench",
    "item.nice_things.music_disc": "Music Disc",
    "item.nice_things.simple_harness": "Simple Harness",
    "item.nice_things.sculk_harness": "Sculk Harness",
@@ -22,6 +25,7 @@
    "item.nice_things.biome_brew.lavender": "Lavender Biome Brew",
    "item.nice_things.biome_brew.pumpkin": "Pumpkin Biome Brew",
    "item.nice_things.biome_brew.void": "Void Biome Brew",
+   "item.nice_things.biome_brew.cotton": "Cotton Biome Brew",
 
    "block.nice_things.fan": "Fan",
    "block.nice_things.chopper": "Chopper",
@@ -623,5 +627,7 @@
    "painting.nice_things.tulip.author": "Explorer's Eden",
    "painting.nice_things.tulip.title": "Tulip",
    "painting.nice_things.beacon.author": "Explorer's Eden",
-   "painting.nice_things.beacon.title": "Beacon"
+   "painting.nice_things.beacon.title": "Beacon",
+   "painting.nice_things.herobrine.author": "Explorer's Eden",
+   "painting.nice_things.herobrine.title": "Herobrine"
 }

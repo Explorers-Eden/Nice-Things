@@ -1,0 +1,8 @@
+execute if block ~ ~ ~ minecraft:lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:lightning_rod"}
+execute if block ~ ~ ~ minecraft:exposed_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:exposed_lightning_rod"}
+execute if block ~ ~ ~ minecraft:weathered_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:weathered_lightning_rod"}
+execute if block ~ ~ ~ minecraft:oxidized_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:oxidized_lightning_rod"}
+execute if block ~ ~ ~ minecraft:waxed_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:waxed_lightning_rod"}
+execute if block ~ ~ ~ minecraft:waxed_exposed_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:waxed_exposed_lightning_rod"}
+execute if block ~ ~ ~ minecraft:waxed_weathered_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:waxed_weathered_lightning_rod"}
+execute if block ~ ~ ~ minecraft:waxed_oxidized_lightning_rod run return run function nice_things:wrench/rotate/waterloggable/facing_up_down {"block":"minecraft:waxed_oxidized_lightning_rod"}

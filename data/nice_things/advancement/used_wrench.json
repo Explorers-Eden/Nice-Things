@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "used_wrench": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_13",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "wrench"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "nice_things:wrench/init"
+  }
+}

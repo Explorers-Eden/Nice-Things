@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " X ",
+    " # "
+  ],
+  "key": {
+    "X": "minecraft:sugar",
+    "#": "minecraft:milk_bucket"
+  },
+  "result": {
+    "id": "minecraft:cookie",
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.nice_things.cheese"
+      },
+      "minecraft:item_model": "nice_things:cheese",
+      "minecraft:custom_data": {
+        "nice_things": "cheese"
+      },
+      "minecraft:consumable": {
+        "on_consume_effects": [
+          {
+            "type": "minecraft:clear_all_effects"
+          }
+        ]
+      }
+    },
+    "count": 1
+  }
+}

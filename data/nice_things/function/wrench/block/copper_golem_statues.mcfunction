@@ -1,0 +1,8 @@
+execute if block ~ ~ ~ minecraft:copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:exposed_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:exposed_copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:weathered_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:weathered_copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:oxidized_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:oxidized_copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:waxed_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:waxed_copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:waxed_exposed_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:waxed_exposed_copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:waxed_weathered_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:waxed_weathered_copper_golem_statue"}
+execute if block ~ ~ ~ minecraft:waxed_oxidized_copper_golem_statue run return run function nice_things:wrench/rotate/waterloggable/facing {"block":"minecraft:waxed_oxidized_copper_golem_statue"}

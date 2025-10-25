@@ -1,0 +1,10 @@
+{
+  "values":[
+	"minecraft:observer",
+	"minecraft:piston",
+	"minecraft:sticky_piston",
+	"minecraft:dropper",
+	"minecraft:dispenser",
+	"minecraft:hopper"
+  ]
+}

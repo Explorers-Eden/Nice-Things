@@ -1,0 +1,9 @@
+execute if block ~ ~ ~ minecraft:iron_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:iron_chain"}
+execute if block ~ ~ ~ minecraft:copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:copper_chain"}
+execute if block ~ ~ ~ minecraft:exposed_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:exposed_copper_chain"}
+execute if block ~ ~ ~ minecraft:weathered_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:weathered_copper_chain"}
+execute if block ~ ~ ~ minecraft:oxidized_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:oxidized_copper_chain"}
+execute if block ~ ~ ~ minecraft:waxed_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:waxed_copper_chain"}
+execute if block ~ ~ ~ minecraft:waxed_exposed_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:waxed_exposed_copper_chain"}
+execute if block ~ ~ ~ minecraft:waxed_weathered_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:waxed_weathered_copper_chain"}
+execute if block ~ ~ ~ minecraft:waxed_oxidized_copper_chain run return run function nice_things:wrench/rotate/waterloggable/axis {"block":"minecraft:waxed_oxidized_copper_chain"}
