@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:sugar",
+    "#minecraft:eggs"
+  ],
+  "result": {
+    "components": {
+      "minecraft:item_model": "nice_things:apple_pie",
+      "minecraft:item_name": {
+        "translate": "item.nice_things.apple_pie"
+      },
+      "minecraft:custom_data": {
+        "nice_things": "apple_pie"
+      }
+    },
+    "count": 1,
+    "id": "minecraft:pumpkin_pie"
+  }
+}

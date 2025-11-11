@@ -14,12 +14,12 @@
             {
               "function": "minecraft:set_components",
               "components": {
-      "minecraft:item_model": "nice_things:chorus_pie",
+      "minecraft:item_model": "nice_things:apple_pie",
       "minecraft:item_name": {
-        "translate": "item.nice_things.chorus_pie"
+        "translate": "item.nice_things.apple_pie"
       },
       "minecraft:custom_data": {
-        "nice_things": "chorus_pie"
+        "nice_things": "apple_pie"
       }
     }
             }

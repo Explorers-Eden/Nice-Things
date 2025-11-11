@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": "minecraft:wheat",
+    "X": "minecraft:sweet_berries"
+  },
+  "pattern": [
+    "#X#"
+  ],
+  "result": {
+    "components": {
+      "minecraft:item_name": {
+        "translate": "item.nice_things.sweet_berry_cookie"
+      },
+      "minecraft:item_model": "nice_things:sweet_berry_cookie",
+      "minecraft:custom_data": {
+        "nice_things": "sweet_berry_cookie"
+      }
+    },
+    "count": 3,
+    "id": "minecraft:cookie"
+  }
+}

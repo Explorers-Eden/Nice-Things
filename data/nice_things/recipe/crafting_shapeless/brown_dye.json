@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:orange_dye",
+    "minecraft:black_dye"
+  ],
+  "result": {
+    "id": "minecraft:brown_dye"
+  }
+}

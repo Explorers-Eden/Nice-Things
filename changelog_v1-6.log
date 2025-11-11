@@ -1,0 +1,12 @@
+## Changes:
+- Added Recipes to repair Damaged/Chipped Anvils
+- Added new recipes for dyes:
+    - 1 Blue Dye + 1 Yellow Dye for 1 Green Dye
+    - 1 Orange Dye + 1 Black Dye for 1 Brown Dye
+    - Smelting Bush for Green Dye
+- Added Chorus Pie
+- Added Apple Pie
+- Added Sweet Berry Cookie
+
+## Fixes:
+- Recipes for Golden Beetroot/Sweet Berries/Potato using Chorus Fruit instead of the respective ingredient
