@@ -1,4 +1,5 @@
 playsound minecraft:block.glass.place block @a ~ ~ ~ 0.8
+setblock ~ ~ ~ minecraft:barrier
 
 $execute align xyz run summon item_display ~.5 ~.5 ~.5 \
     {\
@@ -48,5 +49,4 @@ execute as @e[type=interaction,tag=nice_things.display_case.interaction,distance
     unless data entity @s data.owner \
         run data modify entity @s data.owner set from entity @p[distance=..16] UUID
 
-setblock ~ ~ ~ minecraft:barrier
 kill @s

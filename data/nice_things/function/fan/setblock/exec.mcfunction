@@ -1,4 +1,5 @@
 playsound minecraft:block.wood.place block @a ~ ~ ~ 0.8
+setblock ~ ~ ~ minecraft:petrified_oak_slab[type=double]
 
 summon item_display ~ ~ ~ {billboard:"fixed",Tags:["nice_things.fan.spawner","nice_things.fan.display"],transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0.5f,-0.51f],scale:[1f,1f,1f]},item:{id:"minecraft:barrier",count:1,components:{"minecraft:item_model":"nice_things:fan"}}}
 
@@ -18,8 +19,6 @@ execute if entity @p[y_rotation=135..179.99] run data modify entity @n[type=item
 execute if entity @p[y_rotation=135..179.99] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.fan.spawner,distance=..10] ~ ~-0.5 ~0.51
 
 data modify entity @s Rotation[1] set value 0.0f
-
-setblock ~ ~ ~ minecraft:petrified_oak_slab[type=double]
 
 tag @n[type=item_display,tag=nice_things.fan.spawner,distance=..10] remove nice_things.fan.spawner
 kill @s

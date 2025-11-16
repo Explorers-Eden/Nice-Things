@@ -19,52 +19,14 @@
                 },
                 "minecraft:custom_data": "{nice_things:container}",
                 "minecraft:entity_data": {
-                  "id": "minecraft:item_display",
+                  "id": "minecraft:item_frame",
                   "Tags": [
-                    "nice_things.container.spawner",
-                    "nice_things.container.display"
+                    "nice_things.container.spawner"
                   ],
-                  "data": {
-                      "stored_item": {
-                        "id": "minecraft:air",
-                        "count": "0"
-                      }
-                  },
-                  "transformation": {
-                    "translation": [
-                      0,
-                      0,
-                      0
-                    ],
-                    "left_rotation": [
-                      0,
-                      0,
-                      0,
-                      1
-                    ],
-                    "right_rotation": [
-                      0,
-                      0,
-                      0,
-                      1
-                    ],
-                    "scale": [
-                      1,
-                      1,
-                      1
-                    ]
-                  },
-                  "billboard": "fixed",
-                  "item": {
-                    "id": "minecraft:barrier",
-                    "components": {
-                      "minecraft:item_model": "minecraft:air"
-                    },
-                    "count": 1
-                  }
+                  "Invisible": true
                 }
               },
     "count": 1,
-    "id": "minecraft:bat_spawn_egg"
+    "id": "minecraft:item_frame"
   }
 }
