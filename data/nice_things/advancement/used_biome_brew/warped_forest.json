@@ -10,7 +10,7 @@
             "minecraft:custom_data": {
               "nice_things": {
                 "item": "biome_brew",
-                "biome": "cocoa"
+                "biome": "warped_forest"
               }
             }
           }
@@ -24,6 +24,6 @@
     ]
   ],
   "rewards": {
-    "function": "nice_things:biome_brew/cocoa"
+    "function": "nice_things:biome_brew/warped_forest"
   }
 }

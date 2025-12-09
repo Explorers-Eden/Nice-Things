@@ -26,7 +26,10 @@
       "nice_things:crafting_shaped/biome_brew/ruby",
       "nice_things:crafting_shaped/biome_brew/void",
       "nice_things:crafting_shaped/biome_brew/winter",
-      "nice_things:crafting_shaped/biome_brew/cotton"
+      "nice_things:crafting_shaped/biome_brew/cotton",
+      "nice_things:crafting_shaped/biome_brew/desert",
+      "nice_things:crafting_shaped/biome_brew/warped_forest",
+      "nice_things:crafting_shaped/biome_brew/crimson_forest"
     ]
   }
 }

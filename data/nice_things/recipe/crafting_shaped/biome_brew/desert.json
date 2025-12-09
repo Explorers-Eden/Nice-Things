@@ -1,0 +1,49 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "biome_brew",
+  "category": "misc",
+  "pattern": [
+    " X ",
+    "DGD",
+    "DDD"
+  ],
+  "key": {
+    "X": "minecraft:dead_bush",
+    "D": "minecraft:glowstone_dust",
+    "G": "minecraft:glass_bottle"
+  },
+  "result": {
+    "components": {
+                "minecraft:item_model": "nice_things:biome_brew",
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.biome_brew.desert"
+                },
+                "minecraft:custom_data": {
+                  "nice_things": {
+                    "item": "biome_brew",
+                    "biome": "desert"
+                  }
+                },
+                "minecraft:max_stack_size": 16,
+                "!minecraft:jukebox_playable": {},
+                "minecraft:consumable": {
+                  "consume_seconds": 2,
+                  "animation": "brush",
+                  "sound": "minecraft:block.amethyst_block.resonate",
+                  "has_consume_particles": false
+                },
+                "minecraft:dyed_color": 15653019,
+                "minecraft:enchantment_glint_override": true,
+                "minecraft:tooltip_display": {
+                  "hidden_components": [
+                    "minecraft:dyed_color"
+                  ]
+                },
+                "minecraft:use_remainder": {
+                  "id": "minecraft:glass_bottle"
+                }
+              },
+    "count": 1,
+    "id": "minecraft:music_disc_5"
+  }
+}

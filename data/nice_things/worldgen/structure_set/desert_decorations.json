@@ -1,0 +1,17 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 12,
+    "separation": 5,
+    "salt": 532556942,
+    "spread_type": "triangular",
+    "frequency_reduction_method": "default",
+    "frequency": 0.8
+  },
+  "structures": [
+    {
+      "structure": "nice_things:desert_decorations",
+      "weight": 1
+    }
+  ]
+}
