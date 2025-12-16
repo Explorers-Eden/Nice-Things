@@ -9,4 +9,4 @@ scoreboard objectives add nice_things.wrench dummy
 scoreboard players set $1 nice_things.technical 1
 
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "1.7.1"
+data modify storage eden:datapack nice_things.version set value "1.8"

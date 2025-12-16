@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nice_things:crafting_shapeless/sherd_dupe/angler",
+      "nice_things:crafting_shapeless/sherd_dupe/archer",
+      "nice_things:crafting_shapeless/sherd_dupe/arms_up",
+      "nice_things:crafting_shapeless/sherd_dupe/blade",
+      "nice_things:crafting_shapeless/sherd_dupe/brewer",
+      "nice_things:crafting_shapeless/sherd_dupe/burn",
+      "nice_things:crafting_shapeless/sherd_dupe/danger",
+      "nice_things:crafting_shapeless/sherd_dupe/explorer",
+      "nice_things:crafting_shapeless/sherd_dupe/flow",
+      "nice_things:crafting_shapeless/sherd_dupe/friend",
+      "nice_things:crafting_shapeless/sherd_dupe/guster",
+      "nice_things:crafting_shapeless/sherd_dupe/heart",
+      "nice_things:crafting_shapeless/sherd_dupe/heartbreak",
+      "nice_things:crafting_shapeless/sherd_dupe/howl",
+      "nice_things:crafting_shapeless/sherd_dupe/miner",
+      "nice_things:crafting_shapeless/sherd_dupe/mourner",
+      "nice_things:crafting_shapeless/sherd_dupe/plenty",
+      "nice_things:crafting_shapeless/sherd_dupe/prize",
+      "nice_things:crafting_shapeless/sherd_dupe/scrape",
+      "nice_things:crafting_shapeless/sherd_dupe/sheaf",
+      "nice_things:crafting_shapeless/sherd_dupe/shelter",
+      "nice_things:crafting_shapeless/sherd_dupe/skull",
+      "nice_things:crafting_shapeless/sherd_dupe/snort"
+    ]
+  }
+}

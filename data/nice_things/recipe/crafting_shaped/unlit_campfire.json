@@ -13,16 +13,16 @@
   ],
   "result": {
     "components": {
-                      "minecraft:item_name": {"translate":"block.nice_things.unlit_soul_campfire"},
+                      "minecraft:item_name": {"translate":"block.nice_things.unlit_campfire"},
                       "minecraft:block_state": {
                         "lit": "false"
                       },
                       "minecraft:custom_data": {
-                        "nice_things": "unlit_soul_campfire"
+                        "nice_things": "unlit_campfire"
                       },
-                      "minecraft:item_model": "nice_things:unlit_soul_campfire"
+                      "minecraft:item_model": "nice_things:unlit_campfire"
                     },
     "count": 1,
-    "id": "minecraft:campfire"
+    "id": "minecraft:soul_campfire"
   }
 }
