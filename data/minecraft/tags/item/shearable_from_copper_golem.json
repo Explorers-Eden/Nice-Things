@@ -19,6 +19,8 @@
     "minecraft:cactus_flower",
     "minecraft:conduit",
     "minecraft:campfire",
-    "minecraft:soul_campfire"
+    "minecraft:soul_campfire",
+    "minecraft:red_mushroom",
+    "minecraft:brown_mushroom"
   ]
 }
