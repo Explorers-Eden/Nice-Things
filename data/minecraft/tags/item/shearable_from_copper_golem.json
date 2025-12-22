@@ -1,0 +1,26 @@
+{
+  "values": [
+    "#minecraft:copper_golem_statues",
+    "#minecraft:small_flowers",
+    "#minecraft:candles",
+    "#minecraft:lanterns",
+    "#minecraft:saplings",
+    "minecraft:end_rod",
+    "minecraft:creeper_head",
+    "minecraft:dragon_head",
+    "minecraft:piglin_head",
+    "minecraft:player_head",
+    "minecraft:zombie_head",
+    "minecraft:skeleton_skull",
+    "minecraft:wither_skeleton_skull",
+    "minecraft:heavy_core",
+    "minecraft:cake",
+    "minecraft:dried_ghast",
+    "minecraft:sniffer_egg",
+    "minecraft:mangrove_propagule",
+    "minecraft:cactus_flower",
+    "minecraft:conduit",
+    "minecraft:campfire",
+    "minecraft:soul_campfire"
+  ]
+}

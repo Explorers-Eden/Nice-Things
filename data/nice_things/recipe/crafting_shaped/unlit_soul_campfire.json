@@ -23,6 +23,6 @@
                       "minecraft:item_model": "nice_things:unlit_soul_campfire"
                     },
     "count": 1,
-    "id": "minecraft:campfire"
+    "id": "minecraft:soul_campfire"
   }
 }
