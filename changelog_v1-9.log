@@ -1,6 +1,4 @@
 ## Changes:
-- Added recipes for duping Pottery Sherds
+- Players can now give Copper Golems a variety of Items they want them to wear on their Rods by throwing them the item ([Full List available here](https://github.com/Explorers-Eden/Nice-Things/blob/main/data/minecraft/tags/item/shearable_from_copper_golem.json))
 
 ## Fixes:
-- Display Case Recipes requiring Iron Blocks instead of the type specific block
-- Recipes for Unlit Soul-/Campfires being swapped
