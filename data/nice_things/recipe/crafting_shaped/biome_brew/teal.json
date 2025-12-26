@@ -8,7 +8,7 @@
     "DDD"
   ],
   "key": {
-    "X": "minecraft:crimson_fungus",
+    "X": "minecraft:cyan_dye",
     "D": "minecraft:glowstone_dust",
     "G": "minecraft:glass_bottle"
   },
@@ -16,12 +16,12 @@
     "components": {
                 "minecraft:item_model": "nice_things:biome_brew",
                 "minecraft:item_name": {
-                  "translate": "item.nice_things.biome_brew.crimson_forest"
+                  "translate": "item.nice_things.biome_brew.teal"
                 },
                 "minecraft:custom_data": {
                   "nice_things": {
                     "item": "biome_brew",
-                    "biome": "crimson_forest"
+                    "biome": "teal"
                   }
                 },
                 "minecraft:max_stack_size": 16,
@@ -32,7 +32,7 @@
                   "sound": "minecraft:block.amethyst_block.resonate",
                   "has_consume_particles": false
                 },
-                "minecraft:dyed_color": 8271157,
+                "minecraft:dyed_color": 2454624,
                 "minecraft:enchantment_glint_override": true,
                 "minecraft:tooltip_display": {
                   "hidden_components": [

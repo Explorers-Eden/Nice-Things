@@ -1,17 +1,5 @@
 {
   "attributes": {
-    "minecraft:visual/fog_color": 12638463,
-    "minecraft:visual/sky_light_color": 15390463,
-    "minecraft:visual/water_fog_color": 1836339,
-    "minecraft:visual/sky_color": 7972607,
-    "minecraft:audio/ambient_sounds": {
-      "mood": {
-        "sound": "minecraft:ambient.cave",
-        "tick_delay": 6000,
-        "block_search_extent": 8,
-        "offset": 2
-      }
-    },
     "minecraft:audio/background_music": {
       "default": {
         "sound": "minecraft:music.overworld.forest",
@@ -21,6 +9,17 @@
       }
     },
     "minecraft:audio/music_volume": 1,
+    "minecraft:visual/fog_color": "#8fcab7",
+    "minecraft:visual/sky_color": "#639283",
+    "minecraft:visual/water_fog_color": "#406172",
+    "minecraft:audio/ambient_sounds": {
+      "mood": {
+        "sound": "minecraft:ambient.cave",
+        "tick_delay": 6000,
+        "block_search_extent": 8,
+        "offset": 2
+      }
+    },
     "minecraft:visual/ambient_particles": {
       "modifier": "override",
       "argument": [
@@ -36,60 +35,25 @@
   "carvers": [],
   "downfall": 0.8,
   "effects": {
-    "foliage_color": 11639800,
-    "grass_color": 12561109,
-    "dry_foliage_color": 11698160,
-    "water_color": 9996020
+    "dry_foliage_color": "#00827d",
+    "foliage_color": "#005c5f",
+    "grass_color": "#008573",
+    "water_color": "#5b88a1"
   },
   "features": [],
   "has_precipitation": true,
   "spawn_costs": {},
   "spawners": {
-    "axolotls": [],
-    "creature": [
+    "ambient": [
       {
-        "type": "minecraft:sheep",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 12
-      },
-      {
-        "type": "minecraft:pig",
-        "maxCount": 4,
-        "minCount": 4,
+        "type": "minecraft:bat",
+        "maxCount": 8,
+        "minCount": 8,
         "weight": 10
-      },
-      {
-        "type": "minecraft:chicken",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 10
-      },
-      {
-        "type": "minecraft:cow",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:wolf",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 8
-      },
-      {
-        "type": "minecraft:rabbit",
-        "maxCount": 3,
-        "minCount": 2,
-        "weight": 4
-      },
-      {
-        "type": "minecraft:fox",
-        "maxCount": 4,
-        "minCount": 2,
-        "weight": 8
       }
     ],
+    "axolotls": [],
+    "creature": [],
     "misc": [],
     "monster": [
       {

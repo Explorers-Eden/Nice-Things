@@ -10,7 +10,7 @@
             "minecraft:custom_data": {
               "nice_things": {
                 "item": "biome_brew",
-                "biome": "desert"
+                "biome": "pale_garden"
               }
             }
           }
@@ -24,6 +24,6 @@
     ]
   ],
   "rewards": {
-    "function": "nice_things:biome_brew/desert"
+    "function": "nice_things:biome_brew/pale_garden"
   }
 }

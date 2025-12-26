@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/cocoa"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/cotton"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/crimson_forest"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/desert"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/lavender"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/lush"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/pumpkin"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/ruby"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/void"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/warped_forest"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/winter"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/pale_garden"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/teal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "asset_id": "nice_things:harmony",
+  "author": {
+    "color": "gray",
+    "translate": "painting.nice_things.harmony.author"
+  },
+  "height": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.nice_things.harmony.title"
+  },
+  "width": 4
+}

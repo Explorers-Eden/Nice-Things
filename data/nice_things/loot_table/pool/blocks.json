@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:pool/display_case"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/chopper"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/container"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/conveyor"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/fan"
+        }
+      ]
+    }
+  ]
+}

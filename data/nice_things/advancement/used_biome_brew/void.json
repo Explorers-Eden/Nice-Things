@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "used_scroll": {
+    "used_brew": {
       "trigger": "minecraft:consume_item",
       "conditions": {
         "player": {},
@@ -20,7 +20,7 @@
   },
   "requirements": [
     [
-      "used_scroll"
+      "used_brew"
     ]
   ],
   "rewards": {

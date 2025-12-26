@@ -1,0 +1,78 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/acacia"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/bamboo"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/birch"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/cherry"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/copper"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/crimson"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/dark_oak"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/exposed_copper"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/iron"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/jungle"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/mangrove"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/oak"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/oxidized_copper"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/pale_oak"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/spruce"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/warped"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:block/display_case/weathered_copper"
+        }
+      ]
+    }
+  ]
+}
