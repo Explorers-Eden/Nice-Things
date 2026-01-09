@@ -1,0 +1,13 @@
+{
+  "asset_id": "nice_things:katters_combs",
+  "author": {
+    "color": "gray",
+    "translate": "painting.nice_things.katters_combs.author"
+  },
+  "height": 4,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.nice_things.katters_combs.title"
+  },
+  "width": 4
+}

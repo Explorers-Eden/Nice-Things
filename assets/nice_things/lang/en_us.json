@@ -33,6 +33,7 @@
    "item.nice_things.biome_brew.warped_forest": "Warped Forest Biome Brew",
    "item.nice_things.biome_brew.pale_garden": "Pale Garden Biome Brew",
    "item.nice_things.biome_brew.teal": "Teal Biome Brew",
+   "item.nice_things.biome_brew.charcoal": "Charcoal Biome Brew",
 
    "block.nice_things.fan": "Fan",
    "block.nice_things.chopper": "Chopper",
@@ -638,5 +639,7 @@
    "painting.nice_things.herobrine.author": "Explorer's Eden",
    "painting.nice_things.herobrine.title": "Herobrine",
    "painting.nice_things.harmony.author": "Explorer's Eden",
-   "painting.nice_things.harmony.title": "Harmony"
+   "painting.nice_things.harmony.title": "Harmony",
+   "painting.nice_things.katters_combs.author": "Katter21",
+   "painting.nice_things.katters_combs.title": "Katter's Combs"
 }

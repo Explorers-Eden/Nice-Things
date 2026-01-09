@@ -29,7 +29,10 @@
       "nice_things:crafting_shaped/biome_brew/cotton",
       "nice_things:crafting_shaped/biome_brew/desert",
       "nice_things:crafting_shaped/biome_brew/warped_forest",
-      "nice_things:crafting_shaped/biome_brew/crimson_forest"
+      "nice_things:crafting_shaped/biome_brew/crimson_forest",
+      "nice_things:crafting_shaped/biome_brew/teal",
+      "nice_things:crafting_shaped/biome_brew/pale_garden",
+      "nice_things:crafting_shaped/biome_brew/charcoal"
     ]
   }
 }

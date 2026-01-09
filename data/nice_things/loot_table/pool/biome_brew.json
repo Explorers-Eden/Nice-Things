@@ -55,6 +55,10 @@
         {
           "type": "minecraft:loot_table",
           "value": "nice_things:item/biome_brew/teal"
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "nice_things:item/biome_brew/charcoal"
         }
       ]
     }

@@ -12,7 +12,7 @@ execute if entity @p[y_rotation=-45..45] as @n[type=item_display,tag=nice_things
 execute if entity @p[y_rotation=-45..45] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value -180.0f
 #west
 execute if entity @p[y_rotation=45..135] run data modify entity @n[type=item_display,tag=nice_things.container.spawner,distance=..10] Rotation[0] set value -90.0f
-execute if entity @p[y_rotation=45..135 ] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.container.spawner,distance=..10] ~0.51 ~-0.5 ~
+execute if entity @p[y_rotation=45..135] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.container.spawner,distance=..10] ~0.51 ~-0.5 ~
 execute if entity @p[y_rotation=45..135] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run execute on passengers run data modify entity @s Rotation[0] set value -90.0f
 execute if entity @p[y_rotation=45..135] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value -90.0f
 #east
