@@ -1,0 +1,7 @@
+{
+  "type": "stonecutting",
+  "ingredient": "minecraft:stone",
+  "result": {
+    "id": "minecraft:cobblestone"
+  }
+}

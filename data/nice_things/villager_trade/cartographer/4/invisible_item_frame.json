@@ -1,0 +1,25 @@
+{
+  "gives": {
+    "id": "minecraft:item_frame"
+  },
+  "max_uses": 12,
+  "reputation_discount": 0.05,
+  "wants": {
+    "components": {
+      "minecraft:item_model": "nice_things:invisible_item_frame",
+      "minecraft:item_name": {
+        "translate": "item.nice_things.invisible_item_frame"
+      },
+      "minecraft:entity_data": {
+        "id": "minecraft:item_frame",
+        "Tags": [
+          "nice_things.invis_item_frame"
+        ],
+        "Invisible": true
+      }
+    },
+    "count": 9,
+    "id": "minecraft:emerald"
+  },
+  "xp": 25
+}

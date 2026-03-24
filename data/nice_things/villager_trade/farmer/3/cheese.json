@@ -1,0 +1,29 @@
+{
+  "gives": {
+    "components": {
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.cheese"
+                },
+                "minecraft:item_model": "nice_things:cheese",
+                "minecraft:custom_data": {
+                  "nice_things": "cheese"
+                },
+                "minecraft:consumable": {
+                  "on_consume_effects": [
+                    {
+                      "type": "minecraft:clear_all_effects"
+                    }
+                  ]
+                }
+              },
+    "count": 18,
+    "id": "minecraft:cookie"
+  },
+  "max_uses": 12,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 3,
+    "id": "minecraft:emerald"
+  },
+  "xp": 10
+}

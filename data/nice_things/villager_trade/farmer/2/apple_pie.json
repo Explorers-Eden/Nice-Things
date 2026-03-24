@@ -1,0 +1,21 @@
+{
+  "gives": {
+    "components": {
+      "minecraft:item_model": "nice_things:apple_pie",
+      "minecraft:item_name": {
+        "translate": "item.nice_things.apple_pie"
+      },
+      "minecraft:custom_data": {
+        "nice_things": "apple_pie"
+      }
+    },
+    "count": 4,
+    "id": "minecraft:pumpkin_pie"
+  },
+  "max_uses": 12,
+  "reputation_discount": 0.05,
+  "wants": {
+    "id": "minecraft:emerald"
+  },
+  "xp": 5
+}

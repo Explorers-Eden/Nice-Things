@@ -1,0 +1,22 @@
+{
+  "gives": {
+    "count": 3,
+    "id": "minecraft:golden_carrot"
+  },
+  "max_uses": 12,
+  "reputation_discount": 0.05,
+  "wants": {
+    "components": {
+                "minecraft:item_model": "nice_things:golden_potato",
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.golden_potato"
+                },
+                "minecraft:custom_data": {
+                  "nice_things": "golden_potato"
+                }
+              },
+    "count": 3,
+    "id": "minecraft:emerald"
+  },
+  "xp": 30
+}
