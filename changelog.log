@@ -1,5 +1,5 @@
 # Minecraft Version(s): 26.1.x
 ## Changes:
-- Added recipe to turn Charcoal into Black Dye
+- Lang Files are now getting automatically synced with crowdin with new releases
 
 ## Fixes:
