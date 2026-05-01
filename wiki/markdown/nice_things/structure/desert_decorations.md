@@ -5,6 +5,7 @@ The structure is composed of the following blocks: Smooth Sandstone, Sandstone S
 Additionally, the following entities may spawn during its generation: Husk, Parched.
 
 
+
 ## Per-Structure File Contents
 
 <details>

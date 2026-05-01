@@ -3,6 +3,7 @@
 The structure is composed of the following blocks: Mossy Cobblestone, Exposed Lightning Rod, Oxidized Lightning Rod, Weathered Lightning Rod, Exposed Copper Chain, Oxidized Copper Chain, Weathered Copper Chain, Exposed Chiseled Copper, Exposed Copper, Oxidized Chiseled Copper, Oxidized Copper, Weathered Chiseled Copper, Weathered Copper, Copper Wall Torch, Oak Wall Sign, Weathered Copper Chest.
 
 
+
 ## Per-Structure File Contents
 
 <details>

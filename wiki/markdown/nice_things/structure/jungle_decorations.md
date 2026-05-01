@@ -1,8 +1,24 @@
+# Generated Loot.
+
+There is one loot table used in this structure:
+
+<details>
+<summary><strong>nice_things:structure/bamboo_farm</strong> (4 uses)</summary>
+
+| Item | Stack Size | Pool | Weight | Chance |
+|:-----|:----------:|:----:|:------:|:------:|
+| Bamboo | 1–24 | 1 | 1 | 33.3% |
+| Scaffolding | 1–9 | 1 | 1 | 33.3% |
+| String | 1–12 | 1 | 1 | 33.3% |
+
+</details>
+
 # Contents
 
 The structure is composed of the following blocks: Tuff Bricks, Tuff, Tuff Brick Stairs, Tuff Stairs, Moss Block, Chiseled Tuff, Coarse Dirt, Polished Tuff Wall, Polished Tuff Slab, Bamboo Trapdoor, Jungle Trapdoor, Polished Tuff Stairs, Bamboo, Mossy Cobblestone Slab, Polished Tuff, Cocoa, Bamboo Fence, Scaffolding, Raw Gold Block, Jungle Log, Short Grass, Jungle Planks, Mossy Cobblestone, Chiseled Tuff Bricks, Torch, Green Bed, Mossy Cobblestone Wall, Farmland, Wheat, Tall Grass, Campfire, Chest, Jungle Slab, Lantern, Moss Carpet, Crafting Table, Iron Bars, Polished Deepslate, Decorated Pot, Flower Pot, Hay Block, Azalea, Cartography Table, Fletching Table, Smithing Table, Smoker, Tuff Slab.
 
 Additionally, the following entities may spawn during its generation: Item Frame, Villager.
+
 
 
 ## Per-Structure File Contents
@@ -35,9 +51,9 @@ The structure part is composed of the following blocks: Coarse Dirt, Bamboo Trap
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| nice_things:structure/bamboo_farm |
+| Loot Table | Count |
+|:-----|:-----:|
+| nice_things:structure/bamboo_farm | 1 |
 
 
 </details>
@@ -70,9 +86,9 @@ The structure part is composed of the following blocks: Coarse Dirt, Bamboo Trap
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| nice_things:structure/bamboo_farm |
+| Loot Table | Count |
+|:-----|:-----:|
+| nice_things:structure/bamboo_farm | 1 |
 
 
 </details>
@@ -105,9 +121,9 @@ The structure part is composed of the following blocks: Coarse Dirt, Bamboo Trap
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| nice_things:structure/bamboo_farm |
+| Loot Table | Count |
+|:-----|:-----:|
+| nice_things:structure/bamboo_farm | 1 |
 
 
 </details>
@@ -140,9 +156,9 @@ The structure part is composed of the following blocks: Coarse Dirt, Bamboo Trap
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| nice_things:structure/bamboo_farm |
+| Loot Table | Count |
+|:-----|:-----:|
+| nice_things:structure/bamboo_farm | 1 |
 
 
 </details>

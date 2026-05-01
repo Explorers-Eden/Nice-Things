@@ -1,8 +1,62 @@
+# Generated Loot.
+
+There are 7 loot tables used in this structure:
+
+<details>
+<summary><strong>eden:chests/end_ships/boom_ship</strong> (1 use)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
+<details>
+<summary><strong>eden:chests/end_ships/boom_ship_big</strong> (6 uses)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
+<details>
+<summary><strong>eden:chests/end_ships/boom_ship_giant</strong> (1 use)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
+<details>
+<summary><strong>eden:chests/end_ships/cargo_ship</strong> (2 uses)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
+<details>
+<summary><strong>eden:chests/end_ships/cargo_ship_big</strong> (3 uses)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
+<details>
+<summary><strong>eden:chests/end_ships/elytra_chest</strong> (1 use)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
+<details>
+<summary><strong>minecraft:chests/end_city_treasure</strong> (16 uses)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
 # Contents
 
-The structure is composed of the following blocks: Purpur Block, End Stone Bricks, Purpur Stairs, Purpur Pillar, Obsidian, Purpur Slab, End Stone Brick Stairs, Ladder, End Rod, End Stone Brick Slab, Crying Obsidian, End Stone Brick Wall, Tnt, Magenta Stained Glass, Pale Oak Planks, Chorus Plant, Chest, Spruce Planks, Pale Oak Trapdoor, Iron Bars, Barrel, Brewing Stand, Rail, Respawn Anchor, End Stone, Dragon Wall Head, Spruce Trapdoor, Chorus Flower, Iron Chain, Pale Oak Slab, Structure Block, Dead Fire Coral, Chipped Anvil, Damaged Anvil, Soul Fire, Soul Soil, Dragon Head, Trapped Chest.
+The structure is composed of the following blocks: Purpur Block, End Stone Bricks, Purpur Stairs, Purpur Pillar, Obsidian, Purpur Slab, End Stone Brick Stairs, Ladder, End Rod, End Stone Brick Slab, Crying Obsidian, End Stone Brick Wall, Tnt, Magenta Stained Glass, Pale Oak Planks, Chorus Plant, Chest, Spruce Planks, Pale Oak Trapdoor, Iron Bars, Barrel, Brewing Stand, Rail, Respawn Anchor, End Stone, Dragon Wall Head, Spruce Trapdoor, Chorus Flower, Iron Chain, Pale Oak Slab, Structure Block, Dead Fire Coral, Chipped Anvil, Damaged Anvil, Soul Fire, Soul Soil, Trapped Chest.
 
-Additionally, the following entities may spawn during its generation: Shulker, Item Frame, Item, Magma Cube, Creeper, Skeleton, Zombie.
+Additionally, the following entities may spawn during its generation: Shulker, Item, Item Frame, Magma Cube, Creeper, Skeleton, Zombie.
+
 
 
 ## Per-Structure File Contents
@@ -77,9 +131,9 @@ Additionally, the following entities may spawn during its generation: Item Frame
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/end_city_treasure |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/end_city_treasure | 1 |
 
 
 </details>
@@ -124,9 +178,9 @@ Additionally, the following entities may spawn during its generation: Shulker, I
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/end_city_treasure |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/end_city_treasure | 1 |
 
 
 </details>
@@ -170,9 +224,9 @@ Additionally, the following entities may spawn during its generation: Shulker, M
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/end_city_treasure |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/end_city_treasure | 2 |
 
 
 </details>
@@ -224,12 +278,12 @@ Additionally, the following entities may spawn during its generation: Item, Shul
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| eden:chests/end_ships/cargo_ship |
-| eden:chests/end_ships/cargo_ship_big |
-| eden:chests/end_ships/elytra_chest |
-| minecraft:chests/end_city_treasure |
+| Loot Table | Count |
+|:-----|:-----:|
+| eden:chests/end_ships/cargo_ship | 2 |
+| eden:chests/end_ships/cargo_ship_big | 3 |
+| eden:chests/end_ships/elytra_chest | 1 |
+| minecraft:chests/end_city_treasure | 4 |
 
 
 </details>
@@ -310,9 +364,9 @@ Additionally, the following entities may spawn during its generation: Shulker, C
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/end_city_treasure |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/end_city_treasure | 3 |
 
 
 </details>
@@ -360,12 +414,12 @@ Additionally, the following entities may spawn during its generation: Shulker, I
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| eden:chests/end_ships/boom_ship |
-| eden:chests/end_ships/boom_ship_big |
-| eden:chests/end_ships/boom_ship_giant |
-| minecraft:chests/end_city_treasure |
+| Loot Table | Count |
+|:-----|:-----:|
+| eden:chests/end_ships/boom_ship | 1 |
+| eden:chests/end_ships/boom_ship_big | 6 |
+| eden:chests/end_ships/boom_ship_giant | 1 |
+| minecraft:chests/end_city_treasure | 4 |
 
 
 </details>
@@ -407,83 +461,9 @@ Additionally, the following entities may spawn during its generation: Shulker, I
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/end_city_treasure |
-
-
-</details>
-
-<details>
-<summary><strong>End Ship/09</strong></summary>
-
-The structure part is composed of the following blocks: Purpur Block, Purpur Pillar, Purpur Stairs, End Rod, Purpur Slab, Obsidian, Dragon Wall Head.
-
-Additionally, the following entities may spawn during its generation: Shulker, Item Frame.
-
-### Blocks
-
-| Block | Count |
+| Loot Table | Count |
 |:-----|:-----:|
-| Purpur Block | 93 |
-| Purpur Pillar | 34 |
-| Purpur Stairs | 27 |
-| End Rod | 4 |
-| Purpur Slab | 3 |
-| Obsidian | 2 |
-| Dragon Wall Head | 1 |
-
-
-### Entities
-
-| Entity | Count |
-|:-----|:-----:|
-| Shulker | 3 |
-| Item Frame | 1 |
-
-
-### Loot Tables
-
-*None*
-
-
-</details>
-
-<details>
-<summary><strong>End Ship/10</strong></summary>
-
-The structure part is composed of the following blocks: Purpur Block, Purpur Stairs, Purpur Pillar, End Stone Bricks, End Rod, Purpur Slab, Magenta Stained Glass, Chest, Dragon Head.
-
-Additionally, the following entities may spawn during its generation: Shulker, Item Frame.
-
-### Blocks
-
-| Block | Count |
-|:-----|:-----:|
-| Purpur Block | 318 |
-| Purpur Stairs | 48 |
-| Purpur Pillar | 29 |
-| End Stone Bricks | 21 |
-| End Rod | 8 |
-| Purpur Slab | 5 |
-| Magenta Stained Glass | 4 |
-| Chest | 1 |
-| Dragon Head | 1 |
-
-
-### Entities
-
-| Entity | Count |
-|:-----|:-----:|
-| Shulker | 3 |
-| Item Frame | 1 |
-
-
-### Loot Tables
-
-| Loot Table |
-|:-----|
-| minecraft:chests/end_city_treasure |
+| minecraft:chests/end_city_treasure | 1 |
 
 
 </details>

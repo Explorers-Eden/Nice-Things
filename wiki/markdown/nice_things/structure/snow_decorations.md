@@ -1,8 +1,20 @@
+# Generated Loot.
+
+There is one loot table used in this structure:
+
+<details>
+<summary><strong>minecraft:chests/village/village_snowy_house</strong> (1 use)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
 # Contents
 
 The structure is composed of the following blocks: Spruce Fence, Spruce Trapdoor, Snow Block, Red Wool, Stripped Spruce Log, Spruce Slab, Lever, Smooth Quartz Stairs, Spruce Wall Sign, Campfire, Smooth Quartz, Spruce Planks, Carved Pumpkin, Spruce Button, Sea Pickle, Powder Snow Cauldron, Snow, Cobblestone Wall, Barrel, Chain, Lantern, Soul Lantern, Spruce Fence Gate, Spruce Stairs, Water Cauldron.
 
 Additionally, the following entities may spawn during its generation: Snow Golem, Item.
+
 
 
 ## Per-Structure File Contents
@@ -203,9 +215,9 @@ The structure part is composed of the following blocks: Spruce Trapdoor, Spruce 
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_snowy_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_snowy_house | 1 |
 
 
 </details>

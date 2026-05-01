@@ -1,8 +1,20 @@
+# Generated Loot.
+
+There is one loot table used in this structure:
+
+<details>
+<summary><strong>minecraft:chests/village/village_taiga_house</strong> (7 uses)</summary>
+
+Could not find this loot table locally or in mcmeta 26.1.2.
+
+</details>
+
 # Contents
 
 The structure is composed of the following blocks: Stripped Spruce Log, Moss Block, Spruce Leaves, Spruce Planks, Cobblestone, Spruce Fence, Spruce Trapdoor, Spruce Log, Mossy Cobblestone, Cobblestone Slab, Moss Carpet, Coarse Dirt, Green Wool, Mossy Cobblestone Slab, Cobblestone Stairs, Spruce Slab, Short Grass, Spruce Stairs, Spruce Fence Gate, Barrel, Mossy Cobblestone Stairs, Sweet Berry Bush, Tall Grass, Granite Wall, Azalea, Gray Wool, Rail, Lantern, Cut Copper Slab, Exposed Cut Copper Slab, Oxidized Cut Copper Slab, Weathered Cut Copper Slab, Cut Copper Stairs, Exposed Cut Copper Stairs, Oxidized Cut Copper Stairs, Potted Spruce Sapling, Spruce Door, Spruce Pressure Plate, Weathered Cut Copper Stairs, Decorated Pot, Green Bed, Oak Trapdoor, Spruce Wall Sign, Stonecutter, Bookshelf, Campfire.
 
 Additionally, the following entities may spawn during its generation: Fox, Villager.
+
 
 
 ## Per-Structure File Contents
@@ -292,9 +304,9 @@ The structure part is composed of the following blocks: Stripped Spruce Log, Mos
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
@@ -334,9 +346,9 @@ The structure part is composed of the following blocks: Stripped Spruce Log, Mos
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
@@ -386,9 +398,9 @@ Additionally, the following entities may spawn during its generation: Villager.
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
@@ -527,9 +539,9 @@ The structure part is composed of the following blocks: Green Wool, Spruce Trapd
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
@@ -558,9 +570,9 @@ The structure part is composed of the following blocks: Green Wool, Spruce Trapd
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
@@ -590,9 +602,9 @@ The structure part is composed of the following blocks: Green Wool, Spruce Trapd
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
@@ -699,9 +711,9 @@ The structure part is composed of the following blocks: Spruce Trapdoor, Oak Tra
 
 ### Loot Tables
 
-| Loot Table |
-|:-----|
-| minecraft:chests/village/village_taiga_house |
+| Loot Table | Count |
+|:-----|:-----:|
+| minecraft:chests/village/village_taiga_house | 1 |
 
 
 </details>
