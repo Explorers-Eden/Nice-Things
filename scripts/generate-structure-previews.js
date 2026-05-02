@@ -51,6 +51,7 @@ const stats = {
   structuresRead: 0,
   poolsRead: 0,
   jigsawPoolsFollowed: 0,
+  jigsawBlocksResolved: 0,
   textureHits: 0,
   textureMisses: 0,
   bakedQuads: 0,
@@ -898,6 +899,29 @@ function bakeFallbackElements(blockName, elements, variant = { x: 0, y: 0 }) {
 function specialBlockModel(blockName, properties = {}) {
   const short = blockName.replace(/^minecraft:/, "");
 
+  if (short === "chain") {
+    const axis = properties.axis ?? "y";
+    const elements = axis === "x"
+      ? [
+          { from: [0, 6, 7], to: [16, 10, 9], faces: allFaces() },
+          { from: [2, 4, 6], to: [6, 12, 10], faces: allFaces() },
+          { from: [10, 4, 6], to: [14, 12, 10], faces: allFaces() }
+        ]
+      : axis === "z"
+        ? [
+            { from: [7, 6, 0], to: [9, 10, 16], faces: allFaces() },
+            { from: [6, 4, 2], to: [10, 12, 6], faces: allFaces() },
+            { from: [6, 4, 10], to: [10, 12, 14], faces: allFaces() }
+          ]
+        : [
+            { from: [7, 0, 6], to: [9, 16, 10], faces: allFaces() },
+            { from: [6, 2, 4], to: [10, 6, 12], faces: allFaces() },
+            { from: [6, 10, 4], to: [10, 14, 12], faces: allFaces() }
+          ];
+
+    return bakeFallbackElements(blockName, elements);
+  }
+
   if (short.endsWith("_wall_sign") || short.endsWith("_wall_hanging_sign")) {
     const y = { south: 0, west: 90, north: 180, east: 270 }[properties.facing ?? "north"] ?? 180;
     return bakeFallbackElements(blockName, [
@@ -930,41 +954,10 @@ function specialBlockModel(blockName, properties = {}) {
       variant.y = { north: 0, east: 90, south: 180, west: 270 }[facing] ?? 0;
     } else {
       element = { from: [5, 6, 14 - depth], to: [11, 10, 16], faces: allFaces() };
-      variant.y = { north: 0, east: 90, south: 180, west: 270 }[facing] ?? 0;
+      variant.y = { south: 0, west: 90, north: 180, east: 270 }[facing] ?? 180;
     }
 
     return bakeFallbackElements(blockName, [element], variant);
-  }
-
-
-  if (short === "lever") {
-    const face = properties.face ?? "wall";
-    const powered = properties.powered === "true";
-    const facing = properties.facing ?? "north";
-    const y = { north: 0, east: 90, south: 180, west: 270 }[facing] ?? 0;
-    const baseDepth = 2;
-    const handleTilt = powered ? 5 : 3;
-    let elements;
-    let variant = { x: 0, y };
-
-    if (face === "floor") {
-      elements = [
-        { from: [5, 0, 5], to: [11, baseDepth, 11], faces: allFaces() },
-        { from: [7, baseDepth, 7], to: [9, 10 + handleTilt, 9], faces: allFaces() }
-      ];
-    } else if (face === "ceiling") {
-      elements = [
-        { from: [5, 16 - baseDepth, 5], to: [11, 16, 11], faces: allFaces() },
-        { from: [7, 6 - handleTilt, 7], to: [9, 16 - baseDepth, 9], faces: allFaces() }
-      ];
-    } else {
-      elements = [
-        { from: [5, 5, 14], to: [11, 11, 16], faces: allFaces() },
-        { from: [7, 7, 8 - handleTilt], to: [9, 9, 14], faces: allFaces() }
-      ];
-    }
-
-    return bakeFallbackElements(blockName, elements, variant);
   }
 
   return null;
@@ -1268,32 +1261,33 @@ function addResourceLocation(value, result) {
   result.add(value);
 }
 
-function collectTemplatePoolsFromObject(value, result = new Set(), inPoolField = false) {
+function collectTemplatePoolsFromObject(value, result = new Set()) {
   if (value === null || value === undefined) return result;
 
   if (typeof value === "string") {
-    if (inPoolField) addResourceLocation(value, result);
+    addResourceLocation(value, result);
     return result;
   }
 
   if (Array.isArray(value)) {
-    for (const item of value) collectTemplatePoolsFromObject(item, result, inPoolField);
+    for (const item of value) collectTemplatePoolsFromObject(item, result);
     return result;
   }
 
   if (typeof value === "object") {
     for (const [key, nested] of Object.entries(value)) {
-      const poolField =
+      if (
         key === "start_pool" ||
-        key === "startPool" ||
         key === "fallback" ||
         key === "pool" ||
         key === "template_pool" ||
-        key === "templatePool" ||
-        key === "target_pool" ||
-        key === "targetPool";
+        key === "target_pool"
+      ) {
+        collectTemplatePoolsFromObject(nested, result);
+        continue;
+      }
 
-      collectTemplatePoolsFromObject(nested, result, poolField);
+      collectTemplatePoolsFromObject(nested, result);
     }
   }
 
@@ -1365,8 +1359,8 @@ async function collectJigsawPoolsFromStructureFile(structureFile) {
   }
 }
 
-async function collectStructureFilesFromTemplatePool(poolId, seenPools = new Set(), result = new Set(), seedText = previewSeed) {
-  if (!poolId || poolId === "minecraft:empty" || seenPools.has(poolId)) return result;
+async function collectStructureFilesFromTemplatePool(poolId, seenPools = new Set(), result = new Set()) {
+  if (seenPools.has(poolId)) return result;
   seenPools.add(poolId);
 
   const poolFile = getTemplatePoolFile(poolId);
@@ -1375,36 +1369,35 @@ async function collectStructureFilesFromTemplatePool(poolId, seenPools = new Set
 
   stats.poolsRead++;
 
-  const choices = getTemplatePoolChoices(poolJson)
-    .filter(choice => fs.existsSync(getStructureNbtFileFromLocation(choice.location)));
+  for (const element of poolJson.elements ?? []) {
+    const elementData = element.element ?? element;
+    const locations = collectElementLocations(elementData);
 
-  if (choices.length > 0) {
-    // Fallback collection is only used when full jigsaw assembly fails. Keep
-    // the old traversal behavior, but when a pool is followed choose exactly
-    // one weighted element from that pool instead of appending every element.
-    const choice = chooseWeightedEntry(choices, `${previewSeed}|collect-pool|${poolId}|${seedText}`) ?? choices[0];
-    const structureFile = getStructureNbtFileFromLocation(choice.location);
-    const alreadyHadFile = result.has(structureFile);
-    result.add(structureFile);
+    for (const location of locations) {
+      const structureFile = getStructureNbtFileFromLocation(location);
+      if (!fs.existsSync(structureFile)) continue;
 
-    if (!alreadyHadFile) {
-      const jigsawPools = await collectJigsawPoolsFromStructureFile(structureFile);
+      const alreadyHadFile = result.has(structureFile);
+      result.add(structureFile);
 
-      for (const nestedPool of jigsawPools) {
-        stats.jigsawPoolsFollowed++;
-        await collectStructureFilesFromTemplatePool(nestedPool, seenPools, result, `${seedText}|${choice.location}|${nestedPool}`);
+      if (!alreadyHadFile) {
+        const jigsawPools = await collectJigsawPoolsFromStructureFile(structureFile);
+
+        for (const nestedPool of jigsawPools) {
+          stats.jigsawPoolsFollowed++;
+          await collectStructureFilesFromTemplatePool(nestedPool, seenPools, result);
+        }
       }
     }
-
-    return result;
   }
 
   if (poolJson.fallback && poolJson.fallback !== "minecraft:empty") {
-    await collectStructureFilesFromTemplatePool(poolJson.fallback, seenPools, result, `${seedText}|fallback`);
+    await collectStructureFilesFromTemplatePool(poolJson.fallback, seenPools, result);
   }
 
   return result;
 }
+
 
 function getFirstNumber(value, fallback = 0) {
   const number = Number(value);
@@ -1632,23 +1625,33 @@ function makeBlockKey(block) {
 
 async function assembleJigsawStructureFromPool(startPool, maxDepth = 7) {
   const start = await chooseStructureFromTemplatePool(startPool, new Set(), `${startPool}|start`);
-  if (!start) return [];
+  if (!start) return { blocks: [], files: [], resolvedJigsaws: 0 };
 
   const blocks = [];
   const occupied = new Set();
-  const queue = [{ structureFile: start.structureFile, offset: { x: 0, y: 0, z: 0 }, quarterTurns: 0, depth: 0 }];
+  const queue = [{
+    structureFile: start.structureFile,
+    offset: { x: 0, y: 0, z: 0 },
+    quarterTurns: 0,
+    depth: 0,
+    consumedConnector: null
+  }];
   const placed = new Set();
+  const placedFiles = new Set();
+  let resolvedJigsaws = 0;
 
   while (queue.length > 0) {
     const item = queue.shift();
     const placedKey = `${item.structureFile}|${item.offset.x},${item.offset.y},${item.offset.z}|${item.quarterTurns}`;
     if (placed.has(placedKey)) continue;
     placed.add(placedKey);
+    placedFiles.add(item.structureFile);
 
     const structure = await readNbtFile(item.structureFile);
     const size = getStructureSize(structure);
+    const transformedBlocks = transformStructureBlocks(structure, item.offset, item.quarterTurns);
 
-    for (const block of transformStructureBlocks(structure, item.offset, item.quarterTurns)) {
+    for (const block of transformedBlocks) {
       const key = makeBlockKey(block);
       if (occupied.has(key)) continue;
       occupied.add(key);
@@ -1658,17 +1661,30 @@ async function assembleJigsawStructureFromPool(startPool, maxDepth = 7) {
     if (item.depth >= maxDepth) continue;
 
     for (const parent of getJigsawsFromStructure(structure)) {
+      // A jigsaw used as the incoming connector for this piece is already consumed.
+      // Expanding it again makes the preview grow backwards and quickly creates the
+      // "all pieces blob" that does not match jigsaw placement behavior.
+      if (
+        item.consumedConnector &&
+        parent.x === item.consumedConnector.x &&
+        parent.y === item.consumedConnector.y &&
+        parent.z === item.consumedConnector.z
+      ) {
+        continue;
+      }
+
+      // Only actual jigsaw blocks inside the currently placed structure can extend
+      // the assembly. Do not scan arbitrary worldgen JSON or all template-pool files.
       if (!parent.pool || parent.pool === "minecraft:empty") continue;
 
       const worldParent = transformJigsaw(parent, size, item.offset, item.quarterTurns);
       const childChoice = await chooseStructureFromTemplatePool(parent.pool, new Set(), `${item.structureFile}|${item.offset.x},${item.offset.y},${item.offset.z}|${item.quarterTurns}|${parent.x},${parent.y},${parent.z}|${parent.name}|${parent.target}|${parent.pool}`);
       if (!childChoice) continue;
 
-      stats.jigsawPoolsFollowed++;
       const childStructure = await readNbtFile(childChoice.structureFile);
       const childSize = getStructureSize(childStructure);
       const childJigsaws = getJigsawsFromStructure(childStructure);
-      const childConnector = childJigsaws.find(jigsaw => jigsaw.name === parent.target) ?? childJigsaws[0];
+      const childConnector = childJigsaws.find(jigsaw => jigsaw.name === parent.target) ?? null;
       if (!childConnector) continue;
 
       const parentFront = worldParent.frontVector ?? directionToVector(worldParent.front);
@@ -1686,16 +1702,47 @@ async function assembleJigsawStructureFromPool(startPool, maxDepth = 7) {
         z: attach.z - rotatedChildConnector.z
       };
 
+      const childBlocks = transformStructureBlocks(childStructure, childOffset, childTurns);
+      const overlapsExistingBlock = childBlocks.some(block => occupied.has(makeBlockKey(block)));
+      if (overlapsExistingBlock) continue;
+
+      resolvedJigsaws++;
+      stats.jigsawPoolsFollowed++;
+      stats.jigsawBlocksResolved++;
+
       queue.push({
         structureFile: childChoice.structureFile,
         offset: childOffset,
         quarterTurns: childTurns,
-        depth: item.depth + 1
+        depth: item.depth + 1,
+        consumedConnector: {
+          x: childConnector.x,
+          y: childConnector.y,
+          z: childConnector.z
+        }
       });
     }
   }
 
-  return blocks;
+  return { blocks, files: [...placedFiles].sort(), resolvedJigsaws };
+}
+
+function findFirstValueForKey(value, wantedKey) {
+  if (value === null || value === undefined) return null;
+  if (Array.isArray(value)) {
+    for (const item of value) {
+      const found = findFirstValueForKey(item, wantedKey);
+      if (found !== null && found !== undefined) return found;
+    }
+    return null;
+  }
+  if (typeof value !== "object") return null;
+  if (value[wantedKey] !== undefined) return value[wantedKey];
+  for (const nested of Object.values(value)) {
+    const found = findFirstValueForKey(nested, wantedKey);
+    if (found !== null && found !== undefined) return found;
+  }
+  return null;
 }
 
 async function collectStructureFilesForWorldgenStructure(worldgenFile) {
@@ -1703,27 +1750,26 @@ async function collectStructureFilesForWorldgenStructure(worldgenFile) {
   const json = readJsonIfExists(worldgenFile);
   if (!info || !json) return null;
 
-  const pools = collectTemplatePoolsFromObject(json);
-  const files = new Set();
-  let blocks = [];
+  const startPool = normalizeResourceLocationForCompare(
+    json.start_pool ?? json.startPool ?? findFirstValueForKey(json, "start_pool") ?? findFirstValueForKey(json, "startPool")
+  );
 
-  const startPool = normalizeResourceLocationForCompare(json.start_pool ?? json.startPool);
-  const maxDepth = Math.max(1, Number(json.size ?? json.max_distance_from_center ?? 7));
-
-  if (startPool) {
-    blocks = await assembleJigsawStructureFromPool(startPool, maxDepth);
+  if (!startPool) {
+    console.warn(`No start_pool found for worldgen structure ${worldgenFile}`);
+    return null;
   }
 
-  for (const poolId of pools) {
-    await collectStructureFilesFromTemplatePool(poolId, new Set(), files, `${worldgenFile}|${poolId}`);
-  }
+  const maxDepth = Math.max(1, Number(json.size ?? json.max_distance_from_center ?? json.maxDistanceFromCenter ?? 7));
+  const assembled = await assembleJigsawStructureFromPool(startPool, maxDepth);
 
   return {
     namespace: info.namespace,
     relativePath: info.relativePath,
     id: info.id,
-    files: [...files].sort(),
-    blocks
+    files: assembled.files,
+    blocks: assembled.blocks,
+    resolvedJigsaws: assembled.resolvedJigsaws,
+    worldgen: true
   };
 }
 
@@ -1764,8 +1810,8 @@ async function getWorldgenStructureGroups() {
   for (const file of worldgenFiles) {
     const group = await collectStructureFilesForWorldgenStructure(file);
 
-    if (!group || group.files.length === 0) {
-      console.warn(`No template NBT files found for worldgen structure ${file}`);
+    if (!group || !Array.isArray(group.blocks) || group.blocks.length === 0) {
+      console.warn(`Could not assemble jigsaw preview for worldgen structure ${file}`);
       continue;
     }
 
@@ -1773,7 +1819,9 @@ async function getWorldgenStructureGroups() {
       namespace: group.namespace,
       outputName: group.relativePath,
       files: group.files,
-      blocks: group.blocks
+      blocks: group.blocks,
+      resolvedJigsaws: group.resolvedJigsaws,
+      worldgen: true
     });
   }
 
@@ -1821,9 +1869,11 @@ async function main() {
   for (const group of groups.values()) {
     group.files.sort();
 
-    const blocks = Array.isArray(group.blocks) && group.blocks.length > 0
+    const blocks = group.worldgen
       ? group.blocks
-      : await loadBlocksForFiles(group.files);
+      : (Array.isArray(group.blocks) && group.blocks.length > 0
+        ? group.blocks
+        : await loadBlocksForFiles(group.files));
     const outputDir = path.join(outputRoot, group.namespace, group.outputName);
     const views = renderBlocksToPngViews(blocks);
 
@@ -1838,7 +1888,10 @@ async function main() {
       stats.mainImages++;
     }
 
-    console.log(`Generated ${views.length} PNG preview(s) in ${outputDir} from ${group.files.length} structure part(s), ${blocks.length} block(s), ${totalSize} total bytes`);
+    const sourceDescription = group.worldgen
+      ? `${group.resolvedJigsaws ?? 0} resolved jigsaw block(s)`
+      : `${group.files.length} structure part(s)`;
+    console.log(`Generated ${views.length} PNG preview(s) in ${outputDir} from ${sourceDescription}, ${blocks.length} block(s), ${totalSize} total bytes`);
   }
 
   if (groups.size === 0) console.warn("No structure groups were found.");
