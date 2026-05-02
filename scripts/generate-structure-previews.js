@@ -311,6 +311,7 @@ function getModelVariantsFromBlockState(blockName, properties = {}) {
           model: variant.model,
           x: Number(variant.x ?? 0),
           y: Number(variant.y ?? 0),
+          z: Number(variant.z ?? 0),
           uvlock: Boolean(variant.uvlock)
         }
       ];
@@ -331,6 +332,7 @@ function getModelVariantsFromBlockState(blockName, properties = {}) {
             model: apply.model,
             x: Number(apply.x ?? 0),
             y: Number(apply.y ?? 0),
+            z: Number(apply.z ?? 0),
             uvlock: Boolean(apply.uvlock)
           });
         }
@@ -345,6 +347,7 @@ function getModelVariantsFromBlockState(blockName, properties = {}) {
       model: `${namespace}:block/${blockPath}`,
       x: 0,
       y: 0,
+      z: 0,
       uvlock: false
     }
   ];
@@ -995,20 +998,10 @@ function chainElementsForState(properties) {
 function specialBlockModel(blockName, properties = {}) {
   const short = blockName.replace(/^minecraft:/, "");
 
-  if (short === "chain") {
-    const { elements, variant } = chainElementsForState(properties);
-    return bakeFallbackElements(blockName, elements, variant);
-  }
-
-  if (short.endsWith("_button")) {
-    const { elements, variant } = buttonElementsForState(properties, blockTextureForButton(short));
-    return bakeFallbackElements(blockName, elements, variant);
-  }
-
-  if (short === "lever") {
-    const { elements, variant } = leverElementsForState(properties);
-    return bakeFallbackElements(blockName, elements, variant);
-  }
+  // Chains, buttons, and levers must use vanilla blockstates/models.
+  // Their placement depends on model rotations (including z-rotation) and thin
+  // transparent texture geometry; custom cuboid fallbacks attach to the wrong
+  // side and lose the vanilla chain texture.
 
   if (short.endsWith("_wall_sign") || short.endsWith("_wall_hanging_sign")) {
     const y = { south: 0, west: 90, north: 180, east: 270 }[properties.facing ?? "north"] ?? 180;

@@ -161,7 +161,7 @@ async function resolveMinecraftVersion() {
 }
 
 function extractVanillaAssets(jarPath, versionId) {
-  const marker = path.join(assetRoot, versionId, ".extracted-v3-render-models");
+  const marker = path.join(assetRoot, versionId, ".extracted-v4-vanilla-thin-block-models");
 
   if (
     fs.existsSync(marker) &&
@@ -171,7 +171,9 @@ function extractVanillaAssets(jarPath, versionId) {
     fs.existsSync(path.join(extractedRoot, "minecraft", "models", "block", "chain.json")) &&
     fs.existsSync(path.join(extractedRoot, "minecraft", "models", "block", "lever.json")) &&
     fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block", "chain.png")) &&
-    fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block", "lever.png"))
+    fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block", "lever.png")) &&
+    fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block", "stone.png")) &&
+    fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block", "oak_planks.png"))
   ) {
     console.log(`Vanilla block assets for ${versionId} already extracted.`);
     return;
