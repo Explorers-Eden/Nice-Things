@@ -5,7 +5,21 @@ There is one loot table used in this structure:
 <details>
 <summary><strong>minecraft:chests/village/village_taiga_house</strong> (7 uses)</summary>
 
-Could not find this loot table locally or in mcmeta 26.1.2.
+| Item | Stack Size | Pool | Weight | Chance |
+|:-----|:----------:|:----:|:------:|:------:|
+| Bread | 1–4 | 1 | 10 | 18.5% |
+| Potato | 1–7 | 1 | 10 | 18.5% |
+| Spruce Log | 1–5 | 1 | 10 | 18.5% |
+| Pumpkin Seeds | 1–5 | 1 | 5 | 9.3% |
+| Spruce Sapling | 1–5 | 1 | 5 | 9.3% |
+| Sweet Berries | 1–7 | 1 | 5 | 9.3% |
+| Emerald | 1–4 | 1 | 2 | 3.7% |
+| Fern | 1 | 1 | 2 | 3.7% |
+| Large Fern | 1 | 1 | 2 | 3.7% |
+| Iron Nugget | 1–5 | 1 | 1 | 1.9% |
+| Pumpkin Pie | 1 | 1 | 1 | 1.9% |
+| Spruce Sign | 1 | 1 | 1 | 1.9% |
+| Bundle | 1 | 2 | 1 | 33.3% |
 
 </details>
 
