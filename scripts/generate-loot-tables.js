@@ -90,61 +90,6 @@ function getLatestMinecraftVersionFromReleaseInfo() {
 
 const vanillaLootTableVersion = getLatestMinecraftVersionFromReleaseInfo();
 
-function unique(values) {
-  return [...new Set(values.filter(Boolean))];
-}
-
-function getMinecraftVersionsFromReleaseInfo() {
-  const file = "release_infos.yml";
-  if (!fs.existsSync(file)) return [];
-
-  const lines = fs.readFileSync(file, "utf8").split(/\r?\n/);
-  const versions = [];
-  let inVersions = false;
-  let versionsIndent = null;
-
-  for (const line of lines) {
-    const match = line.match(/^(\s*)Versions\s*:/);
-
-    if (match) {
-      inVersions = true;
-      versionsIndent = match[1].length;
-      continue;
-    }
-
-    if (!inVersions) continue;
-
-    const currentIndent = line.match(/^(\s*)/)?.[1].length ?? 0;
-
-    if (line.trim() && currentIndent <= versionsIndent && !line.trim().startsWith("-")) {
-      break;
-    }
-
-    const versionMatch = line.match(/^\s*-\s*["']?([^"'\s#]+)["']?/);
-    if (versionMatch) versions.push(versionMatch[1]);
-  }
-
-  return versions.sort(compareVersionParts);
-}
-
-function getVanillaLootTableRefs() {
-  const versions = getMinecraftVersionsFromReleaseInfo();
-  const latestFirst = versions.slice().reverse();
-
-  return unique([
-    vanillaLootTableVersion && `${vanillaLootTableVersion}-data`,
-    vanillaLootTableVersion,
-    ...latestFirst.map(version => `${version}-data`),
-    ...latestFirst,
-    "data"
-  ]);
-}
-
-function getVanillaLootTableSourceLabel() {
-  const refs = getVanillaLootTableRefs();
-  return refs.length > 0 ? refs.join(", ") : "unknown";
-}
-
 function fetchJson(url) {
   return new Promise(resolve => {
     https
@@ -180,17 +125,32 @@ function fetchJson(url) {
   });
 }
 
+function getMcmetaRefCandidates(version) {
+  const refs = [];
+  const add = ref => {
+    if (ref && !refs.includes(ref)) refs.push(ref);
+  };
+
+  // Misode/mcmeta stores generated data-pack-format snapshots on *-data refs
+  // such as 26.1.2-data. The plain 26.1.2 ref is not guaranteed to exist.
+  add(`${version}-data`);
+  add(version);
+
+  // Last resort: the rolling data branch has current vanilla generated data.
+  add("data");
+
+  return refs;
+}
+
 async function fetchVanillaLootTableJson(id) {
   const cleaned = cleanTag(id);
   const [namespace, lootPath] = cleaned.includes(":")
     ? cleaned.split(":")
     : ["minecraft", cleaned];
 
-  if (namespace !== "minecraft") return null;
+  if (namespace !== "minecraft" || !vanillaLootTableVersion) return null;
 
-  const refs = getVanillaLootTableRefs();
-
-  for (const ref of refs) {
+  for (const ref of getMcmetaRefCandidates(vanillaLootTableVersion)) {
     const url = `https://raw.githubusercontent.com/misode/mcmeta/${ref}/data/minecraft/loot_table/${lootPath}.json`;
     const json = await fetchJson(url);
 
@@ -200,7 +160,7 @@ async function fetchVanillaLootTableJson(id) {
     }
   }
 
-  console.warn(`Could not find vanilla loot table ${cleaned} in repo or mcmeta refs: ${getVanillaLootTableSourceLabel()}`);
+  console.warn(`Could not find vanilla loot table ${cleaned} in repo or mcmeta refs ${getMcmetaRefCandidates(vanillaLootTableVersion).join(", ")}`);
   return null;
 }
 

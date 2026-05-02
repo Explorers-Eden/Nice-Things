@@ -712,6 +712,7 @@ function applyBlockstateRotation(point, rotation) {
 
   if (rotation.x) rotated = rotatePointAroundOrigin(rotated, center, "x", rotation.x, false);
   if (rotation.y) rotated = rotatePointAroundOrigin(rotated, center, "y", rotation.y, false);
+  if (rotation.z) rotated = rotatePointAroundOrigin(rotated, center, "z", rotation.z, false);
 
   return rotated;
 }
@@ -865,7 +866,8 @@ function bakeElementQuads(blockName, modelTextures, element, variant) {
     const transformed = localPoints.map(point =>
       applyBlockstateRotation(applyElementRotation(point, element), {
         x: variant.x ?? 0,
-        y: variant.y ?? 0
+        y: variant.y ?? 0,
+        z: variant.z ?? 0
       })
     );
 
@@ -890,16 +892,123 @@ function allFaces(texture = null) {
   return { up: face, down: face, north: face, south: face, west: face, east: face };
 }
 
-function bakeFallbackElements(blockName, elements, variant = { x: 0, y: 0 }) {
+function bakeFallbackElements(blockName, elements, variant = { x: 0, y: 0, z: 0 }) {
   const baked = [];
   for (const element of elements) baked.push(...bakeElementQuads(blockName, {}, element, variant));
   return baked;
 }
 
+function blockTextureForButton(short) {
+  if (short === "stone_button") return "minecraft:block/stone";
+  if (short === "polished_blackstone_button") return "minecraft:block/polished_blackstone";
+  if (short.endsWith("_button")) {
+    const wood = short.replace(/_button$/, "");
+    if (["oak", "spruce", "birch", "jungle", "acacia", "dark_oak", "mangrove", "cherry", "bamboo", "pale_oak"].includes(wood)) {
+      return `minecraft:block/${wood}_planks`;
+    }
+    if (wood === "crimson" || wood === "warped") return `minecraft:block/${wood}_planks`;
+  }
+  return "minecraft:block/stone";
+}
+
+function yRotationForFacing(facing, base = "north") {
+  const order = ["north", "east", "south", "west"];
+  const from = order.indexOf(base);
+  const to = order.indexOf(facing);
+  if (from === -1 || to === -1) return 0;
+  return ((to - from + 4) % 4) * 90;
+}
+
+function buttonElementsForState(properties, texture) {
+  const face = properties.face ?? "wall";
+  const powered = String(properties.powered ?? "false") === "true";
+  const depth = powered ? 1 : 2;
+
+  if (face === "floor") {
+    return { elements: [{ from: [5, 0, 5], to: [11, depth, 11], faces: allFaces(texture) }], variant: { x: 0, y: yRotationForFacing(properties.facing ?? "north") } };
+  }
+
+  if (face === "ceiling") {
+    return { elements: [{ from: [5, 16 - depth, 5], to: [11, 16, 11], faces: allFaces(texture) }], variant: { x: 0, y: yRotationForFacing(properties.facing ?? "north") } };
+  }
+
+  // Base wall button faces north and sits on the north side of its block.
+  return {
+    elements: [{ from: [5, 6, 0], to: [11, 10, depth], faces: allFaces(texture) }],
+    variant: { x: 0, y: yRotationForFacing(properties.facing ?? "north") }
+  };
+}
+
+function leverElementsForState(properties) {
+  const face = properties.face ?? "wall";
+  const facing = properties.facing ?? "north";
+  const powered = String(properties.powered ?? "false") === "true";
+  const baseTexture = "minecraft:block/cobblestone";
+  const handleTexture = "minecraft:block/lever";
+
+  if (face === "floor") {
+    return {
+      elements: [
+        { from: [5, 0, 5], to: [11, 2, 11], faces: allFaces(baseTexture) },
+        { from: powered ? [7, 2, 4] : [7, 2, 7], to: powered ? [9, 9, 6] : [9, 10, 9], faces: allFaces(handleTexture) }
+      ],
+      variant: { x: 0, y: yRotationForFacing(facing) }
+    };
+  }
+
+  if (face === "ceiling") {
+    return {
+      elements: [
+        { from: [5, 14, 5], to: [11, 16, 11], faces: allFaces(baseTexture) },
+        { from: powered ? [7, 7, 4] : [7, 6, 7], to: powered ? [9, 14, 6] : [9, 14, 9], faces: allFaces(handleTexture) }
+      ],
+      variant: { x: 0, y: yRotationForFacing(facing) }
+    };
+  }
+
+  // Base wall lever faces north and sits on the north side of its block.
+  return {
+    elements: [
+      { from: [5, 4, 0], to: [11, 12, 2], faces: allFaces(baseTexture) },
+      { from: powered ? [7, 5, 2] : [7, 7, 2], to: powered ? [9, 7, 8] : [9, 13, 4], faces: allFaces(handleTexture) }
+    ],
+    variant: { x: 0, y: yRotationForFacing(facing) }
+  };
+}
+
+function chainElementsForState(properties) {
+  const texture = "minecraft:block/chain";
+  const axis = properties.axis ?? "y";
+  const variant = axis === "x" ? { x: 0, y: 0, z: 90 } : axis === "z" ? { x: 90, y: 0, z: 0 } : { x: 0, y: 0, z: 0 };
+
+  // Two thin crossed bars approximate the vanilla chain model, but use the actual
+  // vanilla chain texture instead of the renderer's hash-color fallback.
+  return {
+    elements: [
+      { from: [6.5, 0, 7], to: [9.5, 16, 9], faces: allFaces(texture) },
+      { from: [7, 0, 6.5], to: [9, 16, 9.5], faces: allFaces(texture) }
+    ],
+    variant
+  };
+}
+
 function specialBlockModel(blockName, properties = {}) {
   const short = blockName.replace(/^minecraft:/, "");
 
-  // Chain uses vanilla blockstates/models/textures. Do not use an untextured fallback.
+  if (short === "chain") {
+    const { elements, variant } = chainElementsForState(properties);
+    return bakeFallbackElements(blockName, elements, variant);
+  }
+
+  if (short.endsWith("_button")) {
+    const { elements, variant } = buttonElementsForState(properties, blockTextureForButton(short));
+    return bakeFallbackElements(blockName, elements, variant);
+  }
+
+  if (short === "lever") {
+    const { elements, variant } = leverElementsForState(properties);
+    return bakeFallbackElements(blockName, elements, variant);
+  }
 
   if (short.endsWith("_wall_sign") || short.endsWith("_wall_hanging_sign")) {
     const y = { south: 0, west: 90, north: 180, east: 270 }[properties.facing ?? "north"] ?? 180;
@@ -1481,58 +1590,42 @@ function rotateYDirection(direction, quarterTurns) {
   return horizontal[(index + quarterTurns + 400) % 4];
 }
 
-function rotateYAxis(axis, quarterTurns) {
-  if (axis !== "x" && axis !== "z") return axis;
-  return Math.abs(quarterTurns) % 2 === 1 ? (axis === "x" ? "z" : "x") : axis;
-}
-
-function rotateYRailShape(shape, quarterTurns) {
-  const turns = ((quarterTurns % 4) + 4) % 4;
-  let value = shape;
-
-  for (let i = 0; i < turns; i++) {
-    value = {
-      north_south: "east_west",
-      east_west: "north_south",
-      ascending_east: "ascending_south",
-      ascending_south: "ascending_west",
-      ascending_west: "ascending_north",
-      ascending_north: "ascending_east",
-      south_east: "south_west",
-      south_west: "north_west",
-      north_west: "north_east",
-      north_east: "south_east"
-    }[value] ?? value;
-  }
-
-  return value;
-}
-
 function rotateYProperties(properties, quarterTurns) {
   const rotated = { ...(properties ?? {}) };
-  const turns = ((quarterTurns % 4) + 4) % 4;
 
-  // Structure-piece rotation must rotate blockstate data too. Thin and
-  // directional vanilla models such as chains, buttons, levers, rails, panes,
-  // stairs, etc. depend on these properties to select the correct blockstate
-  // variant/model rotation. If only the block position is rotated, the model is
-  // drawn as if it still faced the original direction.
-  if (rotated.facing) rotated.facing = rotateYDirection(rotated.facing, turns);
-  if (rotated.horizontal_facing) rotated.horizontal_facing = rotateYDirection(rotated.horizontal_facing, turns);
-
-  if (rotated.axis) rotated.axis = rotateYAxis(rotated.axis, turns);
-
+  if (rotated.facing) rotated.facing = rotateYDirection(rotated.facing, quarterTurns);
+  if (rotated.horizontal_facing) rotated.horizontal_facing = rotateYDirection(rotated.horizontal_facing, quarterTurns);
   if (rotated.orientation) {
     const [front, top = "up"] = String(rotated.orientation).split("_");
-    rotated.orientation = `${rotateYDirection(front, turns)}_${rotateYDirection(top, turns)}`;
+    rotated.orientation = `${rotateYDirection(front, quarterTurns)}_${rotateYDirection(top, quarterTurns)}`;
   }
-
   if (rotated.rotation !== undefined) {
     const value = Number(rotated.rotation);
-    if (Number.isFinite(value)) rotated.rotation = String((value + turns * 4 + 1600) % 16);
+    if (Number.isFinite(value)) rotated.rotation = String((value + quarterTurns * 4 + 1600) % 16);
   }
 
-  if (rotated.shape) rotated.shape = rotateYRailShape(rotated.shape, turns);
+  if (rotated.axis === "x" || rotated.axis === "z") {
+    if (quarterTurns % 2 !== 0) rotated.axis = rotated.axis === "x" ? "z" : "x";
+  }
+
+  if (rotated.shape) {
+    const rotateShape = shape => {
+      const map = {
+        north_south: "east_west",
+        east_west: "north_south",
+        ascending_north: "ascending_east",
+        ascending_east: "ascending_south",
+        ascending_south: "ascending_west",
+        ascending_west: "ascending_north",
+        south_east: "south_west",
+        south_west: "north_west",
+        north_west: "north_east",
+        north_east: "south_east"
+      };
+      return map[shape] ?? shape;
+    };
+    for (let i = 0; i < ((quarterTurns % 4) + 4) % 4; i++) rotated.shape = rotateShape(rotated.shape);
+  }
 
   return rotated;
 }

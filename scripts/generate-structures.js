@@ -108,61 +108,6 @@ function getLatestMinecraftVersionFromReleaseInfo() {
 
 const vanillaLootTableVersion = getLatestMinecraftVersionFromReleaseInfo();
 
-function unique(values) {
-  return [...new Set(values.filter(Boolean))];
-}
-
-function getMinecraftVersionsFromReleaseInfo() {
-  const file = "release_infos.yml";
-  if (!fs.existsSync(file)) return [];
-
-  const lines = fs.readFileSync(file, "utf8").split(/\r?\n/);
-  const versions = [];
-  let inVersions = false;
-  let versionsIndent = null;
-
-  for (const line of lines) {
-    const match = line.match(/^(\s*)Versions\s*:/);
-
-    if (match) {
-      inVersions = true;
-      versionsIndent = match[1].length;
-      continue;
-    }
-
-    if (!inVersions) continue;
-
-    const currentIndent = line.match(/^(\s*)/)?.[1].length ?? 0;
-
-    if (line.trim() && currentIndent <= versionsIndent && !line.trim().startsWith("-")) {
-      break;
-    }
-
-    const versionMatch = line.match(/^\s*-\s*["']?([^"'\s#]+)["']?/);
-    if (versionMatch) versions.push(versionMatch[1]);
-  }
-
-  return versions.sort(compareVersionParts);
-}
-
-function getVanillaLootTableRefs() {
-  const versions = getMinecraftVersionsFromReleaseInfo();
-  const latestFirst = versions.slice().reverse();
-
-  return unique([
-    vanillaLootTableVersion && `${vanillaLootTableVersion}-data`,
-    vanillaLootTableVersion,
-    ...latestFirst.map(version => `${version}-data`),
-    ...latestFirst,
-    "data"
-  ]);
-}
-
-function getVanillaLootTableSourceLabel() {
-  const refs = getVanillaLootTableRefs();
-  return refs.length > 0 ? refs.join(", ") : "unknown";
-}
-
 function fetchJson(url) {
   return new Promise(resolve => {
     https
@@ -411,22 +356,18 @@ async function fetchVanillaLootTableJson(id) {
     ? cleaned.split(":")
     : ["minecraft", cleaned];
 
-  if (namespace !== "minecraft") return null;
+  if (namespace !== "minecraft" || !vanillaLootTableVersion) return null;
 
-  const refs = getVanillaLootTableRefs();
+  const url = `https://raw.githubusercontent.com/misode/mcmeta/${vanillaLootTableVersion}/data/minecraft/loot_table/${lootPath}.json`;
+  const json = await fetchJson(url);
 
-  for (const ref of refs) {
-    const url = `https://raw.githubusercontent.com/misode/mcmeta/${ref}/data/minecraft/loot_table/${lootPath}.json`;
-    const json = await fetchJson(url);
-
-    if (json) {
-      console.log(`Fetched vanilla loot table ${cleaned} from mcmeta ${ref}`);
-      return json;
-    }
+  if (json) {
+    console.log(`Fetched vanilla loot table ${cleaned} from mcmeta ${vanillaLootTableVersion}`);
+  } else {
+    console.warn(`Could not find vanilla loot table ${cleaned} in repo or mcmeta ${vanillaLootTableVersion}`);
   }
 
-  console.warn(`Could not find vanilla loot table ${cleaned} in repo or mcmeta refs: ${getVanillaLootTableSourceLabel()}`);
-  return null;
+  return json;
 }
 
 async function loadLootTableJson(id) {
@@ -706,7 +647,7 @@ async function renderGeneratedLootSection(lootTables) {
     let content;
 
     if (!json) {
-      content = `Could not find this loot table locally or in mcmeta refs: ${getVanillaLootTableSourceLabel()}.`;
+      content = `Could not find this loot table locally or in mcmeta ${vanillaLootTableVersion ?? "unknown"}.`;
     } else {
       content = await renderMergedPools(json.pools ?? []);
     }
