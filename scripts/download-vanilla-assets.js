@@ -161,13 +161,25 @@ async function resolveMinecraftVersion() {
 }
 
 function extractVanillaAssets(jarPath, versionId) {
-  const marker = path.join(assetRoot, versionId, ".extracted-v2");
+  const marker = path.join(assetRoot, versionId, ".extracted-v3");
+  const requiredAssetFiles = [
+    path.join(extractedRoot, "minecraft", "blockstates", "chain.json"),
+    path.join(extractedRoot, "minecraft", "blockstates", "lever.json"),
+    path.join(extractedRoot, "minecraft", "blockstates", "oak_button.json"),
+    path.join(extractedRoot, "minecraft", "models", "block", "chain.json"),
+    path.join(extractedRoot, "minecraft", "models", "block", "lever.json"),
+    path.join(extractedRoot, "minecraft", "models", "block", "button.json"),
+    path.join(extractedRoot, "minecraft", "textures", "block", "chain.png"),
+    path.join(extractedRoot, "minecraft", "textures", "block", "lever.png"),
+    path.join(extractedRoot, "minecraft", "textures", "block", "oak_planks.png")
+  ];
 
   if (
     fs.existsSync(marker) &&
     fs.existsSync(path.join(extractedRoot, "minecraft", "blockstates")) &&
     fs.existsSync(path.join(extractedRoot, "minecraft", "models", "block")) &&
-    fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block"))
+    fs.existsSync(path.join(extractedRoot, "minecraft", "textures", "block")) &&
+    requiredAssetFiles.every(file => fs.existsSync(file))
   ) {
     console.log(`Vanilla block assets for ${versionId} already extracted.`);
     return;

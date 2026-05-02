@@ -1481,19 +1481,58 @@ function rotateYDirection(direction, quarterTurns) {
   return horizontal[(index + quarterTurns + 400) % 4];
 }
 
+function rotateYAxis(axis, quarterTurns) {
+  if (axis !== "x" && axis !== "z") return axis;
+  return Math.abs(quarterTurns) % 2 === 1 ? (axis === "x" ? "z" : "x") : axis;
+}
+
+function rotateYRailShape(shape, quarterTurns) {
+  const turns = ((quarterTurns % 4) + 4) % 4;
+  let value = shape;
+
+  for (let i = 0; i < turns; i++) {
+    value = {
+      north_south: "east_west",
+      east_west: "north_south",
+      ascending_east: "ascending_south",
+      ascending_south: "ascending_west",
+      ascending_west: "ascending_north",
+      ascending_north: "ascending_east",
+      south_east: "south_west",
+      south_west: "north_west",
+      north_west: "north_east",
+      north_east: "south_east"
+    }[value] ?? value;
+  }
+
+  return value;
+}
+
 function rotateYProperties(properties, quarterTurns) {
   const rotated = { ...(properties ?? {}) };
+  const turns = ((quarterTurns % 4) + 4) % 4;
 
-  if (rotated.facing) rotated.facing = rotateYDirection(rotated.facing, quarterTurns);
-  if (rotated.horizontal_facing) rotated.horizontal_facing = rotateYDirection(rotated.horizontal_facing, quarterTurns);
+  // Structure-piece rotation must rotate blockstate data too. Thin and
+  // directional vanilla models such as chains, buttons, levers, rails, panes,
+  // stairs, etc. depend on these properties to select the correct blockstate
+  // variant/model rotation. If only the block position is rotated, the model is
+  // drawn as if it still faced the original direction.
+  if (rotated.facing) rotated.facing = rotateYDirection(rotated.facing, turns);
+  if (rotated.horizontal_facing) rotated.horizontal_facing = rotateYDirection(rotated.horizontal_facing, turns);
+
+  if (rotated.axis) rotated.axis = rotateYAxis(rotated.axis, turns);
+
   if (rotated.orientation) {
     const [front, top = "up"] = String(rotated.orientation).split("_");
-    rotated.orientation = `${rotateYDirection(front, quarterTurns)}_${rotateYDirection(top, quarterTurns)}`;
+    rotated.orientation = `${rotateYDirection(front, turns)}_${rotateYDirection(top, turns)}`;
   }
+
   if (rotated.rotation !== undefined) {
     const value = Number(rotated.rotation);
-    if (Number.isFinite(value)) rotated.rotation = String((value + quarterTurns * 4 + 1600) % 16);
+    if (Number.isFinite(value)) rotated.rotation = String((value + turns * 4 + 1600) % 16);
   }
+
+  if (rotated.shape) rotated.shape = rotateYRailShape(rotated.shape, turns);
 
   return rotated;
 }
