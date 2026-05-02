@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const nbt = require("prismarine-nbt");
 const { PNG } = require("pngjs");
+const crypto = require("crypto");
 
 const inputRoot = process.env.STRUCTURE_INPUT_ROOT ?? "data";
 const outputRoot = process.env.STRUCTURE_PREVIEW_OUTPUT_ROOT ?? path.join("wiki", "images", "structures");
@@ -16,7 +17,7 @@ const padding = Number(process.env.STRUCTURE_PREVIEW_PADDING ?? 48);
 const maxImageSize = Number(process.env.STRUCTURE_PREVIEW_MAX_SIZE ?? 900);
 const transparentBackground = String(process.env.STRUCTURE_PREVIEW_TRANSPARENT ?? "true") !== "false";
 const pngCompressionLevel = Math.min(9, Math.max(0, Number(process.env.STRUCTURE_PREVIEW_PNG_COMPRESSION ?? 9)));
-const previewSeed = String(process.env.STRUCTURE_PREVIEW_SEED ?? "katters-structures-preview");
+const previewSeed = String(process.env.STRUCTURE_PREVIEW_SEED ?? crypto.randomBytes(8).toString("hex"));
 
 const previewRotations = [
   { name: "north", degrees: 0 },
@@ -244,11 +245,15 @@ function hashString(text) {
 }
 
 function seededRandom(seedText) {
+  // One deterministic sample in [0, 1) for a specific choice key. The base
+  // previewSeed is randomized once per run unless STRUCTURE_PREVIEW_SEED is set,
+  // so weighted jigsaw and blockstate choices vary between runs but remain
+  // reproducible when the logged seed is reused.
   let state = hashString(seedText) || 1;
-  state ^= state << 13;
-  state ^= state >>> 17;
-  state ^= state << 5;
-  return ((state >>> 0) / 4294967296);
+  state = Math.imul(state ^ (state >>> 15), 0x2c1b3c6d);
+  state = Math.imul(state ^ (state >>> 12), 0x297a2d39);
+  state = (state ^ (state >>> 15)) >>> 0;
+  return state / 4294967296;
 }
 
 function chooseWeightedEntry(entries, seedText) {
@@ -922,23 +927,67 @@ function yRotationForFacing(facing, base = "north") {
   return ((to - from + 4) % 4) * 90;
 }
 
+function cuboid(from, to, texture) {
+  return { from, to, faces: allFaces(texture) };
+}
+
+function wallAttachmentCuboid(facing, depth, y0, y1, inset0, inset1, texture) {
+  // For wall-attached blocks, the blockstate `facing` is the direction the
+  // button/lever faces. The solid support is behind it, i.e. on the opposite
+  // side of this block's local cube. So a north-facing button is drawn on the
+  // south edge of the button block, not the north edge.
+  switch (facing) {
+    case "south":
+      return cuboid([inset0, y0, 0], [inset1, y1, depth], texture);
+    case "east":
+      return cuboid([0, y0, inset0], [depth, y1, inset1], texture);
+    case "west":
+      return cuboid([16 - depth, y0, inset0], [16, y1, inset1], texture);
+    case "north":
+    default:
+      return cuboid([inset0, y0, 16 - depth], [inset1, y1, 16], texture);
+  }
+}
+
+function wallLeverHandleCuboid(facing, powered, texture) {
+  // A compact cuboid handle that stays connected to the wall base plate. It is
+  // approximate but deliberately attached to the same opposite-side support as
+  // the base instead of being rotated onto the outside of the block.
+  if (facing === "south") {
+    return powered ? cuboid([7, 5, 2], [9, 7, 8], texture) : cuboid([7, 7, 2], [9, 13, 4], texture);
+  }
+  if (facing === "east") {
+    return powered ? cuboid([2, 5, 7], [8, 7, 9], texture) : cuboid([2, 7, 7], [4, 13, 9], texture);
+  }
+  if (facing === "west") {
+    return powered ? cuboid([8, 5, 7], [14, 7, 9], texture) : cuboid([12, 7, 7], [14, 13, 9], texture);
+  }
+  return powered ? cuboid([7, 5, 8], [9, 7, 14], texture) : cuboid([7, 7, 12], [9, 13, 14], texture);
+}
+
 function buttonElementsForState(properties, texture) {
   const face = properties.face ?? "wall";
+  const facing = properties.facing ?? "north";
   const powered = String(properties.powered ?? "false") === "true";
   const depth = powered ? 1 : 2;
 
   if (face === "floor") {
-    return { elements: [{ from: [5, 0, 5], to: [11, depth, 11], faces: allFaces(texture) }], variant: { x: 0, y: yRotationForFacing(properties.facing ?? "north") } };
+    return {
+      elements: [cuboid([5, 0, 5], [11, depth, 11], texture)],
+      variant: { x: 0, y: yRotationForFacing(facing), z: 0 }
+    };
   }
 
   if (face === "ceiling") {
-    return { elements: [{ from: [5, 16 - depth, 5], to: [11, 16, 11], faces: allFaces(texture) }], variant: { x: 0, y: yRotationForFacing(properties.facing ?? "north") } };
+    return {
+      elements: [cuboid([5, 16 - depth, 5], [11, 16, 11], texture)],
+      variant: { x: 0, y: yRotationForFacing(facing), z: 0 }
+    };
   }
 
-  // Base wall button faces north and sits on the north side of its block.
   return {
-    elements: [{ from: [5, 6, 0], to: [11, 10, depth], faces: allFaces(texture) }],
-    variant: { x: 0, y: yRotationForFacing(properties.facing ?? "north") }
+    elements: [wallAttachmentCuboid(facing, depth, 6, 10, 5, 11, texture)],
+    variant: { x: 0, y: 0, z: 0 }
   };
 }
 
@@ -952,57 +1001,56 @@ function leverElementsForState(properties) {
   if (face === "floor") {
     return {
       elements: [
-        { from: [5, 0, 5], to: [11, 2, 11], faces: allFaces(baseTexture) },
-        { from: powered ? [7, 2, 4] : [7, 2, 7], to: powered ? [9, 9, 6] : [9, 10, 9], faces: allFaces(handleTexture) }
+        cuboid([5, 0, 5], [11, 2, 11], baseTexture),
+        cuboid(powered ? [7, 2, 4] : [7, 2, 7], powered ? [9, 9, 6] : [9, 10, 9], handleTexture)
       ],
-      variant: { x: 0, y: yRotationForFacing(facing) }
+      variant: { x: 0, y: yRotationForFacing(facing), z: 0 }
     };
   }
 
   if (face === "ceiling") {
     return {
       elements: [
-        { from: [5, 14, 5], to: [11, 16, 11], faces: allFaces(baseTexture) },
-        { from: powered ? [7, 7, 4] : [7, 6, 7], to: powered ? [9, 14, 6] : [9, 14, 9], faces: allFaces(handleTexture) }
+        cuboid([5, 14, 5], [11, 16, 11], baseTexture),
+        cuboid(powered ? [7, 7, 4] : [7, 6, 7], powered ? [9, 14, 6] : [9, 14, 9], handleTexture)
       ],
-      variant: { x: 0, y: yRotationForFacing(facing) }
+      variant: { x: 0, y: yRotationForFacing(facing), z: 0 }
     };
   }
 
-  // Base wall lever faces north and sits on the north side of its block.
-  return {
-    elements: [
-      { from: [5, 4, 0], to: [11, 12, 2], faces: allFaces(baseTexture) },
-      { from: powered ? [7, 5, 2] : [7, 7, 2], to: powered ? [9, 7, 8] : [9, 13, 4], faces: allFaces(handleTexture) }
-    ],
-    variant: { x: 0, y: yRotationForFacing(facing) }
-  };
+  const elements = [
+    wallAttachmentCuboid(facing, 2, 4, 12, 5, 11, baseTexture),
+    wallLeverHandleCuboid(facing, powered, handleTexture)
+  ];
+
+  return { elements, variant: { x: 0, y: 0, z: 0 } };
 }
 
 function chainElementsForState(properties) {
   const texture = "minecraft:block/chain";
   const axis = properties.axis ?? "y";
-  const variant = axis === "x" ? { x: 0, y: 0, z: 90 } : axis === "z" ? { x: 90, y: 0, z: 0 } : { x: 0, y: 0, z: 0 };
 
-  // Two thin crossed bars approximate the vanilla chain model, but use the actual
-  // vanilla chain texture instead of the renderer's hash-color fallback.
-  return {
-    elements: [
-      { from: [6.5, 0, 7], to: [9.5, 16, 9], faces: allFaces(texture) },
-      { from: [7, 0, 6.5], to: [9, 16, 9.5], faces: allFaces(texture) }
-    ],
-    variant
-  };
+  // Crossed, very thin cuboids using the actual vanilla chain texture. These
+  // are intentionally slim so lantern chains read as chains instead of as thick
+  // posts, and they still render even when the generic transparent model baker
+  // misses the vanilla chain model.
+  const elements = [
+    cuboid([6.75, 0, 7.25], [9.25, 16, 8.75], texture),
+    cuboid([7.25, 0, 6.75], [8.75, 16, 9.25], texture)
+  ];
+
+  if (axis === "x") return { elements, variant: { x: 0, y: 0, z: 90 } };
+  if (axis === "z") return { elements, variant: { x: 90, y: 0, z: 0 } };
+  return { elements, variant: { x: 0, y: 0, z: 0 } };
 }
 
 function specialBlockModel(blockName, properties = {}) {
   const short = blockName.replace(/^minecraft:/, "");
 
-  // Chains, buttons, and levers must use vanilla blockstates/models.
-  // Their placement depends on model rotations (including z-rotation) and thin
-  // transparent texture geometry; custom cuboid fallbacks attach to the wrong
-  // side and lose the vanilla chain texture.
-
+  // Keep true special fallbacks only for blocks that do not have useful vanilla
+  // model geometry in the asset baker. Directional/thin blocks such as chains,
+  // buttons, and levers intentionally go through vanilla blockstates/models so
+  // their rotations, UVs, and textures come from Minecraft's own data.
   if (short.endsWith("_wall_sign") || short.endsWith("_wall_hanging_sign")) {
     const y = { south: 0, west: 90, north: 180, east: 270 }[properties.facing ?? "north"] ?? 180;
     return bakeFallbackElements(blockName, [
@@ -1019,10 +1067,54 @@ function specialBlockModel(blockName, properties = {}) {
     ], { x: 0, y });
   }
 
-  // Buttons and levers use vanilla blockstates/models so wall/floor/ceiling
-  // placement, rotations, and textures come from the downloaded vanilla assets.
-
   return null;
+}
+
+function getAttachmentSnap(blockName, properties = {}) {
+  const short = blockName.replace(/^minecraft:/, "");
+  if (!(short === "lever" || short.endsWith("_button"))) return null;
+
+  const face = properties.face ?? "wall";
+  const facing = properties.facing ?? "north";
+
+  if (face === "floor") return { axis: "y", side: "min" };
+  if (face === "ceiling") return { axis: "y", side: "max" };
+
+  switch (facing) {
+    case "south": return { axis: "z", side: "min" };
+    case "east": return { axis: "x", side: "min" };
+    case "west": return { axis: "x", side: "max" };
+    case "north":
+    default: return { axis: "z", side: "max" };
+  }
+}
+
+function snapAttachedModelToSupport(blockName, properties, quads) {
+  const snap = getAttachmentSnap(blockName, properties);
+  if (!snap || quads.length === 0) return quads;
+
+  let min = Infinity;
+  let max = -Infinity;
+  for (const quad of quads) {
+    for (const point of quad.points) {
+      const value = point[snap.axis];
+      if (value < min) min = value;
+      if (value > max) max = value;
+    }
+  }
+
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return quads;
+
+  const target = snap.side === "min" ? 0 : 1;
+  const current = snap.side === "min" ? min : max;
+  const delta = target - current;
+  if (Math.abs(delta) < 0.0001) return quads;
+
+  return quads.map(quad => ({
+    ...quad,
+    points: quad.points.map(point => ({ ...point, [snap.axis]: point[snap.axis] + delta })),
+    depthOffset: faceDepth(quad.points.map(point => ({ ...point, [snap.axis]: point[snap.axis] + delta })))
+  }));
 }
 
 function bakeBlockModel(blockName, properties = {}) {
@@ -1054,9 +1146,10 @@ function bakeBlockModel(blockName, properties = {}) {
     }
   }
 
-  stats.bakedQuads += baked.length;
-  bakedModelCache.set(cacheKey, baked);
-  return baked;
+  const attached = snapAttachedModelToSupport(blockName, properties, baked);
+  stats.bakedQuads += attached.length;
+  bakedModelCache.set(cacheKey, attached);
+  return attached;
 }
 
 function makeBlockQuads(block, offsetX, offsetY, scale, rotation = null) {
@@ -1692,7 +1785,7 @@ async function chooseStructureFromTemplatePool(poolId, seenPools = new Set(), se
   const choices = getTemplatePoolChoices(poolJson);
 
   if (choices.length > 0) {
-    const choice = chooseWeightedEntry(choices, `${previewSeed}|pool|${poolId}|${seedText}`) ?? choices[0];
+    const choice = chooseWeightedEntry(choices, `${seedText}|pool|${poolId}`) ?? choices[0];
 
     // The chosen pool element may be minecraft:empty or another non-structure
     // element. That means this jigsaw does not place a child here; do not
@@ -1958,6 +2051,7 @@ function removeStaleOutputFiles(validOutputFiles) {
 }
 
 async function main() {
+  console.log(`Using STRUCTURE_PREVIEW_SEED=${previewSeed}`);
   const groups = await getWorldgenStructureGroups();
 
   if (groups.size === 0) {

@@ -161,7 +161,7 @@ async function resolveMinecraftVersion() {
 }
 
 function extractVanillaAssets(jarPath, versionId) {
-  const marker = path.join(assetRoot, versionId, ".extracted-v4-vanilla-thin-block-models");
+  const marker = path.join(assetRoot, versionId, ".extracted-v5-full-block-model-baker");
 
   if (
     fs.existsSync(marker) &&
