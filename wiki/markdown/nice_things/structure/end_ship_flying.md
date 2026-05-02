@@ -5,76 +5,49 @@ There are 7 loot tables used in this structure:
 <details>
 <summary><strong>eden:chests/end_ships/boom_ship</strong> (1 use)</summary>
 
-Could not find this loot table locally or in mcmeta refs: 26.1.2-data, 26.1.2, 26.1.1-data, 26.1-data, 26.1.1, 26.1, data.
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
 <details>
 <summary><strong>eden:chests/end_ships/boom_ship_big</strong> (6 uses)</summary>
 
-Could not find this loot table locally or in mcmeta refs: 26.1.2-data, 26.1.2, 26.1.1-data, 26.1-data, 26.1.1, 26.1, data.
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
 <details>
 <summary><strong>eden:chests/end_ships/boom_ship_giant</strong> (1 use)</summary>
 
-Could not find this loot table locally or in mcmeta refs: 26.1.2-data, 26.1.2, 26.1.1-data, 26.1-data, 26.1.1, 26.1, data.
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
 <details>
 <summary><strong>eden:chests/end_ships/cargo_ship</strong> (2 uses)</summary>
 
-Could not find this loot table locally or in mcmeta refs: 26.1.2-data, 26.1.2, 26.1.1-data, 26.1-data, 26.1.1, 26.1, data.
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
 <details>
 <summary><strong>eden:chests/end_ships/cargo_ship_big</strong> (3 uses)</summary>
 
-Could not find this loot table locally or in mcmeta refs: 26.1.2-data, 26.1.2, 26.1.1-data, 26.1-data, 26.1.1, 26.1, data.
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
 <details>
 <summary><strong>eden:chests/end_ships/elytra_chest</strong> (1 use)</summary>
 
-Could not find this loot table locally or in mcmeta refs: 26.1.2-data, 26.1.2, 26.1.1-data, 26.1-data, 26.1.1, 26.1, data.
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
 <details>
 <summary><strong>minecraft:chests/end_city_treasure</strong> (16 uses)</summary>
 
-| Item | Stack Size | Pool | Weight | Chance |
-|:-----|:----------:|:----:|:------:|:------:|
-| Gold Ingot | 2–7 | 1 | 15 | 16.9% |
-| Iron Ingot | 4–8 | 1 | 10 | 11.2% |
-| Beetroot Seeds | 1–10 | 1 | 5 | 5.6% |
-| Diamond | 2–7 | 1 | 5 | 5.6% |
-| Diamond Boots | 1 | 1 | 3 | 3.4% |
-| Diamond Chestplate | 1 | 1 | 3 | 3.4% |
-| Diamond Helmet | 1 | 1 | 3 | 3.4% |
-| Diamond Leggings | 1 | 1 | 3 | 3.4% |
-| Diamond Pickaxe | 1 | 1 | 3 | 3.4% |
-| Diamond Shovel | 1 | 1 | 3 | 3.4% |
-| Diamond Spear | 1 | 1 | 3 | 3.4% |
-| Diamond Sword | 1 | 1 | 3 | 3.4% |
-| Iron Boots | 1 | 1 | 3 | 3.4% |
-| Iron Chestplate | 1 | 1 | 3 | 3.4% |
-| Iron Helmet | 1 | 1 | 3 | 3.4% |
-| Iron Leggings | 1 | 1 | 3 | 3.4% |
-| Iron Pickaxe | 1 | 1 | 3 | 3.4% |
-| Iron Shovel | 1 | 1 | 3 | 3.4% |
-| Iron Sword | 1 | 1 | 3 | 3.4% |
-| Saddle | 1 | 1 | 3 | 3.4% |
-| Emerald | 2–6 | 1 | 2 | 2.2% |
-| Copper Horse Armor | 1 | 1 | 1 | 1.1% |
-| Diamond Horse Armor | 1 | 1 | 1 | 1.1% |
-| Golden Horse Armor | 1 | 1 | 1 | 1.1% |
-| Iron Horse Armor | 1 | 1 | 1 | 1.1% |
-| Spire Armor Trim Smithing Template | 1 | 2 | 1 | 6.7% |
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 

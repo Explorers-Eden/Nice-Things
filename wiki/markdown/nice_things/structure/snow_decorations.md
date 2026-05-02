@@ -5,19 +5,7 @@ There is one loot table used in this structure:
 <details>
 <summary><strong>minecraft:chests/village/village_snowy_house</strong> (1 use)</summary>
 
-| Item | Stack Size | Pool | Weight | Chance |
-|:-----|:----------:|:----:|:------:|:------:|
-| Beetroot Seeds | 1–5 | 1 | 10 | 18.9% |
-| Bread | 1–4 | 1 | 10 | 18.9% |
-| Potato | 1–7 | 1 | 10 | 18.9% |
-| Snowball | 1–7 | 1 | 10 | 18.9% |
-| Coal | 1–4 | 1 | 5 | 9.4% |
-| Snow Block | 1 | 1 | 4 | 7.5% |
-| Beetroot Soup | 1 | 1 | 1 | 1.9% |
-| Blue Ice | 1 | 1 | 1 | 1.9% |
-| Emerald | 1–4 | 1 | 1 | 1.9% |
-| Furnace | 1 | 1 | 1 | 1.9% |
-| Bundle | 1 | 2 | 1 | 33.3% |
+Could not find this loot table locally or in mcmeta 26.1.2.
 
 </details>
 
