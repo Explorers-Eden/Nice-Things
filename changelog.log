@@ -1,5 +1,12 @@
 # Minecraft Version(s): 26.1.x
 ## Changes:
 - Lang Files are now getting automatically synced with crowdin with new releases
+- Chorus Flowers & Chorus Plants are now placeable on Farmland, Dirt, Grass, Mud, Moss & Podzol Blocks
+- Podzol now supports vegetation
+- Cocoa Beans can now be placed onto every Log type
+- Small Dripleaves are now placeable on Grass, Mud, Moss & Podzol Blocks
+- Crafting Brown Dye from Orange and Black Dye now gives 2 Items in return
+- Crafting Green Dye from Blue and Yellow Dye now gives 2 Items in return
 
 ## Fixes:
+- Small Dripleaves couldnt be placed no longer on Dirt & Farmland blocks due to tag list name change

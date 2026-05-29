@@ -6,6 +6,7 @@
     "minecraft:black_dye"
   ],
   "result": {
-    "id": "minecraft:brown_dye"
+    "id": "minecraft:brown_dye",
+    "count": 2
   }
 }

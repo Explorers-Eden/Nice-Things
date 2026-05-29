@@ -1,3 +1,5 @@
+execute unless items entity @s inventory.* minecraft:armor_stand[!minecraft:custom_data] unless items entity @s hotbar.* minecraft:armor_stand[!minecraft:custom_data] unless items entity @s weapon.offhand minecraft:armor_stand[!minecraft:custom_data] unless items entity @s player.cursor minecraft:armor_stand[!minecraft:custom_data] run return fail
+
 execute if items entity @s weapon.offhand minecraft:armor_stand[!minecraft:custom_data] run item modify entity @s weapon.offhand nice_things:armor_stand_arms
 execute if items entity @s player.cursor minecraft:armor_stand[!minecraft:custom_data] run item modify entity @s player.cursor nice_things:armor_stand_arms
 
