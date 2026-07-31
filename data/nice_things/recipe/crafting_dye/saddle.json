@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_dye",
+  "dye": "#minecraft:dyes",
+  "group": "dyed_saddle",
+  "result": {
+    "id": "minecraft:saddle"
+  },
+  "target": "minecraft:saddle"
+}
