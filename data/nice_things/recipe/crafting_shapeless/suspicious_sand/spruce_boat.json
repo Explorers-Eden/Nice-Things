@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_sand",
+  "ingredients": [
+    "minecraft:sand",
+    "minecraft:spruce_boat"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:spruce_boat"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_sand"
+        },
+        " (",
+        {
+          "translate": "entity.minecraft.spruce_boat"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_sand"
+  }
+}

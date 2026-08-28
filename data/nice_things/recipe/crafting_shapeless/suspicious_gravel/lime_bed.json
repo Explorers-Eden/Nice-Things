@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_gravel",
+  "ingredients": [
+    "minecraft:gravel",
+    "minecraft:lime_bed"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:lime_bed"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_gravel"
+        },
+        " (",
+        {
+          "translate": "block.minecraft.lime_bed"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_gravel"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_gravel",
+  "ingredients": [
+    "minecraft:gravel",
+    "minecraft:zombie_head"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:zombie_head"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_gravel"
+        },
+        " (",
+        {
+          "translate": "block.minecraft.zombie_head"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_gravel"
+  }
+}

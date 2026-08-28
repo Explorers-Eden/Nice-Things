@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_sand",
+  "ingredients": [
+    "minecraft:sand",
+    "minecraft:orange_banner"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:orange_banner"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_sand"
+        },
+        " (",
+        {
+          "translate": "block.minecraft.orange_banner"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_sand"
+  }
+}

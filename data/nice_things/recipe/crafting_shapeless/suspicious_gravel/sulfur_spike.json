@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_gravel",
+  "ingredients": [
+    "minecraft:gravel",
+    "minecraft:sulfur_spike"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:sulfur_spike"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_gravel"
+        },
+        " (",
+        {
+          "translate": "block.minecraft.sulfur_spike"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_gravel"
+  }
+}

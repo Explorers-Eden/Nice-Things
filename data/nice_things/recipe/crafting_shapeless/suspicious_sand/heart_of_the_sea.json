@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_sand",
+  "ingredients": [
+    "minecraft:sand",
+    "minecraft:heart_of_the_sea"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:heart_of_the_sea"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_sand"
+        },
+        " (",
+        {
+          "translate": "item.minecraft.heart_of_the_sea"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_sand"
+  }
+}

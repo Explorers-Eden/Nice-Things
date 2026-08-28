@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_sand",
+  "ingredients": [
+    "minecraft:sand",
+    "minecraft:silence_armor_trim_smithing_template"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:silence_armor_trim_smithing_template"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_sand"
+        },
+        " (",
+        {
+          "translate": "item.minecraft.silence_armor_trim_smithing_template"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_sand"
+  }
+}

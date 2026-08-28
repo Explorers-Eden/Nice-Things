@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_gravel",
+  "ingredients": [
+    "minecraft:gravel",
+    "minecraft:netherite_shovel"
+  ],
+  "result": {
+    "components": {
+      "minecraft:block_entity_data": {
+        "id": "minecraft:brushable_block",
+        "item": {
+          "id": "minecraft:netherite_shovel"
+        }
+      },
+      "minecraft:item_name": [
+        {
+          "translate": "block.minecraft.suspicious_gravel"
+        },
+        " (",
+        {
+          "translate": "item.minecraft.netherite_shovel"
+        },
+        ")"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_gravel"
+  }
+}
