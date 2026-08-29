@@ -638,5 +638,21 @@
     "painting.nice_things.harmony.author": "Рай исследователя",
     "painting.nice_things.harmony.title": "Гармония",
     "painting.nice_things.katters_combs.author": "Katter21",
-    "painting.nice_things.katters_combs.title": "Расческа Ketter"
+    "painting.nice_things.katters_combs.title": "Расческа Ketter",
+    "block.nice_things.banner.r.black": "Black Letter: R",
+    "block.nice_things.banner.r.blue": "Blue Letter: R",
+    "block.nice_things.banner.r.brown": "Brown Letter: R",
+    "block.nice_things.banner.r.cyan": "Cyan Letter: R",
+    "block.nice_things.banner.r.gray": "Gray Letter: R",
+    "block.nice_things.banner.r.green": "Green Letter: R",
+    "block.nice_things.banner.r.light_blue": "Light Blue Letter: R",
+    "block.nice_things.banner.r.light_gray": "Light Gray Letter: R",
+    "block.nice_things.banner.r.lime": "Lime Letter: R",
+    "block.nice_things.banner.r.magenta": "Magenta Letter: R",
+    "block.nice_things.banner.r.orange": "Orange Letter: R",
+    "block.nice_things.banner.r.pink": "Pink Letter: R",
+    "block.nice_things.banner.r.purple": "Purple Letter: R",
+    "block.nice_things.banner.r.red": "Red Letter: R",
+    "block.nice_things.banner.r.white": "White Letter: R",
+    "block.nice_things.banner.r.yellow": "Yellow Letter: R"
 }
