@@ -1,11 +1,11 @@
 {
   "values": [
-    "minecraft:chest",
-    "minecraft:trapped_chest",
     "minecraft:barrel",
-    "minecraft:suspicious_sand",
-    "minecraft:suspicious_gravel",
+    "minecraft:chest",
     "minecraft:chiseled_bookshelf",
-    "minecraft:decorated_pot"
+    "minecraft:decorated_pot",
+    "minecraft:suspicious_gravel",
+    "minecraft:suspicious_sand",
+    "minecraft:trapped_chest"
   ]
 }

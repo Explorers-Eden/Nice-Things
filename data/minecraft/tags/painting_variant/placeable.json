@@ -1,18 +1,18 @@
 {
   "values": [
-    "nice_things:overworld",
-    "nice_things:nether",
-    "nice_things:end",
-    "nice_things:bear",
-    "nice_things:tulip",
-    "nice_things:red_mushroom",
-    "nice_things:beacon",
-    "nice_things:herobrine",
-    "nice_things:harmony",
-    "nice_things:katters_combs",
-    "minecraft:fire",
     "minecraft:earth",
+    "minecraft:fire",
     "minecraft:water",
-    "minecraft:wind"
+    "minecraft:wind",
+    "nice_things:beacon",
+    "nice_things:bear",
+    "nice_things:end",
+    "nice_things:harmony",
+    "nice_things:herobrine",
+    "nice_things:katters_combs",
+    "nice_things:nether",
+    "nice_things:overworld",
+    "nice_things:red_mushroom",
+    "nice_things:tulip"
   ]
 }

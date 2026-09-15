@@ -1,0 +1,40 @@
+{
+  "parent": "eden:adventure/wrench_it",
+  "display": {
+    "icon": {
+      "id": "minecraft:amethyst_shard"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.through_the_kaleidoscope.title",
+      "fallback": "Through the Kaleidoscope"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.through_the_kaleidoscope.description",
+      "fallback": "Craft and use the Kaleidoscope."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/kaleidoscope"
+      }
+    },
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_13",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "kaleidoscope"
+            }
+          }
+        }
+      }
+    }
+  }
+}

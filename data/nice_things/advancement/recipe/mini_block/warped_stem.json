@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/warped_stem"
+        "recipes": "nice_things:stonecutter/mini_block/warped_stem"
       }
     },
     "has_item": {

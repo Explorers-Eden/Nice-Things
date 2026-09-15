@@ -1,6 +1,14 @@
-# Minecraft Version(s): 26.2
+# Minecraft Version(s): 26.3
+## The Wilderness Bound update had lots of small technical changes which added up - so please report any Bugs you catch on our Discord server. 
+## We also moved away from crowdin for our translations and now have our own solution. Feel free to contribute: https://explorerseden.eu/translate/
+## Thank you!
+
 ## Changes:
-- Added crafting recipes for filled Suspicious Sand & Gravel (supports almost any vanilla item/block)
-- Added missing translation keys for "R" Banner Patterns
+- Crying Obsidian and Reinforced Deepslate can now be used as Nether Portal Frames
+- Chopper blocks can now shear Pumpkins into Carved Pumpkins and Wool Blocks into Wool Stairs
+- Added Kaleidoscope (can be crafted from 2 Iron Ingots and an Emerald)
+- Redstone Wire, Redstone Torch, Repeater & Comparator blocks are no longer washed away by fluids
+- Red-/Brown Mushrooms are now placeable on Grass, Dirt, Mud, Moss, Farmland Blocks regardless of the light level
+- Added 17 progression advancements
 
 ## Fixes:

@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/blast_furnace"
+        "recipes": "nice_things:stonecutter/mini_block/blast_furnace"
       }
     },
     "has_item": {

@@ -1,5 +1,15 @@
 {
   "values": [
+    "nice_things:0",
+    "nice_things:1",
+    "nice_things:2",
+    "nice_things:3",
+    "nice_things:4",
+    "nice_things:5",
+    "nice_things:6",
+    "nice_things:7",
+    "nice_things:8",
+    "nice_things:9",
     "nice_things:a",
     "nice_things:b",
     "nice_things:c",
@@ -25,16 +35,6 @@
     "nice_things:w",
     "nice_things:x",
     "nice_things:y",
-    "nice_things:z",
-    "nice_things:0",
-    "nice_things:1",
-    "nice_things:2",
-    "nice_things:3",
-    "nice_things:4",
-    "nice_things:5",
-    "nice_things:6",
-    "nice_things:7",
-    "nice_things:8",
-    "nice_things:9"
+    "nice_things:z"
   ]
 }

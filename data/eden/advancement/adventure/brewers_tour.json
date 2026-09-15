@@ -1,0 +1,245 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:brewing_stand"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.brewers_tour.title",
+      "fallback": "Brewer's Tour"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.brewers_tour.description",
+      "fallback": "Drink all 14 Biome Brews."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "drank_charcoal": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "charcoal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_cocoa": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "cocoa"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_cotton": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "cotton"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_crimson_forest": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "crimson_forest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_desert": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "desert"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_lavender": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "lavender"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_lush": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "lush"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_pale_garden": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "pale_garden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_pumpkin": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "pumpkin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_ruby": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "ruby"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_teal": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "teal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_void": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "void"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_warped_forest": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "warped_forest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "drank_winter": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "winter"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

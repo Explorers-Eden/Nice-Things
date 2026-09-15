@@ -1,6 +1,7 @@
 {
   "values": [
+    "#nice_things:mineable_by_chopper",
     "#nice_things:strippable_by_chopper",
-    "#nice_things:mineable_by_chopper"
+    "#nice_things:shearable_by_chopper"
   ]
 }

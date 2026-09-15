@@ -1,38 +1,26 @@
 {
-    "type": "minecraft:block",
-    "pools": [
-      {
-        "bonus_rolls": 0,
-        "entries": [
-          {
-            "type": "minecraft:alternatives",
-            "children": [
-              {
-                "type": "minecraft:item",
-                "functions": [
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
                   {
-                    "function": "minecraft:set_components",
-                    "components": {
-                      "minecraft:item_name": {"translate":"block.nice_things.lit_soul_campfire"},
-                      "minecraft:block_state": {
-                        "lit": "true"
-                      },
-                      "minecraft:custom_data": {
-                        "nice_things": "lit_soul_campfire"
-                      }
-                    }
-                  }
-                ],
-                "conditions": [
-                  {
-                    "condition": "minecraft:block_state_property",
-                    "block": "minecraft:soul_campfire",
-                    "properties": {
+                    "type": "minecraft:match_block",
+                    "blocks": "minecraft:soul_campfire",
+                    "state": {
                       "lit": "true"
                     }
                   },
                   {
-                    "condition": "minecraft:match_tool",
+                    "type": "minecraft:match_tool",
                     "predicate": {
                       "predicates": {
                         "minecraft:enchantments": [
@@ -46,36 +34,40 @@
                       }
                     }
                   }
-                ],
-                "name": "minecraft:soul_campfire"
+                ]
               },
-              {
-                "type": "minecraft:item",
-                "functions": [
-                  {
-                    "function": "minecraft:set_components",
-                    "components": {
-                      "minecraft:item_name": {"translate":"block.nice_things.unlit_soul_campfire"},
-                      "minecraft:block_state": {
-                        "lit": "false"
-                      },
-                      "minecraft:custom_data": {
-                        "nice_things": "unlit_soul_campfire"
-                      },
-                      "minecraft:item_model": "nice_things:unlit_soul_campfire"
+              "name": "minecraft:soul_campfire",
+              "modifier": [
+                {
+                  "type": "minecraft:set_components",
+                  "components": {
+                    "minecraft:item_name": {
+                      "translate": "block.nice_things.lit_soul_campfire"
+                    },
+                    "minecraft:block_state": {
+                      "lit": "true"
+                    },
+                    "minecraft:custom_data": {
+                      "nice_things": "lit_soul_campfire"
                     }
                   }
-                ],
-                "conditions": [
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "condition": {
+                "type": "minecraft:all_of",
+                "terms": [
                   {
-                    "condition": "minecraft:block_state_property",
-                    "block": "minecraft:soul_campfire",
-                    "properties": {
+                    "type": "minecraft:match_block",
+                    "blocks": "minecraft:soul_campfire",
+                    "state": {
                       "lit": "false"
                     }
                   },
                   {
-                    "condition": "minecraft:match_tool",
+                    "type": "minecraft:match_tool",
                     "predicate": {
                       "predicates": {
                         "minecraft:enchantments": [
@@ -89,30 +81,46 @@
                       }
                     }
                   }
-                ],
-                "name": "minecraft:soul_campfire"
+                ]
               },
-              {
-                "type": "minecraft:item",
-                "conditions": [
-                  {
-                    "condition": "minecraft:survives_explosion"
+              "name": "minecraft:soul_campfire",
+              "modifier": [
+                {
+                  "type": "minecraft:set_components",
+                  "components": {
+                    "minecraft:item_name": {
+                      "translate": "block.nice_things.unlit_soul_campfire"
+                    },
+                    "minecraft:block_state": {
+                      "lit": "false"
+                    },
+                    "minecraft:custom_data": {
+                      "nice_things": "unlit_soul_campfire"
+                    },
+                    "minecraft:item_model": "nice_things:unlit_soul_campfire"
                   }
-                ],
-                "functions": [
-                  {
-                    "add": false,
-                    "count": 1,
-                    "function": "minecraft:set_count"
-                  }
-                ],
-                "name": "minecraft:soul_soil"
-              }
-            ]
-          }
-        ],
-        "rolls": 1
-      }
-    ],
-    "random_sequence": "minecraft:blocks/campfire"
-  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "condition": {
+                "type": "minecraft:survives_explosion"
+              },
+              "name": "minecraft:soul_soil",
+              "modifier": [
+                {
+                  "add": false,
+                  "count": 1,
+                  "type": "minecraft:set_count"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "rolls": 1
+    }
+  ],
+  "random_sequence": "minecraft:blocks/campfire"
+}

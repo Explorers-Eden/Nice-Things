@@ -4,9 +4,10 @@ scoreboard objectives add nice_things.technical dummy
 ##additional scoreboards
 scoreboard objectives add nice_things.container dummy
 scoreboard objectives add nice_things.wrench dummy
+scoreboard objectives add nice_things.kaleidoscope dummy
 
 ##fixed scoreboard entries
 scoreboard players set $1 nice_things.technical 1
 
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "2.6"
+data modify storage eden:datapack nice_things.version set value "2.7"

@@ -7,9 +7,9 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:black_harness",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_components",
+              "type": "minecraft:set_components",
               "components": {
                 "minecraft:equippable": {
                   "slot": "body",

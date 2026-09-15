@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nice_things:crafting_dye/saddle"
+        "recipes": "nice_things:crafting_dye/saddle"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

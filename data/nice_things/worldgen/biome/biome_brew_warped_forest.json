@@ -31,7 +31,44 @@
     "minecraft:visual/fog_color": "#1a051a",
     "minecraft:visual/sky_color": 2031907,
     "minecraft:visual/cloud_color": 2031907,
-    "minecraft:visual/sky_light_color": "#3e283e"
+    "minecraft:visual/sky_light_color": "#3e283e",
+    "minecraft:gameplay/natural_mob_spawns": {
+      "modifier": "overlay",
+      "argument": {
+        "spawns_by_category": {
+          "ambient": [],
+          "axolotls": [],
+          "creature": [
+            {
+              "type": "minecraft:strider",
+              "weight": 60,
+              "count": {
+                "type": "minecraft:uniform",
+                "min_inclusive": 1,
+                "max_inclusive": 2
+              }
+            }
+          ],
+          "misc": [],
+          "monster": [
+            {
+              "type": "minecraft:enderman",
+              "weight": 1,
+              "count": 4
+            }
+          ],
+          "underground_water_creature": [],
+          "water_ambient": [],
+          "water_creature": []
+        },
+        "spawn_costs": {
+          "minecraft:enderman": {
+            "charge": 1,
+            "energy_budget": 0.12
+          }
+        }
+      }
+    }
   },
   "carvers": "minecraft:nether_cave",
   "downfall": 0,
@@ -73,35 +110,5 @@
     ]
   ],
   "has_precipitation": false,
-  "spawn_costs": {
-    "minecraft:enderman": {
-      "charge": 1,
-      "energy_budget": 0.12
-    }
-  },
-  "spawners": {
-    "ambient": [],
-    "axolotls": [],
-    "creature": [
-      {
-        "type": "minecraft:strider",
-        "maxCount": 2,
-        "minCount": 1,
-        "weight": 60
-      }
-    ],
-    "misc": [],
-    "monster": [
-      {
-        "type": "minecraft:enderman",
-        "maxCount": 4,
-        "minCount": 4,
-        "weight": 1
-      }
-    ],
-    "underground_water_creature": [],
-    "water_ambient": [],
-    "water_creature": []
-  },
   "temperature": 2
 }

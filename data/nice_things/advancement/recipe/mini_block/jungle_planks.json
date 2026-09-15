@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/jungle_planks"
+        "recipes": "nice_things:stonecutter/mini_block/jungle_planks"
       }
     },
     "has_item": {

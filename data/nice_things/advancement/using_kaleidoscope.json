@@ -1,0 +1,30 @@
+{
+  "criteria": {
+    "using": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {}
+        },
+        "item": {
+          "items": "minecraft:music_disc_13",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "kaleidoscope"
+            }
+          }
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "using"
+    ]
+  ],
+  "rewards": {
+    "function": "nice_things:kaleidoscope/using"
+  }
+}

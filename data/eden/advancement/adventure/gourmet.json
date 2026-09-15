@@ -1,0 +1,99 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:cookie"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.gourmet.title",
+      "fallback": "Gourmet"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.gourmet.description",
+      "fallback": "Cook and eat Cheese, Apple Pie, Chorus Pie, Sweet Berry Cookie, Boiled Egg, and a Cake Slice."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "cheese": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:cookie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "cheese"
+            }
+          }
+        }
+      }
+    },
+    "apple_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:pumpkin_pie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "apple_pie"
+            }
+          }
+        }
+      }
+    },
+    "chorus_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:pumpkin_pie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "chorus_pie"
+            }
+          }
+        }
+      }
+    },
+    "sweet_berry_cookie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:cookie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "sweet_berry_cookie"
+            }
+          }
+        }
+      }
+    },
+    "boiled_egg": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:baked_potato",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "boiled_egg"
+            }
+          }
+        }
+      }
+    },
+    "cake_slice": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:bread",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "cake_slice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

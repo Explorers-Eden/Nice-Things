@@ -1,0 +1,186 @@
+{
+  "parent": "eden:adventure/anvil_whisperer",
+  "display": {
+    "icon": {
+      "id": "minecraft:brick"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.duplicity.title",
+      "fallback": "Duplicity"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.duplicity.description",
+      "fallback": "Duplicate a pottery sherd using a brick."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "angler": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/angler"
+      }
+    },
+    "archer": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/archer"
+      }
+    },
+    "arms_up": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/arms_up"
+      }
+    },
+    "blade": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/blade"
+      }
+    },
+    "brewer": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/brewer"
+      }
+    },
+    "burn": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/burn"
+      }
+    },
+    "danger": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/danger"
+      }
+    },
+    "explorer": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/explorer"
+      }
+    },
+    "flow": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/flow"
+      }
+    },
+    "friend": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/friend"
+      }
+    },
+    "guster": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/guster"
+      }
+    },
+    "heart": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/heart"
+      }
+    },
+    "heartbreak": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/heartbreak"
+      }
+    },
+    "howl": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/howl"
+      }
+    },
+    "miner": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/miner"
+      }
+    },
+    "mourner": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/mourner"
+      }
+    },
+    "plenty": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/plenty"
+      }
+    },
+    "prize": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/prize"
+      }
+    },
+    "scrape": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/scrape"
+      }
+    },
+    "sheaf": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/sheaf"
+      }
+    },
+    "shelter": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/shelter"
+      }
+    },
+    "skull": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/skull"
+      }
+    },
+    "snort": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/snort"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "angler",
+      "archer",
+      "arms_up",
+      "blade",
+      "brewer",
+      "burn",
+      "danger",
+      "explorer",
+      "flow",
+      "friend",
+      "guster",
+      "heart",
+      "heartbreak",
+      "howl",
+      "miner",
+      "mourner",
+      "plenty",
+      "prize",
+      "scrape",
+      "sheaf",
+      "shelter",
+      "skull",
+      "snort"
+    ]
+  ]
+}

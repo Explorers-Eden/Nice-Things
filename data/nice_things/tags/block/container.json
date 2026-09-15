@@ -1,10 +1,10 @@
 {
-  "values":[
-	"#minecraft:shulker_boxes",
-	"#minecraft:copper_chests",
-	"minecraft:chest",
-	"minecraft:ender_chest",
-	"minecraft:trapped_chest",
-	"minecraft:barrel"
+  "values": [
+    "#minecraft:copper_chests",
+    "#minecraft:shulker_boxes",
+    "minecraft:barrel",
+    "minecraft:chest",
+    "minecraft:ender_chest",
+    "minecraft:trapped_chest"
   ]
 }

@@ -1,0 +1,119 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:compass"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.outpost_explorer.title",
+      "fallback": "Outpost Explorer"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.outpost_explorer.description",
+      "fallback": "Find all 7 Villager Outposts."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/desert"
+            }
+          }
+        }
+      }
+    },
+    "jungle": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/jungle"
+            }
+          }
+        }
+      }
+    },
+    "plains": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/plains"
+            }
+          }
+        }
+      }
+    },
+    "savanna": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/savanna"
+            }
+          }
+        }
+      }
+    },
+    "snow": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/snow"
+            }
+          }
+        }
+      }
+    },
+    "swamp": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/swamp"
+            }
+          }
+        }
+      }
+    },
+    "taiga": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/taiga"
+            }
+          }
+        }
+      }
+    }
+  }
+}

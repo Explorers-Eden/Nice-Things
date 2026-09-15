@@ -1,10 +1,9 @@
 {
-    "values": [
-      "minecraft:ochre_froglight",
-      "minecraft:pearlescent_froglight",
-      "minecraft:verdant_froglight",
-      "minecraft:redstone_lamp",
-      "minecraft:sea_lantern"
-    ]
-  }
-  
+  "values": [
+    "minecraft:ochre_froglight",
+    "minecraft:pearlescent_froglight",
+    "minecraft:redstone_lamp",
+    "minecraft:sea_lantern",
+    "minecraft:verdant_froglight"
+  ]
+}

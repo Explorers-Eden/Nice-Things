@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/observer"
+        "recipes": "nice_things:stonecutter/mini_block/observer"
       }
     },
     "has_item": {

@@ -1,0 +1,984 @@
+{
+  "parent": "eden:adventure/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:chest"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.chapter.title",
+      "fallback": "A Nice Thing"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.chapter.description",
+      "fallback": "Craft, use, or find something from Nice Things for the first time."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "brew_charcoal": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "charcoal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_cocoa": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "cocoa"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_cotton": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "cotton"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_crimson_forest": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "crimson_forest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_desert": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "desert"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_lavender": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "lavender"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_lush": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "lush"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_pale_garden": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "pale_garden"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_pumpkin": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "pumpkin"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_ruby": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "ruby"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_teal": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "teal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_void": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "void"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_warped_forest": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "warped_forest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "brew_winter": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_5",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": {
+                "item": "biome_brew",
+                "biome": "winter"
+              }
+            }
+          }
+        }
+      }
+    },
+    "outpost_desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/desert"
+            }
+          }
+        }
+      }
+    },
+    "outpost_jungle": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/jungle"
+            }
+          }
+        }
+      }
+    },
+    "outpost_plains": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/plains"
+            }
+          }
+        }
+      }
+    },
+    "outpost_savanna": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/savanna"
+            }
+          }
+        }
+      }
+    },
+    "outpost_snow": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/snow"
+            }
+          }
+        }
+      }
+    },
+    "outpost_swamp": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/swamp"
+            }
+          }
+        }
+      }
+    },
+    "outpost_taiga": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "location": {
+              "structures": "nice_things:villager_outpost/taiga"
+            }
+          }
+        }
+      }
+    },
+    "painting_beacon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:beacon"
+            }
+          }
+        ]
+      }
+    },
+    "painting_bear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:bear"
+            }
+          }
+        ]
+      }
+    },
+    "painting_end": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:end"
+            }
+          }
+        ]
+      }
+    },
+    "painting_harmony": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:harmony"
+            }
+          }
+        ]
+      }
+    },
+    "painting_herobrine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:herobrine"
+            }
+          }
+        ]
+      }
+    },
+    "painting_katters_combs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:katters_combs"
+            }
+          }
+        ]
+      }
+    },
+    "painting_nether": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:nether"
+            }
+          }
+        ]
+      }
+    },
+    "painting_overworld": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:overworld"
+            }
+          }
+        ]
+      }
+    },
+    "painting_red_mushroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:red_mushroom"
+            }
+          }
+        ]
+      }
+    },
+    "painting_tulip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:tulip"
+            }
+          }
+        ]
+      }
+    },
+    "crafted_wrench": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/wrench"
+      }
+    },
+    "used_wrench": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_13",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "wrench"
+            }
+          }
+        }
+      }
+    },
+    "crafted_kaleidoscope": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/kaleidoscope"
+      }
+    },
+    "used_kaleidoscope": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_13",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "kaleidoscope"
+            }
+          }
+        }
+      }
+    },
+    "crafted_fan": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/fan"
+      }
+    },
+    "crafted_chopper": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/chopper"
+      }
+    },
+    "crafted_conveyor": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/conveyor"
+      }
+    },
+    "crafted_container": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/container"
+      }
+    },
+    "ate_cheese": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:cookie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "cheese"
+            }
+          }
+        }
+      }
+    },
+    "ate_apple_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:pumpkin_pie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "apple_pie"
+            }
+          }
+        }
+      }
+    },
+    "ate_chorus_pie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:pumpkin_pie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "chorus_pie"
+            }
+          }
+        }
+      }
+    },
+    "ate_sweet_berry_cookie": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:cookie",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "sweet_berry_cookie"
+            }
+          }
+        }
+      }
+    },
+    "ate_boiled_egg": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:baked_potato",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "boiled_egg"
+            }
+          }
+        }
+      }
+    },
+    "ate_cake_slice": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:bread",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "cake_slice"
+            }
+          }
+        }
+      }
+    },
+    "dyed_saddle": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_dye/saddle"
+      }
+    },
+    "dyed_elytra": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_dye/elytra"
+      }
+    },
+    "repaired_damaged_anvil": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/damaged_anvil_repair"
+      }
+    },
+    "repaired_chipped_anvil": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/chipped_anvil_repair"
+      }
+    },
+    "sherd_dupe_angler": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/angler"
+      }
+    },
+    "sherd_dupe_archer": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/archer"
+      }
+    },
+    "sherd_dupe_arms_up": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/arms_up"
+      }
+    },
+    "sherd_dupe_blade": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/blade"
+      }
+    },
+    "sherd_dupe_brewer": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/brewer"
+      }
+    },
+    "sherd_dupe_burn": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/burn"
+      }
+    },
+    "sherd_dupe_danger": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/danger"
+      }
+    },
+    "sherd_dupe_explorer": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/explorer"
+      }
+    },
+    "sherd_dupe_flow": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/flow"
+      }
+    },
+    "sherd_dupe_friend": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/friend"
+      }
+    },
+    "sherd_dupe_guster": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/guster"
+      }
+    },
+    "sherd_dupe_heart": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/heart"
+      }
+    },
+    "sherd_dupe_heartbreak": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/heartbreak"
+      }
+    },
+    "sherd_dupe_howl": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/howl"
+      }
+    },
+    "sherd_dupe_miner": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/miner"
+      }
+    },
+    "sherd_dupe_mourner": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/mourner"
+      }
+    },
+    "sherd_dupe_plenty": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/plenty"
+      }
+    },
+    "sherd_dupe_prize": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/prize"
+      }
+    },
+    "sherd_dupe_scrape": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/scrape"
+      }
+    },
+    "sherd_dupe_sheaf": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/sheaf"
+      }
+    },
+    "sherd_dupe_shelter": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/shelter"
+      }
+    },
+    "sherd_dupe_skull": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/skull"
+      }
+    },
+    "sherd_dupe_snort": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shapeless/sherd_dupe/snort"
+      }
+    },
+    "disc_ambient_forest": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/music_disc/ambient_forest"
+      }
+    },
+    "disc_ambient_ocean": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/music_disc/ambient_ocean"
+      }
+    },
+    "display_case_acacia": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/acacia"
+      }
+    },
+    "display_case_bamboo": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/bamboo"
+      }
+    },
+    "display_case_birch": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/birch"
+      }
+    },
+    "display_case_cherry": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/cherry"
+      }
+    },
+    "display_case_copper": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/copper"
+      }
+    },
+    "display_case_crimson": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/crimson"
+      }
+    },
+    "display_case_dark_oak": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/dark_oak"
+      }
+    },
+    "display_case_exposed_copper": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/exposed_copper"
+      }
+    },
+    "display_case_iron": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/iron"
+      }
+    },
+    "display_case_jungle": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/jungle"
+      }
+    },
+    "display_case_mangrove": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/mangrove"
+      }
+    },
+    "display_case_oak": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/oak"
+      }
+    },
+    "display_case_oxidized_copper": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/oxidized_copper"
+      }
+    },
+    "display_case_pale_oak": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/pale_oak"
+      }
+    },
+    "display_case_spruce": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/spruce"
+      }
+    },
+    "display_case_warped": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/warped"
+      }
+    },
+    "display_case_weathered_copper": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/display_case/weathered_copper"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "brew_charcoal",
+      "brew_cocoa",
+      "brew_cotton",
+      "brew_crimson_forest",
+      "brew_desert",
+      "brew_lavender",
+      "brew_lush",
+      "brew_pale_garden",
+      "brew_pumpkin",
+      "brew_ruby",
+      "brew_teal",
+      "brew_void",
+      "brew_warped_forest",
+      "brew_winter",
+      "outpost_desert",
+      "outpost_jungle",
+      "outpost_plains",
+      "outpost_savanna",
+      "outpost_snow",
+      "outpost_swamp",
+      "outpost_taiga",
+      "painting_beacon",
+      "painting_bear",
+      "painting_end",
+      "painting_harmony",
+      "painting_herobrine",
+      "painting_katters_combs",
+      "painting_nether",
+      "painting_overworld",
+      "painting_red_mushroom",
+      "painting_tulip",
+      "crafted_wrench",
+      "used_wrench",
+      "crafted_kaleidoscope",
+      "used_kaleidoscope",
+      "crafted_fan",
+      "crafted_chopper",
+      "crafted_conveyor",
+      "crafted_container",
+      "ate_cheese",
+      "ate_apple_pie",
+      "ate_chorus_pie",
+      "ate_sweet_berry_cookie",
+      "ate_boiled_egg",
+      "ate_cake_slice",
+      "dyed_saddle",
+      "dyed_elytra",
+      "repaired_damaged_anvil",
+      "repaired_chipped_anvil",
+      "sherd_dupe_angler",
+      "sherd_dupe_archer",
+      "sherd_dupe_arms_up",
+      "sherd_dupe_blade",
+      "sherd_dupe_brewer",
+      "sherd_dupe_burn",
+      "sherd_dupe_danger",
+      "sherd_dupe_explorer",
+      "sherd_dupe_flow",
+      "sherd_dupe_friend",
+      "sherd_dupe_guster",
+      "sherd_dupe_heart",
+      "sherd_dupe_heartbreak",
+      "sherd_dupe_howl",
+      "sherd_dupe_miner",
+      "sherd_dupe_mourner",
+      "sherd_dupe_plenty",
+      "sherd_dupe_prize",
+      "sherd_dupe_scrape",
+      "sherd_dupe_sheaf",
+      "sherd_dupe_shelter",
+      "sherd_dupe_skull",
+      "sherd_dupe_snort",
+      "disc_ambient_forest",
+      "disc_ambient_ocean",
+      "display_case_acacia",
+      "display_case_bamboo",
+      "display_case_birch",
+      "display_case_cherry",
+      "display_case_copper",
+      "display_case_crimson",
+      "display_case_dark_oak",
+      "display_case_exposed_copper",
+      "display_case_iron",
+      "display_case_jungle",
+      "display_case_mangrove",
+      "display_case_oak",
+      "display_case_oxidized_copper",
+      "display_case_pale_oak",
+      "display_case_spruce",
+      "display_case_warped",
+      "display_case_weathered_copper"
+    ]
+  ]
+}

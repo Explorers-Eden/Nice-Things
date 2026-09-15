@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/sticky_piston"
+        "recipes": "nice_things:stonecutter/mini_block/sticky_piston"
       }
     },
     "has_item": {

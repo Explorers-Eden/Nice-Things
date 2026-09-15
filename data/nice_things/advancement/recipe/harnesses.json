@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "nice_things:simple_harness"
+        "recipes": "nice_things:crafting_shaped/simple_harness"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,8 +26,8 @@
   ],
   "rewards": {
     "recipes": [
-      "nice_things:simple_harness",
-      "nice_things:sculk_harness"
+      "nice_things:crafting_shaped/simple_harness",
+      "nice_things:crafting_shaped/sculk_harness"
     ]
   }
 }

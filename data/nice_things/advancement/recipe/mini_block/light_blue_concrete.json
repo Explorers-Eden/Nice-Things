@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/light_blue_concrete"
+        "recipes": "nice_things:stonecutter/mini_block/light_blue_concrete"
       }
     },
     "has_item": {

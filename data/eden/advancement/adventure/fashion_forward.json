@@ -1,0 +1,33 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:saddle"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.fashion_forward.title",
+      "fallback": "Fashion Forward"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.fashion_forward.description",
+      "fallback": "Dye a Saddle and an Elytra."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "dyed_saddle": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_dye/saddle"
+      }
+    },
+    "dyed_elytra": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_dye/elytra"
+      }
+    }
+  }
+}

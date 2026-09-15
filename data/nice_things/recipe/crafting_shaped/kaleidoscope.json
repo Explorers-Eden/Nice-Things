@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:emerald",
+    "X": "minecraft:iron_ingot"
+  },
+  "pattern": [
+    " # ",
+    " X ",
+    " X "
+  ],
+  "result": {
+    "id": "minecraft:music_disc_13",
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "!minecraft:jukebox_playable": {},
+      "minecraft:item_name": {
+        "translate": "item.nice_things.kaleidoscope"
+      },
+      "minecraft:item_model": "nice_things:kaleidoscope",
+      "minecraft:rarity": "common",
+      "minecraft:custom_data": {
+        "nice_things": "kaleidoscope"
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 9999999,
+        "animation": "spyglass",
+        "has_consume_particles": false
+      }
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:painting"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.gallery_opening.title",
+      "fallback": "Gallery Opening"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.gallery_opening.description",
+      "fallback": "Place all 10 custom paintings."
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "beacon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:beacon"
+            }
+          }
+        ]
+      }
+    },
+    "bear": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:bear"
+            }
+          }
+        ]
+      }
+    },
+    "end": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:end"
+            }
+          }
+        ]
+      }
+    },
+    "harmony": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:harmony"
+            }
+          }
+        ]
+      }
+    },
+    "herobrine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:herobrine"
+            }
+          }
+        ]
+      }
+    },
+    "katters_combs": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:katters_combs"
+            }
+          }
+        ]
+      }
+    },
+    "nether": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:nether"
+            }
+          }
+        ]
+      }
+    },
+    "overworld": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:overworld"
+            }
+          }
+        ]
+      }
+    },
+    "red_mushroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:red_mushroom"
+            }
+          }
+        ]
+      }
+    },
+    "tulip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:painting",
+            "components": {
+              "minecraft:painting/variant": "nice_things:tulip"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

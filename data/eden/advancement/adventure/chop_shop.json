@@ -1,0 +1,27 @@
+{
+  "parent": "eden:adventure/blowing_air",
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_axe"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.chop_shop.title",
+      "fallback": "Chop Shop"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.chop_shop.description",
+      "fallback": "Craft a Chopper."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/chopper"
+      }
+    }
+  }
+}

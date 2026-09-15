@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/ender_chest"
+        "recipes": "nice_things:stonecutter/mini_block/ender_chest"
       }
     },
     "has_item": {

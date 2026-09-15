@@ -1,9 +1,9 @@
 {
-    "values": [
-		"nice_things:conveyor/setblock/init",
-		"nice_things:chopper/setblock/init",
-		"nice_things:fan/setblock/init",
-		"nice_things:container/setblock/init",
-		"nice_things:display_case/setblock/init"
-	]
+  "values": [
+    "nice_things:chopper/setblock/init",
+    "nice_things:container/setblock/init",
+    "nice_things:conveyor/setblock/init",
+    "nice_things:display_case/setblock/init",
+    "nice_things:fan/setblock/init"
+  ]
 }

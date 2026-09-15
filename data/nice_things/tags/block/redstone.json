@@ -1,10 +1,10 @@
 {
-  "values":[
-	"minecraft:observer",
-	"minecraft:piston",
-	"minecraft:sticky_piston",
-	"minecraft:dropper",
-	"minecraft:dispenser",
-	"minecraft:hopper"
+  "values": [
+    "minecraft:dispenser",
+    "minecraft:dropper",
+    "minecraft:hopper",
+    "minecraft:observer",
+    "minecraft:piston",
+    "minecraft:sticky_piston"
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:jukebox"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.set_the_mood.title",
+      "fallback": "Set the Mood"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.set_the_mood.description",
+      "fallback": "Obtain both of the pack's ambient sound discs."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "forest": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/music_disc/ambient_forest"
+      }
+    },
+    "ocean": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/music_disc/ambient_ocean"
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/chiseled_polished_blackstone"
+        "recipes": "nice_things:stonecutter/mini_block/chiseled_polished_blackstone"
       }
     },
     "has_item": {

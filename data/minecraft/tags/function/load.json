@@ -1,6 +1,6 @@
 {
-    "values": [
-		"nice_things:load",
-		"#nice_things:scheduled_functions"
-	]
+  "values": [
+    "#nice_things:scheduled_functions",
+    "nice_things:load"
+  ]
 }

@@ -3,7 +3,7 @@ execute if items block ~ ~ ~ container.4 * run return fail
 playsound minecraft:block.vault.eject_item block @a ~ ~ ~ 0.3 1.75
 
 $item replace block ~ ~ ~ container.4 with $(id)
-$item modify block ~ ~ ~ container.4 {"function":"minecraft:set_components","components":$(components)}
+$item modify block ~ ~ ~ container.4 {"type":"minecraft:set_components","components":$(components)}
 
 scoreboard players operation @s nice_things.container -= $1 nice_things.technical
 execute store result entity @s data.stored_item.count int 1 run scoreboard players get @s nice_things.container

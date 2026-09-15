@@ -1,0 +1,40 @@
+{
+  "parent": "eden:adventure/nice_things",
+  "display": {
+    "icon": {
+      "id": "minecraft:iron_ingot"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.wrench_it.title",
+      "fallback": "Wrench It"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.wrench_it.description",
+      "fallback": "Craft and use the Wrench."
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/wrench"
+      }
+    },
+    "used": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": "minecraft:music_disc_13",
+          "predicates": {
+            "minecraft:custom_data": {
+              "nice_things": "wrench"
+            }
+          }
+        }
+      }
+    }
+  }
+}

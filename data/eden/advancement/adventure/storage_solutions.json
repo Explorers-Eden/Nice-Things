@@ -1,0 +1,27 @@
+{
+  "parent": "eden:adventure/keep_it_moving",
+  "display": {
+    "icon": {
+      "id": "minecraft:ender_chest"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.storage_solutions.title",
+      "fallback": "Storage Solutions"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.storage_solutions.description",
+      "fallback": "Craft a Container."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/container"
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "nice_things:stonecutter/mini_block/pumpkin"
+        "recipes": "nice_things:stonecutter/mini_block/pumpkin"
       }
     },
     "has_item": {

@@ -1,0 +1,27 @@
+{
+  "parent": "eden:adventure/chop_shop",
+  "display": {
+    "icon": {
+      "id": "minecraft:powered_rail"
+    },
+    "title": {
+      "translate": "advancement.eden.adventure.nice_things.keep_it_moving.title",
+      "fallback": "Keep It Moving"
+    },
+    "description": {
+      "translate": "advancement.eden.adventure.nice_things.keep_it_moving.description",
+      "fallback": "Craft a Conveyor."
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "crafted": {
+      "trigger": "minecraft:recipe_crafted",
+      "conditions": {
+        "recipes": "nice_things:crafting_shaped/conveyor"
+      }
+    }
+  }
+}
