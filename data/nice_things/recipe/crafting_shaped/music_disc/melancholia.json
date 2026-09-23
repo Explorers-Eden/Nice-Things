@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "craftable_disc",
+  "category": "misc",
+  "pattern": [
+    "GGG",
+    "G#G",
+    "GGG"
+  ],
+  "key": {
+    "G": "minecraft:ghast_tear",
+    "#": "minecraft:music_disc_creator_music_box"
+  },
+  "result": {
+    "components": {
+                "minecraft:item_name": {
+                  "translate": "item.nice_things.music_disc"
+                },
+                "minecraft:rarity": "uncommon",
+                "item_model": "nice_things:music_disc_melancholia",
+                "minecraft:custom_data": {
+                  "nice_things": {
+                    "item": "music_disc_melancholia"
+                  }
+                },
+                "minecraft:jukebox_playable": "nice_things:melancholia"
+              },
+    "count": 1,
+    "id": "minecraft:music_disc_5"
+  }
+}

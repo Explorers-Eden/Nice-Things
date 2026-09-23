@@ -1,6 +1,7 @@
 {
     "sound_event": {
-      "sound_id": "nice_things:music_disc.ambient.forest"
+      "sound_id": "nice_things:music_disc.ambient.forest",
+      "range": 128
   },
     "description": {
       "translate": "jukebox_song.nice_things.ambient_forest"

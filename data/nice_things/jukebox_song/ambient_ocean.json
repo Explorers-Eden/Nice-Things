@@ -1,6 +1,7 @@
 {
     "sound_event": {
-      "sound_id": "nice_things:music_disc.ambient.ocean"
+      "sound_id": "nice_things:music_disc.ambient.ocean",
+      "range": 128
   },
     "description": {
       "translate": "jukebox_song.nice_things.ambient_ocean"

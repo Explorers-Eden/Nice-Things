@@ -1,0 +1,12 @@
+{
+    "sound_event": {
+      "sound_id": "nice_things:music_disc.melancholia",
+      "range": 64
+  },
+    "description": {
+      "translate": "jukebox_song.nice_things.melancholia"
+    },
+    "length_in_seconds": 230.0,
+    "comparator_output": 1
+  }
+  

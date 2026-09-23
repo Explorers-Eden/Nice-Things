@@ -1,8 +1,6 @@
 # Minecraft Version(s): 26.3
 ## Changes:
-- Added Poplar, Dark Prismarine, Cinnabar and Sulfur Display Cases
-- Cushions can now be placed inside every block
-- Poplar Logs, Shelves and Decorated Pots can now be rotated with a Wrench
-- Blockstates like Furnaces smelt progress are being better preserved when rotating with a Wrench
+- Added new Music Disc: MELANCHOLIA - Ryan Creep (Can be crafted from 8 Ghast Tears and a Creator (Music Box) Disc)
+- Changed range of Ambient Music Discs to 128 blocks
 
 ## Fixes:
