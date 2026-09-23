@@ -16,6 +16,8 @@ execute if block ~ ~ ~ minecraft:cherry_log run return run function nice_things:
 execute if block ~ ~ ~ minecraft:stripped_cherry_log run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_cherry_log"}
 execute if block ~ ~ ~ minecraft:pale_oak_log run return run function nice_things:wrench/rotate/axis {"block":"minecraft:pale_oak_log"}
 execute if block ~ ~ ~ minecraft:stripped_pale_oak_log run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_pale_oak_log"}
+execute if block ~ ~ ~ minecraft:poplar_log run return run function nice_things:wrench/rotate/axis {"block":"minecraft:poplar_log"}
+execute if block ~ ~ ~ minecraft:stripped_poplar_log run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_poplar_log"}
 execute if block ~ ~ ~ minecraft:crimson_stem run return run function nice_things:wrench/rotate/axis {"block":"minecraft:crimson_stem"}
 execute if block ~ ~ ~ minecraft:stripped_crimson_stem run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_crimson_stem"}
 execute if block ~ ~ ~ minecraft:warped_stem run return run function nice_things:wrench/rotate/axis {"block":"minecraft:warped_stem"}
@@ -39,6 +41,8 @@ execute if block ~ ~ ~ minecraft:cherry_wood run return run function nice_things
 execute if block ~ ~ ~ minecraft:stripped_cherry_wood run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_cherry_wood"}
 execute if block ~ ~ ~ minecraft:pale_oak_wood run return run function nice_things:wrench/rotate/axis {"block":"minecraft:pale_oak_wood"}
 execute if block ~ ~ ~ minecraft:stripped_pale_oak_wood run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_pale_oak_wood"}
+execute if block ~ ~ ~ minecraft:poplar_wood run return run function nice_things:wrench/rotate/axis {"block":"minecraft:poplar_wood"}
+execute if block ~ ~ ~ minecraft:stripped_poplar_wood run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_poplar_wood"}
 execute if block ~ ~ ~ minecraft:crimson_hyphae run return run function nice_things:wrench/rotate/axis {"block":"minecraft:crimson_hyphae"}
 execute if block ~ ~ ~ minecraft:stripped_crimson_hyphae run return run function nice_things:wrench/rotate/axis {"block":"minecraft:stripped_crimson_hyphae"}
 execute if block ~ ~ ~ minecraft:warped_hyphae run return run function nice_things:wrench/rotate/axis {"block":"minecraft:warped_hyphae"}

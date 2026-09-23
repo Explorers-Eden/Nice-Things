@@ -1,0 +1,13 @@
+execute if block ~ ~ ~ minecraft:acacia_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:acacia_shelf"}
+execute if block ~ ~ ~ minecraft:bamboo_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:bamboo_shelf"}
+execute if block ~ ~ ~ minecraft:birch_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:birch_shelf"}
+execute if block ~ ~ ~ minecraft:cherry_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:cherry_shelf"}
+execute if block ~ ~ ~ minecraft:crimson_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:crimson_shelf"}
+execute if block ~ ~ ~ minecraft:dark_oak_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:dark_oak_shelf"}
+execute if block ~ ~ ~ minecraft:jungle_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:jungle_shelf"}
+execute if block ~ ~ ~ minecraft:mangrove_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:mangrove_shelf"}
+execute if block ~ ~ ~ minecraft:oak_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:oak_shelf"}
+execute if block ~ ~ ~ minecraft:pale_oak_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:pale_oak_shelf"}
+execute if block ~ ~ ~ minecraft:poplar_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:poplar_shelf"}
+execute if block ~ ~ ~ minecraft:spruce_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:spruce_shelf"}
+execute if block ~ ~ ~ minecraft:warped_shelf run return run function nice_things:wrench/rotate/facing {"block":"minecraft:warped_shelf"}

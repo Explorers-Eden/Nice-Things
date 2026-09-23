@@ -2,6 +2,7 @@ execute if block ~ ~ ~ #nice_things:container run return run function nice_thing
 execute if block ~ ~ ~ #nice_things:furnaces run return run function nice_things:wrench/block/furnaces
 execute if block ~ ~ ~ #nice_things:redstone run return run function nice_things:wrench/block/redstone
 execute if block ~ ~ ~ #nice_things:glazed_terracotta run return run function nice_things:wrench/block/glazed_terracotta
+execute if block ~ ~ ~ #nice_things:shelves run return run function nice_things:wrench/block/shelves
 execute if block ~ ~ ~ #minecraft:logs run return run function nice_things:wrench/block/logs
 execute if block ~ ~ ~ #minecraft:chains run return run function nice_things:wrench/block/chains
 execute if block ~ ~ ~ #minecraft:anvil run return run function nice_things:wrench/block/anvil

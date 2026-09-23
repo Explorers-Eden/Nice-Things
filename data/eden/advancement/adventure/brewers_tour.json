@@ -10,7 +10,7 @@
     },
     "description": {
       "translate": "advancement.eden.adventure.nice_things.brewers_tour.description",
-      "fallback": "Drink all 14 Biome Brews."
+      "fallback": "Use all 14 Biome Brews."
     },
     "frame": "challenge",
     "show_toast": true,
