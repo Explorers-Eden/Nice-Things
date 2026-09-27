@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": "minecraft:fishing_rod",
+    "X": "minecraft:emerald"
+  },
+  "pattern": [
+    "# ",
+    " X"
+  ],
+  "result": {
+    "id": "minecraft:music_disc_13",
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:max_damage": 25,
+      "!minecraft:jukebox_playable": {},
+      "minecraft:item_name": {
+        "translate": "item.nice_things.emerald_on_a_stick"
+      },
+      "minecraft:item_model": "nice_things:emerald_on_a_stick",
+      "minecraft:rarity": "common",
+      "minecraft:damage": 0,
+      "minecraft:repairable": {
+        "items": "minecraft:emerald"
+      },
+      "minecraft:custom_data": {
+        "nice_things": "emerald_on_a_stick"
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 9999999,
+        "animation": "none",
+        "has_consume_particles": false
+      }
+    }
+  }
+}

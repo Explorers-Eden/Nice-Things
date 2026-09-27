@@ -1,7 +1,12 @@
 # Minecraft Version(s): 26.3
 ## Changes:
-- Added new Music Disc: MELANCHOLIA - Ryan Creep (Can be crafted from 8 Ghast Tears and a Creator (Music Box) Disc)
-- Cats can now also on Wool Carpets and Pale-/Moss Carpets
+- Added Emerald on a Stick:
+    - 25 Durability points
+    - Villagers follow the player holding it
+    - Right Clicking it costs durability and lets the Villagers jump
+    - Can be enchanted with Unbreaking to lower the chance of the item being damaged
+    - Villagers following don't take damage on Magma Blocks
+    - Villagers standing on Honey Blocks do not follow players
 
 
 ## Fixes:

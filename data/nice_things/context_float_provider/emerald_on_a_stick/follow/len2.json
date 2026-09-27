@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    { "type": "minecraft:mul", "inputs": ["nice_things:emerald_on_a_stick/follow/dx", "nice_things:emerald_on_a_stick/follow/dx"] },
+    { "type": "minecraft:mul", "inputs": ["nice_things:emerald_on_a_stick/follow/dz", "nice_things:emerald_on_a_stick/follow/dz"] }
+  ]
+}
