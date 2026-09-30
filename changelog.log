@@ -1,12 +1,5 @@
 # Minecraft Version(s): 26.3
 ## Changes:
-- Added Emerald on a Stick:
-    - 25 Durability points
-    - Villagers follow the player holding it
-    - Right Clicking it costs durability and lets the Villagers jump
-    - Can be enchanted with Unbreaking to lower the chance of the item being damaged
-    - Villagers following don't take damage on Magma Blocks
-    - Villagers standing on Honey Blocks do not follow players
-
+- Changed Chorus Pie recipe to actually use a Chorus Fruit
 
 ## Fixes:

@@ -16,4 +16,4 @@ scoreboard objectives add nice_things.follow.motionZ dummy
 scoreboard players set $1 nice_things.technical 1
 
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "3.0"
+data modify storage eden:datapack nice_things.version set value "3.1"
