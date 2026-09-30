@@ -1,6 +1,5 @@
 # Minecraft Version(s): 26.3
 ## Changes:
+- Performance improvements for custom blocks (fewer entity scans, work paused when no player is within 64 blocks)
 
 ## Fixes:
-- Custom blocks (Conveyor, Fan, Chopper, Container) facing the direction of the nearest player instead of the player placing them
-- Display Case owner being set to the nearest player instead of the player placing it

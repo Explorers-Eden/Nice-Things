@@ -23,16 +23,14 @@ execute if entity @p[tag=nice_things.placer,y_rotation=-135..-45] align xyz posi
 execute if entity @p[tag=nice_things.placer,y_rotation=-135..-45] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run execute on passengers run data modify entity @s Rotation[0] set value 90.0f
 execute if entity @p[tag=nice_things.placer,y_rotation=-135..-45] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value 90.0f
 #north
-execute if entity @p[tag=nice_things.placer,y_rotation=-179.99..-135] run data modify entity @n[type=item_display,tag=nice_things.container.spawner,distance=..10] Rotation[0] set value 0.0f
-execute if entity @p[tag=nice_things.placer,y_rotation=-179.99..-135] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.container.spawner,distance=..10] ~ ~-0.5 ~0.51
-execute if entity @p[tag=nice_things.placer,y_rotation=-179.99..-135] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run execute on passengers run data modify entity @s Rotation[0] set value 0.0f
-execute if entity @p[tag=nice_things.placer,y_rotation=-179.99..-135] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value 0.0f
-execute if entity @p[tag=nice_things.placer,y_rotation=135..179.99] run data modify entity @n[type=item_display,tag=nice_things.container.spawner,distance=..10] Rotation[0] set value 0.0f
-execute if entity @p[tag=nice_things.placer,y_rotation=135..179.99] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.container.spawner,distance=..10] ~ ~-0.5 ~0.51
-execute if entity @p[tag=nice_things.placer,y_rotation=135..179.99] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run execute on passengers run data modify entity @s Rotation[0] set value 0.0f
-execute if entity @p[tag=nice_things.placer,y_rotation=135..179.99] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value 0.0f
-
-data modify entity @s Rotation[1] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=-180..-135] run data modify entity @n[type=item_display,tag=nice_things.container.spawner,distance=..10] Rotation[0] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=-180..-135] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.container.spawner,distance=..10] ~ ~-0.5 ~0.51
+execute if entity @p[tag=nice_things.placer,y_rotation=-180..-135] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run execute on passengers run data modify entity @s Rotation[0] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=-180..-135] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=135..180] run data modify entity @n[type=item_display,tag=nice_things.container.spawner,distance=..10] Rotation[0] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=135..180] align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.container.spawner,distance=..10] ~ ~-0.5 ~0.51
+execute if entity @p[tag=nice_things.placer,y_rotation=135..180] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run execute on passengers run data modify entity @s Rotation[0] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=135..180] as @n[type=item_display,tag=nice_things.container.spawner,distance=..10] on passengers run data modify entity @s Rotation[0] set value 0.0f
 
 tag @n[type=item_display,tag=nice_things.container.spawner,distance=..10] remove nice_things.container.spawner
 tag @a remove nice_things.placer

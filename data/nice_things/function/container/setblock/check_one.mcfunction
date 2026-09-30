@@ -1,0 +1,12 @@
+execute if entity @s[y_rotation=-180] unless block ~ ~ ~.5 petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute if entity @s[y_rotation=-90] unless block ~-.5 ~ ~ petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute if entity @s[y_rotation=90] unless block ~.5 ~ ~ petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute if entity @s[y_rotation=0] unless block ~ ~ ~-.5 petrified_oak_slab[type=double] unless data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_w_items with entity @s data.stored_item
+execute if entity @s[y_rotation=-180] unless block ~ ~ ~.5 petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_wo_items
+execute if entity @s[y_rotation=-90] unless block ~-.5 ~ ~ petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_wo_items
+execute if entity @s[y_rotation=90] unless block ~.5 ~ ~ petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_wo_items
+execute if entity @s[y_rotation=0] unless block ~ ~ ~-.5 petrified_oak_slab[type=double] if data entity @s data.stored_item{id:"minecraft:air"} run return run function nice_things:container/setblock/remove_wo_items
+execute if predicate {"type":"minecraft:random_chance","chance":0.5} if entity @s[y_rotation=-180] run particle minecraft:portal ~ ~ ~.5 0 0 0 .5 2 normal
+execute if predicate {"type":"minecraft:random_chance","chance":0.5} if entity @s[y_rotation=-90] run particle minecraft:portal ~-.5 ~ ~ 0 0 0 .5 2 normal
+execute if predicate {"type":"minecraft:random_chance","chance":0.5} if entity @s[y_rotation=90] run particle minecraft:portal ~.5 ~ ~ 0 0 0 .5 2 normal
+execute if predicate {"type":"minecraft:random_chance","chance":0.5} if entity @s[y_rotation=0] run particle minecraft:portal ~ ~ ~-.5 0 0 0 .5 2 normal

@@ -12,10 +12,8 @@ execute if entity @p[tag=nice_things.placer,y_rotation=45..135] run data modify 
 #east
 execute if entity @p[tag=nice_things.placer,y_rotation=-135..-45] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 90.0f
 #north
-execute if entity @p[tag=nice_things.placer,y_rotation=-179.99..-135] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 0.0f
-execute if entity @p[tag=nice_things.placer,y_rotation=135..179.99] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 0.0f
-
-data modify entity @s Rotation[1] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=-180..-135] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 0.0f
+execute if entity @p[tag=nice_things.placer,y_rotation=135..180] run data modify entity @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] Rotation[0] set value 0.0f
 
 execute align xyz positioned ~.5 ~.5 ~.5 run tp @n[type=item_display,tag=nice_things.conveyor.spawner,distance=..10] ~ ~0.51 ~
 

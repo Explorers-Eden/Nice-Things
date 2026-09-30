@@ -13,6 +13,10 @@
     "nice_things:display_case/rotate",
     "nice_things:fan/blow/init",
     "nice_things:wrench/cooldown",
-    "nice_things:kaleidoscope/scheduled"
+    "nice_things:kaleidoscope/scheduled",
+    "nice_things:chopper/setblock/check",
+    "nice_things:container/setblock/check",
+    "nice_things:conveyor/setblock/check",
+    "nice_things:fan/setblock/check"
   ]
 }
