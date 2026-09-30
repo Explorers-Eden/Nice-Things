@@ -1,3 +1,5 @@
+function nice_things:placer/tag
+
 playsound minecraft:block.glass.place block @a ~ ~ ~ 0.8
 setblock ~ ~ ~ minecraft:barrier
 
@@ -47,6 +49,7 @@ $execute align xyz run summon interaction ~.5 ~ ~.5 \
 
 execute as @e[type=interaction,tag=nice_things.display_case.interaction,distance=..1] \
     unless data entity @s data.owner \
-        run data modify entity @s data.owner set from entity @p[distance=..16] UUID
+        run data modify entity @s data.owner set from entity @p[tag=nice_things.placer] UUID
 
+tag @a remove nice_things.placer
 kill @s

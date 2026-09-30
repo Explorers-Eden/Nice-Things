@@ -4,6 +4,7 @@ scoreboard objectives add nice_things.technical dummy
 ##additional scoreboards
 scoreboard objectives add nice_things.container dummy
 scoreboard objectives add nice_things.wrench dummy
+scoreboard objectives add nice_things.placed_frame minecraft.used:minecraft.item_frame
 scoreboard objectives add nice_things.kaleidoscope dummy
 scoreboard objectives add nice_things.follow.dx dummy
 scoreboard objectives add nice_things.follow.dy dummy
@@ -16,4 +17,4 @@ scoreboard objectives add nice_things.follow.motionZ dummy
 scoreboard players set $1 nice_things.technical 1
 
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "3.1"
+data modify storage eden:datapack nice_things.version set value "3.2"

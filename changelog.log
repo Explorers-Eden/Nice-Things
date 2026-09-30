@@ -1,5 +1,6 @@
 # Minecraft Version(s): 26.3
 ## Changes:
-- Changed Chorus Pie recipe to actually use a Chorus Fruit
 
 ## Fixes:
+- Custom blocks (Conveyor, Fan, Chopper, Container) facing the direction of the nearest player instead of the player placing them
+- Display Case owner being set to the nearest player instead of the player placing it
