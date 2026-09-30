@@ -1,1 +1,1 @@
-execute if entity @a[scores={nice_things.placed_frame=1..}] as @e[type=minecraft:item_frame,tag=nice_things.conveyor.spawner] at @s run function nice_things:conveyor/setblock/exec
+execute as @e[type=minecraft:item_frame,tag=nice_things.conveyor.spawner] at @s run function nice_things:conveyor/setblock/exec
