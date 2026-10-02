@@ -1,5 +1,8 @@
 # Minecraft Version(s): 26.3
 ## Changes:
+- Biome Brews now affect a 17x17x17 area centered on the player
 
 ## Fixes:
-- Block placement no longer working on smp server
+- Items given to Copper Golems not being consumed without Fabled Roots installed
+- Chopper dealing less damage when facing east
+- Cats not lying on Wool Carpets and Pale-/Moss Carpets

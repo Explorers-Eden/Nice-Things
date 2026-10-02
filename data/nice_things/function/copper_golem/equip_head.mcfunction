@@ -1,4 +1,4 @@
 execute at @n[type=copper_golem,distance=..1] run particle minecraft:happy_villager ~ ~0.75 ~ .3 .3 .3 0.5 10
 data modify entity @n[type=copper_golem,distance=..1] equipment.saddle set from entity @s Item
-item modify entity @s container.0 fabled_roots:detract_item
+item modify entity @s container.0 nice_things:detract_item
 execute as @e[type=player,distance=..12] at @s run advancement grant @s only eden:adventure/copper_companion
