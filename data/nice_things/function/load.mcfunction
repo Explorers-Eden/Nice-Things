@@ -16,5 +16,8 @@ scoreboard objectives add nice_things.follow.motionZ dummy
 ##fixed scoreboard entries
 scoreboard players set $1 nice_things.technical 1
 
+##start repeating loops
+function nice_things:start
+
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "3.5"
+data modify storage eden:datapack nice_things.version set value "3.6"
