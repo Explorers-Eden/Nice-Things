@@ -1,5 +1,5 @@
 # Minecraft Version(s): 26.3
 ## Changes:
-- Repeating background tasks now start a few ticks apart after loading instead of all on the same tick, spreading out server load
+- Farmer trades for Boiled Eggs, Cheese and Sweet Berry Cookies now give 2-3 items instead of 18
 
 ## Fixes:

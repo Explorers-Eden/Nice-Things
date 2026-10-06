@@ -20,4 +20,4 @@ scoreboard players set $1 nice_things.technical 1
 function nice_things:start
 
 ##set data pack version
-data modify storage eden:datapack nice_things.version set value "3.6"
+data modify storage eden:datapack nice_things.version set value "3.7"

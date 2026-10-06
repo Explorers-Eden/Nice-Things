@@ -1,4 +1,14 @@
 {
+  "given_item_modifier": [
+    {
+      "type": "minecraft:set_count",
+      "count": {
+        "type": "minecraft:uniform",
+        "min": 2,
+        "max": 3
+      }
+    }
+  ],
   "gives": {
     "components": {
       "minecraft:item_name": {
@@ -9,7 +19,7 @@
         "nice_things": "sweet_berry_cookie"
       }
     },
-    "count": 18,
+    "count": 1,
     "id": "minecraft:cookie"
   },
   "max_uses": 12,
